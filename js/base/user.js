@@ -1,5 +1,5 @@
 //2015.9.20
-var loop = new Loop({ keyname: 'loop_test', appkey: '', link: '' });
+var loop = new Loop({ keyname: 'anchor_template' });
 var iuser=importUser();
 
 function importUser(){

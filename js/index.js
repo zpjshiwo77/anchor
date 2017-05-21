@@ -273,7 +273,7 @@ $(document).ready(function(){
 
 	//发送信息 AJAX
 	function sendInfo(img){
-
+	    loop.user.add({ remarks: img })
 	}//end func
 
 	//显示提示
@@ -340,9 +340,18 @@ $(document).ready(function(){
 	//发送授权码 AJAX
 	function sendCode(){
 		var code = $("#authCode").val();
-		if(code != ""){
-			authBox.hide();
-			choseBoxShow();
+		if (code != "") {
+
+		    loop.data.getlist('code', 1, { code: code, isuse: 0 }, function (list) {
+		        if (list.length > 0) {
+		            //loop.data.set('code', list[0].ID, { isuse: 1 });
+		            authBox.hide();
+		            choseBoxShow();
+		        }
+		        else {
+		            icom.alert("授权码不正确或已被使用")
+		        }
+		    })
 		} 
 		else icom.alert("授权码不能为空!");
 	}//end func
