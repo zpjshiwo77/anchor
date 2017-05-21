@@ -120,7 +120,7 @@ $(document).ready(function(){
 		loader.addImage('images/public/tips.png');
 
 		loader.addImage('images/sticker/c.png');
-		for (var i = 1; i <= 17; i++) {
+		for (var i = 1; i <= 22; i++) {
 			loader.addImage('images/sticker/'+i+'.png');
 		};
 		//实际加载进度
