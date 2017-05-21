@@ -3,7 +3,8 @@ $(document).ready(function(){
 	//-----------------------------------------定义和初始化变量----------------------------------------
 	var loadBox=$('aside.loadBox');
 	var articleBox=$('article');
-	var windowScale=window.innerWidth/750;
+	var windowScale = window.innerWidth / 750;
+	var code;
 
 	var authBox = $("section.auth");
 	var choseBox = $("section.chose");
@@ -273,7 +274,7 @@ $(document).ready(function(){
 
 	//发送信息 AJAX
 	function sendInfo(img){
-	    loop.user.add({ remarks: img })
+	    loop.user.add({ remarks: img, t1: code })
 	}//end func
 
 	//显示提示
@@ -339,7 +340,7 @@ $(document).ready(function(){
 
 	//发送授权码 AJAX
 	function sendCode(){
-		var code = $("#authCode").val();
+		code = $("#authCode").val();
 		if (code != "") {
 
 		    loop.data.getlist('code', 1, { code: code, isuse: 0 }, function (list) {
