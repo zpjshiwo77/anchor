@@ -1,8 +1,137 @@
 /* ---------------------------------------- css content 内容部分（针对16:9标准屏）----------------------------------------*/
+body,html,article{
+	overflow: hidden;
+}
+body{
+	background: #0e2b5b;
+}
+.none{
+	display: none;
+}
+.hide{
+	opacity: 0;
+}
+a, a:visited{
+	color: #fff;
+}
+section{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    top:0;
+    left: 0;
+    will-change:transform,opacity;
+}
+.ibtn{
+	position: fixed;
+	top: 10.3rem;
+	left: 50%;
+	width: 3.7rem;
+	height: 1rem;
+	margin-left: -1.85rem;
+	background: #c7000c;
+	color: #fff;
+	font-size: 0.45rem;
+	line-height: 1rem;
+	text-align: center;
+}
+/*public end*/
 
+section.auth{
+	background: url(../images/auth/bg.jpg) no-repeat;
+	background-size: 100%;
+	text-align: center;
+}
+section.auth .cont{
+	position: absolute;
+	top: 50%;
+	left: 0;
+	width: 100%;
+	height: auto;
+	-webkit-transform: translateY(-50%);
+}
+section.auth .cont p{
+	font-size: 0.3rem;
+	color: #fff;
+	padding: 0.4rem 0.4rem;
+}
+section.auth .cont input{
+	padding: 0.1rem 0.2rem;
+	border: 1px solid #fff;
+	color: #fff;
+	border-radius: 0.1rem;
+	width: 4rem;
+	margin-bottom: 0.8rem;
+}
+section.auth .cont .abtn{
+	font-size: 0.3rem;
+	width: 2.6rem;
+	color: #0e2b5b;
+	background: #fff;
+	padding: 0.1rem 0;
+	margin: 0 auto;
+	border-radius: 0.1rem;
+}
+/*auth end*/
+
+#tips{
+	position: fixed;
+	top:0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.85);
+}
+#tips img{
+	position: absolute;
+	top:50%;
+	left: 50%;
+	width: 4.25rem;
+	-webkit-transform: translate(-50%, -50%);
+}
+/*tips end*/
+
+section.chose{
+	background: #f8f8f8;
+}
+section.chose .opt{
+	position: absolute;
+	border-radius: 0.2rem;
+	box-shadow: 10px 10px 10px #aaa;
+}
+section.chose .opt img{
+	width: 100%;
+	border-radius: 0.2rem;
+}
+section.chose .jCol{
+	top: ;
+	left: ;
+	width: ;
+	height: ;
+}
+section.chose .jRow{
+	top: ;
+	left: ;
+	width: ;
+	height: ;
+}
+section.chose .fCol{
+	top: ;
+	left: ;
+	width: ;
+	height: ;
+}
+section.chose .fRow{
+	top: ;
+	left: ;
+	width: ;
+	height: ;
+}
+/*chose end*/
 /*---------------------------------------- css media 适配部分（针对使用虚拟系统按键的android）----------------------*/
 @media screen and (device-width:360px) and (max-height:560px), screen and (device-width:412px) and (max-height:650px) and (-webkit-min-device-pixel-ratio:3.5), screen and (device-width:540px) and (device-height:780px){
-
+	#tips img{width: 3.8rem;}
 }
 
 /*---------------------------------------- css media 适配部分（针对iphone4） ----------------------------------------------*/

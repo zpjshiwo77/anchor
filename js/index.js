@@ -11,7 +11,7 @@ $(document).ready(function(){
 	
 	function init(){
 		requestAnimationFrame(function(){
-//			loadBox.show();
+			loadBox.show();
 			iuser.init(userGetted);
 //			load_handler();
 		});
@@ -56,8 +56,15 @@ $(document).ready(function(){
 	//----------------------------------------页面逻辑代码----------------------------------------
 	function init_handler(){
 		console.log('init handler');
-//		icom.fadeOut(loadBox,500);
+		icom.fadeOut(loadBox,500);
 		monitor_handler();
+		icom.fadeIn(articleBox);
+		pageInit();
+	}//end func
+
+	//页面初始化
+	function pageInit(){
+
 	}//end func
 	
 	//----------------------------------------页面监测代码----------------------------------------

@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-<title>微信竖屏模板页</title>
+<title>海报生成</title>
 <meta charset="utf-8">
 <meta name="format-detection" content="telephone=no" />
 <meta name="format-detection" content="email=no" />
@@ -16,9 +16,60 @@ ibase.load('css/index.css');//无缓存加载文件
 </head>
 <body>
 <!--------------------------------------------------------------html区域-------------------------------------------------------------------------------------------->
-<article>
-	
+<article style="display:none">
+	<section class="auth none">
+		<div class="cont">
+			<p>输入您的授权码</p>
+			<input type="text" id="authCode">
+			<div class="abtn">制作您的海报</div>
+		</div>
+	</section>
+
+	<section class="chose ">
+		<div class="opt jCol" data-val="japanC">
+			<img src="images/japan/col.jpg">
+		</div>
+		<div class="opt jRow" data-val="japanR">
+			<img src="images/japan/row.jpg" >
+		</div>
+		<div class="opt fCol" data-val="franceC">
+			<img src="images/france/col.jpg" >
+		</div>
+		<div class="opt fRow" data-val="franceR">
+			<img src="images/france/row.jpg">
+		</div>
+		<div class="tips">日式极简</div>
+		<div class="tips">法式缤纷</div>
+	</section>
+
+	<section class="control none">
+		
+	</section>
+
+	<section class="franceC none">
+		
+	</section>
+
+	<section class="franceR none">
+		
+	</section>
+
+	<section class="japanC none">
+		
+	</section>
+
+	<section class="japanR none">
+		
+	</section>
 </article>
+
+<aside id="tips" style="display:none">
+	<img src="images/public/tips.png">
+</aside>
+
+<aside id="preview" style="display:none">
+	
+</aside>
 <!--------------------------------------------------------------javascript区域-------------------------------------------------------------------------------------->
 <script src="https://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
 <script src="js/base/jquery.js"></script>
