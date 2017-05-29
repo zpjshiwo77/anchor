@@ -25,37 +25,96 @@ ibase.load('css/index.css');//无缓存加载文件
 		</div>
 	</section>
 
-	<section class="chose ">
-		<div class="opt jCol" data-val="japanC">
+	<section class="chose none">
+		<div class="opt jCol " data-val="japanC">
 			<img src="images/japan/col.jpg">
 		</div>
-		<div class="opt jRow" data-val="japanR">
+		<div class="opt jRow " data-val="japanR">
 			<img src="images/japan/row.jpg" >
 		</div>
-		<div class="opt fCol" data-val="franceC">
+		<div class="opt fCol " data-val="franceC">
 			<img src="images/france/col.jpg" >
 		</div>
-		<div class="opt fRow" data-val="franceR">
+		<div class="opt fRow " data-val="franceR">
 			<img src="images/france/row.jpg">
 		</div>
-		<div class="tips">日式极简</div>
-		<div class="tips">法式缤纷</div>
+		<div class="tips jp">日式极简</div>
+		<div class="tips fc">法式缤纷</div>
 	</section>
 
-	<section class="control none">
-		
-	</section>
+	<div class="control ">
+		<div class="funcBtns">
+			<div class="fbtn active" id="templet"></div>
+			<div class="fbtn" id="tone"></div>
+			<div class="fbtn" id="sticker"></div>
+		</div>
+		<div class="ibtn " id="next">下一步 <i>▲</i></div>
+		<div class="ibtn none" id="view">预览</div>
+		<div class="ibtn none" id="back">返回</div>
+
+		<div class="choseControl none" id="color">
+			<img src="images/japan/color1.png" data-val="1">
+			<img src="images/japan/color2.png" data-val="2">
+		</div>
+
+		<div class="none" id="stickers">
+			<div class="scrollBox" id="scrollBox">
+				<div class="moveBox">
+					<img src="images/sticker/1.png">
+					<img src="images/sticker/2.png">
+					<img src="images/sticker/3.png">
+					<img src="images/sticker/4.png">
+					<img src="images/sticker/5.png">
+					<img src="images/sticker/6.png">
+					<img src="images/sticker/7.png">
+					<img src="images/sticker/8.png">
+					<img src="images/sticker/9.png">
+					<img src="images/sticker/10.png">
+					<img src="images/sticker/11.png">
+					<img src="images/sticker/12.png">
+					<img src="images/sticker/13.png">
+					<img src="images/sticker/14.png">
+					<img src="images/sticker/15.png">
+					<img src="images/sticker/16.png">
+					<img src="images/sticker/17.png">
+				</div>
+			</div>
+		</div>
+	</div>
 
 	<section class="franceC none">
-		
+		<div class="cont bg1">
+			<div class="pattern pattern1 noPointer"></div>
+			<div class="ring noPointer"></div>
+
+			<div class="logo"></div>
+			<div class="code"></div>
+			<input type="text" placeholder="点击输入主标题" class="titleA">
+			<input type="text" placeholder="点击输入副标题" class="titleB">
+			<div class="shellBox">
+				<div class="shell"></div>
+				<div class="uploadBtn"></div>
+			</div>
+		</div>
 	</section>
 
 	<section class="franceR none">
 		
 	</section>
 
-	<section class="japanC none">
-		
+	<section class="japanC ">
+		<div class="cont bg1">
+			<div class="pattern pattern1 noPointer"></div>
+
+			<div class="logo"></div>
+			<div class="code"></div>
+			<input type="text" placeholder="点击输入主标题" class="titleA">
+			<input type="text" placeholder="点击输入副标题" class="titleB">
+			<div class="shellBox shellBox1">
+				<div class="shell"></div>
+				<div class="uploadBtn"></div>
+			</div>
+		</div>
 	</section>
 
 	<section class="japanR none">
@@ -76,6 +135,7 @@ ibase.load('css/index.css');//无缓存加载文件
 <script src="js/base/framwork.js"></script>
 <script src="js/base/monitor.js"></script>
 <script src="js/base/share.js"></script>
+<script src="js/widget/iscroll.js"></script>
 <script src="http://bamboo.api.be-xx.com/js/loop_api.js"></script>
 <script src="js/base/user.js"></script>
 <script>ibase.load('js/index.js');</script>

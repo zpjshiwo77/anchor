@@ -24,17 +24,24 @@ section{
     will-change:transform,opacity;
 }
 .ibtn{
-	position: fixed;
-	top: 10.3rem;
-	left: 50%;
-	width: 3.7rem;
-	height: 1rem;
-	margin-left: -1.85rem;
-	background: #c7000c;
-	color: #fff;
-	font-size: 0.45rem;
-	line-height: 1rem;
+	position: absolute;
+	bottom: 0.2rem;
+	right: 0.2rem;
+	width: 1.75rem;
+	height: 0.85rem;
 	text-align: center;
+	line-height: 0.85rem;
+	font-size: 0.29rem;
+	color: #626262;
+	font-weight: bold;
+	border-radius: 0.2rem;
+	box-shadow: 2px 2px 7px #777;
+	background: #fff;
+}
+.ibtn i{
+	display: inline-block;
+	font-size: 0.32rem;
+	-webkit-transform: rotate(90deg);
 }
 /*public end*/
 
@@ -97,41 +104,372 @@ section.chose{
 }
 section.chose .opt{
 	position: absolute;
-	border-radius: 0.2rem;
-	box-shadow: 10px 10px 10px #aaa;
+	border-radius: 0.1rem;
+	box-shadow: 5px 5px 10px #ddd;
+	box-sizing: content-box;
+	overflow: hidden;
+}
+section.chose .opt.active{
+	border: 0.1rem solid #e7563d;
+	box-shadow: none;
 }
 section.chose .opt img{
 	width: 100%;
-	border-radius: 0.2rem;
 }
 section.chose .jCol{
-	top: ;
-	left: ;
-	width: ;
-	height: ;
+	top: 1.2rem;
+	left: 0.5rem;
+	width: 2.43rem;
+	height: 4.3rem;
 }
 section.chose .jRow{
-	top: ;
-	left: ;
-	width: ;
-	height: ;
+	top: 1.7rem;
+	right: 0.5rem;
+	width: 3.66rem;
+	height: 2.06rem;
 }
 section.chose .fCol{
-	top: ;
-	left: ;
-	width: ;
-	height: ;
+	top: 5.4rem;
+	right: 0.5rem;
+	width: 2.43rem;
+	height: 4.3rem;
 }
 section.chose .fRow{
-	top: ;
-	left: ;
-	width: ;
-	height: ;
+	top: 7.5rem;
+	left: 0.5rem;
+	width: 3.66rem;
+	height: 2.06rem;
+}
+section.chose .tips{
+	position: absolute;
+	color: #373233;
+	font-size: 0.25rem;
+	border: 1px solid #373233;
+	padding: 0.1rem 0.3rem;
+	border-radius: 0.45rem;
+}
+section.chose .tips.jp{
+	top: 1rem;
+	right: 0.5rem;
+}
+section.chose .tips.fc{
+	top: 9.8rem;
+	left: 0.5rem;
 }
 /*chose end*/
+	
+div.control{
+	position: fixed;
+	z-index: 3;
+	width: 100%;
+	height: 1.05rem;
+	bottom: 0;
+	left: 0;
+}
+div.control .funcBtns{
+	position: absolute;
+	top: -0.08rem;
+	left: 0.1rem;
+	width: 5.42rem;
+	height: 1.12rem;
+	background: url(../images/public/control.png) no-repeat;
+	background-size: 100%;
+}
+div.control .funcBtns .fbtn{
+	width: 1.7rem;
+	height: 0.8rem;
+	background: rgba(255,255,255,0.7);
+	float: left;
+	margin-top: 0.1rem;
+	border-radius: 0.3rem;
+}
+div.control .funcBtns .fbtn.active{
+	background: none;
+}
+div.control .funcBtns .fbtn:first-child{
+	margin-left: 0.1rem;
+}
+
+div.control .choseControl{
+	position: absolute;
+	top: -1.7rem;
+	height: 1.4rem;
+	box-shadow: 4px 4px 10px #777;
+	background: #fff;
+	border-radius: 0.2rem;
+}
+div.control .choseControl:after{
+	content: "";
+	position: absolute;
+	border: 0.2rem solid #fff;
+	border-color: #fff rgba(0,0,0,0) rgba(0,0,0,0) rgba(0,0,0,0);
+	bottom: -0.35rem;
+	left: 50%;
+	margin-left: -0.2rem;
+}
+div.control .choseControl#color{
+	left: 1.05rem;
+	width: 3.2rem;
+}
+div.control .choseControl#color img{
+	width: 0.8rem;
+	margin: 0.3rem 0.38rem 0;
+}
+div.control #stickers{
+	position: absolute;
+	top: -1.9rem;
+	left: 0.06rem;
+	width: 7.38rem;
+	height: 1.82rem;
+	background: url(../images/public/stickersBox.png) no-repeat;
+	background-size: 100%;
+	overflow: hidden;
+	padding: 0 0.6rem;
+}
+div.control #stickers .scrollBox{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+div.control #stickers .scrollBox .moveBox{
+	height: 100%;
+	width: 17.6rem;
+	overflow: hidden;
+}
+div.control #stickers .scrollBox img{
+	height: 1rem;
+	margin-top: 0.3rem;
+}
+
+/*control end*/
+
+section.franceC .cont{
+	position: absolute;
+	top:0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+section.franceC .cont.bg1{
+	background: url(../images/france/bgCol1.jpg) no-repeat;
+	background-size: cover;
+}
+section.franceC .cont.bg2{
+	background: url(../images/france/bgCol2.jpg) no-repeat;
+	background-size: cover;
+}
+section.franceC .cont .logo{
+	position: absolute;
+	top: 0.35rem;
+	left: 0.35rem;
+	width: 1.45rem;
+	height: 1.45rem;
+	background: url(../images/public/logoW.png) no-repeat;
+	background-size: 100%;
+}
+section.franceC .cont .code{
+	position: absolute;
+	bottom: 0.6rem;
+	right: 0.2rem;
+	width: 1.65rem;
+	height: 1.65rem;
+	background: url(../images/public/codeG.png) no-repeat;
+	background-size: 100%;
+	z-index: 2;
+}
+section.franceC input{
+	border: 1px dashed #fff;
+	text-align: center;
+	color: #fff;
+	position: absolute;
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+}
+section.franceC input::-webkit-input-placeholder{
+	color: #fff;
+}
+section.franceC input.titleA{
+	width: 7.2rem;
+	height: 1rem;
+	font-size: 0.7rem;
+	font-weight: bold;
+	top: 2rem;
+	z-index: 2;
+}
+section.franceC input.titleB{
+	width: 6.4rem;
+	height: 0.8rem;
+	font-size: 0.45rem;
+	top: 3.1rem;
+	z-index: 2;
+}
+section.franceC .shellBox{
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	width: 7rem;
+	height: 8.38rem;
+	background: url(../images/france/uploadCol.png) no-repeat;
+	background-size: 100%;
+}
+section.franceC .shellBox .shell{
+	width: 100%;
+	height: 100%;
+	-webkit-mask-image: url(../images/france/maskCol.png);
+	-webkit-mask-size: 100%;
+}
+section.franceC .shellBox .uploadBtn{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top:0;
+	left: 0;
+}
+section.franceC .pattern{
+	position: absolute;
+	bottom: 4.9rem;
+	left: 1.35rem;
+	width: 2.39rem;
+	height: 2.5rem;
+	z-index: 2;
+}
+section.franceC .pattern1{
+	background: url(../images/france/lCol1.png) no-repeat;
+	background-size: 100%;
+}
+section.franceC .pattern2{
+	background: url(../images/france/lCol2.png) no-repeat;
+	background-size: 100%;
+}
+section.franceC .ring{
+	position: absolute;
+	bottom: 2.6rem;
+	left: 0.5rem;
+	width: 1.13rem;
+	height: 1.11rem;
+	background: url(../images/france/circle.png) no-repeat;
+	background-size: 100%;
+	z-index: 2;
+}
+/*franceC end*/
+
+section.japanC .cont{
+	position: absolute;
+	top:0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+section.japanC .cont.bg1{
+	background: #e6e7e8;
+}
+section.japanC .cont.bg2{
+	background: url(../images/japan/bgCol.jpg) no-repeat;
+	background-size: cover;
+}
+section.japanC .cont .logo{
+	position: absolute;
+	top: 0.2rem;
+	left: 0.2rem;
+	width: 1.2rem;
+	height: 1.2rem;
+	background: url(../images/public/logoG.png) no-repeat;
+	background-size: 100%;
+}
+section.japanC .cont .code{
+	position: absolute;
+	bottom: 0.7rem;
+	right: 0.2rem;
+	width: 1.3rem;
+	height: 1.3rem;
+	background: url(../images/public/codeG.png) no-repeat;
+	background-size: 100%;
+	z-index: 2;
+}
+section.japanC input{
+	border: 1px dashed #626262;
+	text-align: center;
+	color: #626262;
+	position: absolute;
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+}
+section.japanC input::-webkit-input-placeholder{
+	color: #626262;
+}
+section.japanC input.titleA{
+	width: 7.2rem;
+	height: 0.7rem;
+	font-size: 0.5rem;
+	font-weight: bold;
+	top: 1.5rem;
+	z-index: 2;
+}
+section.japanC input.titleB{
+	width: 6.4rem;
+	height: 0.45rem;
+	font-size: 0.35rem;
+	top: 2.3rem;
+	z-index: 2;
+}
+section.japanC .shellBox{
+	position: absolute;
+	top: 3rem;
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+	width: 6.27rem;
+	height: 6.28rem;
+	
+}
+section.japanC .shellBox.shellBox1{
+	background: url(../images/japan/upload1.png) no-repeat;
+	background-size: 100%;
+}
+section.japanC .shellBox.shellBox2{
+	background: url(../images/japan/upload2.png) no-repeat;
+	background-size: 100%;
+}
+section.japanC .shellBox .shell{
+	width: 100%;
+	height: 100%;
+	-webkit-mask-image: url(../images/japan/mask.png);
+	-webkit-mask-size: 100%;
+}
+section.japanC .shellBox .uploadBtn{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top:0;
+	left: 0;
+}
+section.japanC .pattern{
+	position: absolute;
+	top: 8.6rem;
+	left: 0;
+	width: 7.5rem;
+	height: 2.6rem;
+}
+section.japanC .pattern1{
+	background: url(../images/japan/chopsticks1.png) no-repeat;
+	background-size: 100%;
+}
+section.japanC .pattern2{
+	background: url(../images/japan/chopsticks2.png) no-repeat;
+	background-size: 100%;
+}
+/*japanC end*/
 /*---------------------------------------- css media 适配部分（针对使用虚拟系统按键的android）----------------------*/
 @media screen and (device-width:360px) and (max-height:560px), screen and (device-width:412px) and (max-height:650px) and (-webkit-min-device-pixel-ratio:3.5), screen and (device-width:540px) and (device-height:780px){
 	#tips img{width: 3.8rem;}
+	section.chose .jCol{top: 1.1rem;}
+	section.chose .jRow{top: 1.6rem;}
+	section.chose .fCol{top: 4.7rem;}
+	section.chose .fRow{top: 6.8rem;}
+	section.chose .tips.jp{top:0.9rem;}
+	section.chose .tips.fc{top:9.1rem;}
+	section.franceC .shellBox{width: 6rem;height: 7.184rem;}
+	section.franceC .pattern{left: 1.8rem;bottom:4.3rem;}
+	section.franceC .ring{left: 1.6rem;}
 }
 
 /*---------------------------------------- css media 适配部分（针对iphone4） ----------------------------------------------*/

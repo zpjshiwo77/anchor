@@ -4,6 +4,13 @@ $(document).ready(function(){
 	var loadBox=$('aside.loadBox');
 	var articleBox=$('article');
 	var windowScale=window.innerWidth/750;
+
+	var myScroll = new IScroll('#scrollBox',{
+		bounce:true,
+		click:true,
+		scrollX: true,
+		scrollY: false,
+	});
 	
 	//----------------------------------------页面初始化----------------------------------------
 	icom.init(init);//初始化
@@ -64,7 +71,7 @@ $(document).ready(function(){
 
 	//页面初始化
 	function pageInit(){
-
+		myScroll.refresh();
 	}//end func
 	
 	//----------------------------------------页面监测代码----------------------------------------
