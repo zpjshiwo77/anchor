@@ -9,7 +9,23 @@ $(document).ready(function(){
 		bounce:true,
 		click:true,
 		scrollX: true,
+		scrollY: false
+	});
+
+	var myScrollF = new IScroll('#f_r_scroll',{
+		bounce:true,
+		click:true,
+		scrollX: true,
 		scrollY: false,
+		preventDefault:false
+	});
+
+	var myScrollJ = new IScroll('#j_r_scroll',{
+		bounce:true,
+		click:true,
+		scrollX: true,
+		scrollY: false,
+		preventDefault:false
 	});
 	
 	//----------------------------------------页面初始化----------------------------------------
@@ -72,6 +88,8 @@ $(document).ready(function(){
 	//页面初始化
 	function pageInit(){
 		myScroll.refresh();
+		myScrollF.refresh();
+		myScrollJ.refresh();
 	}//end func
 	
 	//----------------------------------------页面监测代码----------------------------------------

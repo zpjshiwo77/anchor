@@ -163,7 +163,7 @@ div.control{
 	z-index: 3;
 	width: 100%;
 	height: 1.05rem;
-	bottom: 0;
+	top: 10.8rem;
 	left: 0;
 }
 div.control .funcBtns{
@@ -273,7 +273,7 @@ section.franceC .cont .code{
 	right: 0.2rem;
 	width: 1.65rem;
 	height: 1.65rem;
-	background: url(../images/public/codeG.png) no-repeat;
+	background: url(../images/public/code.jpg) no-repeat;
 	background-size: 100%;
 	z-index: 2;
 }
@@ -352,6 +352,121 @@ section.franceC .ring{
 	z-index: 2;
 }
 /*franceC end*/
+section.franceR .scrollBox,section.japanR .scrollBox{
+	position: absolute;
+	top: 0.7rem;
+	left: 0;
+	width: 100%;
+	height: 7.5rem;
+	overflow: hidden;
+}
+section.franceR .cont{
+	position: absolute;
+	top:0;
+	left: 0;
+	width: 12.06rem;
+	height: 7.5rem;
+}
+section.franceR .cont.bg1{
+	background: url(../images/france/bgRow1.jpg) no-repeat;
+	background-size: cover;
+}
+section.franceR .cont.bg2{
+	background: url(../images/france/bgRow2.jpg) no-repeat;
+	background-size: cover;
+}
+section.franceR .cont .logo{
+	position: absolute;
+	top: 0.35rem;
+	left: 0.35rem;
+	width: 1.45rem;
+	height: 1.45rem;
+	background: url(../images/public/logoW.png) no-repeat;
+	background-size: 100%;
+}
+section.franceR .cont .code{
+	position: absolute;
+	bottom: 0.35rem;
+	right: 0.35rem;
+	width: 1.4rem;
+	height: 1.4rem;
+	background: url(../images/public/code.jpg) no-repeat;
+	background-size: 100%;
+	z-index: 2;
+}
+section.franceR input{
+	border: 1px dashed #fff;
+	color: #fff;
+	position: absolute;
+	left: 0.35rem;
+}
+section.franceR input::-webkit-input-placeholder{
+	color: #fff;
+}
+section.franceR input.titleA{
+	width: 5.5rem;
+	height: 1rem;
+	font-size: 0.7rem;
+	font-weight: bold;
+	top: 2rem;
+	z-index: 2;
+}
+section.franceR input.titleB{
+	width: 4rem;
+	height: 0.8rem;
+	font-size: 0.45rem;
+	top: 3.1rem;
+	z-index: 2;
+}
+section.franceR .shellBox{
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	width: 8rem;
+	height: 6.14rem;
+	background: url(../images/france/uploadRow.png) no-repeat;
+	background-size: 100%;
+}
+section.franceR .shellBox .shell{
+	width: 100%;
+	height: 100%;
+	-webkit-mask-image: url(../images/france/maskRow.png);
+	-webkit-mask-size: 100%;
+}
+section.franceR .shellBox .uploadBtn{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top:0;
+	left: 0;
+}
+section.franceR .pattern{
+	position: absolute;
+	top: 1rem;
+	right: 0.1rem;
+	width: 2.49rem;
+	height: 2.4rem;
+	z-index: 2;
+}
+section.franceR .pattern1{
+	background: url(../images/france/lRow1.png) no-repeat;
+	background-size: 100%;
+}
+section.franceR .pattern2{
+	background: url(../images/france/lRow2.png) no-repeat;
+	background-size: 100%;
+}
+section.franceR .ring{
+	position: absolute;
+	top: 1.4rem;
+	left: 7.5rem;
+	width: 1.13rem;
+	height: 1.11rem;
+	background: url(../images/france/circle.png) no-repeat;
+	background-size: 100%;
+	z-index: 2;
+}
+/*franceR end*/
 
 section.japanC .cont{
 	position: absolute;
@@ -382,7 +497,7 @@ section.japanC .cont .code{
 	right: 0.2rem;
 	width: 1.3rem;
 	height: 1.3rem;
-	background: url(../images/public/codeG.png) no-repeat;
+	background: url(../images/public/code.jpg) no-repeat;
 	background-size: 100%;
 	z-index: 2;
 }
@@ -458,6 +573,112 @@ section.japanC .pattern2{
 	background-size: 100%;
 }
 /*japanC end*/
+
+section.japanR .cont{
+	position: absolute;
+	top:0;
+	left: 0;
+	width: 12.06rem;
+	height: 7.5rem;
+	overflow: hidden;
+}
+section.japanR .cont.bg1{
+	background: #e6e7e8;
+}
+section.japanR .cont.bg2{
+	background: url(../images/japan/bgRow.jpg) no-repeat;
+	background-size: cover;
+}
+section.japanR .cont .logo{
+	position: absolute;
+	top: 0.4rem;
+	left: 0.4rem;
+	width: 1.2rem;
+	height: 1.2rem;
+	background: url(../images/public/logoG.png) no-repeat;
+	background-size: 100%;
+}
+section.japanR .cont .code{
+	position: absolute;
+	bottom: 0.4rem;
+	right: 0.4rem;
+	width: 1.4rem;
+	height: 1.4rem;
+	background: url(../images/public/code.jpg) no-repeat;
+	background-size: 100%;
+	z-index: 2;
+}
+section.japanR input{
+	border: 1px dashed #626262;
+	color: #626262;
+	position: absolute;
+	left: 0.4rem;
+}
+section.japanR input::-webkit-input-placeholder{
+	color: #626262;
+}
+section.japanR input.titleA{
+	width: 4.5rem;
+	height: 0.9rem;
+	font-size: 0.6rem;
+	font-weight: bold;
+	top: 4.3rem;
+	z-index: 2;
+}
+section.japanR input.titleB{
+	width: 4rem;
+	height: 0.55rem;
+	font-size: 0.35rem;
+	top: 5.3rem;
+	z-index: 2;
+}
+section.japanR .shellBox{
+	position: absolute;
+	top: 50%;
+	left: 5rem;
+	-webkit-transform: translateY(-50%);
+	width: 5.5rem;
+	height: 5.5rem;
+	
+}
+section.japanR .shellBox.shellBox1{
+	background: url(../images/japan/upload1.png) no-repeat;
+	background-size: 100%;
+}
+section.japanR .shellBox.shellBox2{
+	background: url(../images/japan/upload2.png) no-repeat;
+	background-size: 100%;
+}
+section.japanR .shellBox .shell{
+	width: 100%;
+	height: 100%;
+	-webkit-mask-image: url(../images/japan/mask.png);
+	-webkit-mask-size: 100%;
+}
+section.japanR .shellBox .uploadBtn{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top:0;
+	left: 0;
+}
+section.japanR .pattern{
+	position: absolute;
+	top: 1.4rem;
+	left: 7.7rem;
+	width: 7.5rem;
+	height: 2.6rem;
+	-webkit-transform: scale(0.7, 0.7) rotate(-90deg);
+}
+section.japanR .pattern1{
+	background: url(../images/japan/chopsticks1.png) no-repeat;
+	background-size: 100%;
+}
+section.japanR .pattern2{
+	background: url(../images/japan/chopsticks2.png) no-repeat;
+	background-size: 100%;
+}
+/*japanR end*/
 /*---------------------------------------- css media 适配部分（针对使用虚拟系统按键的android）----------------------*/
 @media screen and (device-width:360px) and (max-height:560px), screen and (device-width:412px) and (max-height:650px) and (-webkit-min-device-pixel-ratio:3.5), screen and (device-width:540px) and (device-height:780px){
 	#tips img{width: 3.8rem;}
@@ -470,6 +691,7 @@ section.japanC .pattern2{
 	section.franceC .shellBox{width: 6rem;height: 7.184rem;}
 	section.franceC .pattern{left: 1.8rem;bottom:4.3rem;}
 	section.franceC .ring{left: 1.6rem;}
+	div.control{top:10rem;}
 }
 
 /*---------------------------------------- css media 适配部分（针对iphone4） ----------------------------------------------*/
