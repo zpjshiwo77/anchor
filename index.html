@@ -21,7 +21,7 @@ ibase.load('css/index.css');//无缓存加载文件
 		<div class="cont">
 			<p>输入您的授权码</p>
 			<input type="text" id="authCode">
-			<div class="abtn">制作您的海报</div>
+			<div class="abtn" id="vef">制作您的海报</div>
 		</div>
 	</section>
 
@@ -42,7 +42,7 @@ ibase.load('css/index.css');//无缓存加载文件
 		<div class="tips fc">法式缤纷</div>
 	</section>
 
-	<div class="control ">
+	<div class="control  none">
 		<div class="funcBtns">
 			<div class="fbtn active" id="templet"></div>
 			<div class="fbtn" id="tone"></div>
@@ -50,7 +50,7 @@ ibase.load('css/index.css');//无缓存加载文件
 		</div>
 		<div class="ibtn " id="next">下一步 <i>▲</i></div>
 		<div class="ibtn none" id="view">预览</div>
-		<div class="ibtn none" id="back">返回</div>
+		<!-- <div class="ibtn none" id="back">返回</div> -->
 
 		<div class="choseControl none" id="color">
 			<img src="images/japan/color1.png" data-val="1">
@@ -82,13 +82,19 @@ ibase.load('css/index.css');//无缓存加载文件
 		</div>
 	</div>
 
-	<section class="franceC none">
+	<section class="franceC ">
 		<div class="cont bg1">
 			<div class="pattern pattern1 noPointer"></div>
 			<div class="ring noPointer"></div>
 
-			<div class="logo"></div>
-			<div class="code"></div>
+			<div class="logo">
+				<div class="l-shell"></div>
+				<div class="l-ulBtn"></div>
+			</div>
+			<div class="code">
+				<div class="c-shell"></div>
+				<div class="c-ulBtn"></div>
+			</div>
 			<input type="text" placeholder="点击输入主标题" class="titleA">
 			<input type="text" placeholder="点击输入副标题" class="titleB">
 			<div class="shellBox">
@@ -98,14 +104,20 @@ ibase.load('css/index.css');//无缓存加载文件
 		</div>
 	</section>
 
-	<section class="franceR none">
+	<section class="franceR ">
 		<div class="scrollBox" id="f_r_scroll">
 			<div class="cont bg1">
 				<div class="pattern pattern1 noPointer"></div>
 				<div class="ring noPointer"></div>
 
-				<div class="logo"></div>
-				<div class="code"></div>
+				<div class="logo">
+					<div class="l-shell"></div>
+					<div class="l-ulBtn"></div>
+				</div>
+				<div class="code">
+					<div class="c-shell"></div>
+					<div class="c-ulBtn"></div>
+				</div>
 				<input type="text" placeholder="点击输入主标题" class="titleA">
 				<input type="text" placeholder="点击输入副标题" class="titleB">
 				<div class="shellBox">
@@ -116,18 +128,28 @@ ibase.load('css/index.css');//无缓存加载文件
 		</div>
 	</section>
 
-	<section class="japanC none">
+	<section class="japanC ">
 		<div class="cont bg1">
 			<div class="pattern pattern1 noPointer"></div>
 
-			<div class="logo"></div>
-			<div class="code"></div>
+			<div class="logo">
+				<div class="l-shell"></div>
+				<div class="l-ulBtn"></div>
+			</div>
+			<div class="code">
+				<div class="c-shell"></div>
+				<div class="c-ulBtn"></div>
+			</div>
 			<input type="text" placeholder="点击输入主标题" class="titleA">
 			<input type="text" placeholder="点击输入副标题" class="titleB">
 			<div class="shellBox shellBox1">
 				<div class="shell"></div>
 				<div class="uploadBtn"></div>
 			</div>
+			<!-- <div class="adorn">
+				<img src="images/sticker/1.png">
+				<div class="remove"></div>
+			</div> -->
 		</div>
 	</section>
 
@@ -136,8 +158,14 @@ ibase.load('css/index.css');//无缓存加载文件
 			<div class="cont bg1">
 				<div class="pattern pattern1 noPointer"></div>
 
-				<div class="logo"></div>
-				<div class="code"></div>
+				<div class="logo">
+					<div class="l-shell"></div>
+					<div class="l-ulBtn"></div>
+				</div>
+				<div class="code">
+					<div class="c-shell"></div>
+					<div class="c-ulBtn"></div>
+				</div>
 				<input type="text" placeholder="点击输入主标题" class="titleA">
 				<input type="text" placeholder="点击输入副标题" class="titleB">
 				<div class="shellBox shellBox1">
@@ -165,6 +193,10 @@ ibase.load('css/index.css');//无缓存加载文件
 <script src="js/widget/iscroll.js"></script>
 <script src="http://bamboo.api.be-xx.com/js/loop_api.js"></script>
 <script src="js/base/user.js"></script>
+<script src="js/base/reader.js"></script>
+<script src="js/canvas/html2canvas.js"></script>
+<script src="js/canvas/jcanvas.js"></script>
+<script src="js/widget/camera.js"></script>
 <script>ibase.load('js/index.js');</script>
 </body>
 </html>

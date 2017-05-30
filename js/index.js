@@ -5,6 +5,17 @@ $(document).ready(function(){
 	var articleBox=$('article');
 	var windowScale=window.innerWidth/750;
 
+	var authBox = $("section.auth");
+	var choseBox = $("section.chose");
+	var controlBox = $("div.control");
+	var japanCBox = $("section.japanC");
+	var japanRBox = $("section.japanR");
+	var franceCBox = $("section.franceC");
+	var franceRBox = $("section.franceR");
+
+	var itemplet = "";
+	var controlFlag = false;
+
 	var myScroll = new IScroll('#scrollBox',{
 		bounce:true,
 		click:true,
@@ -17,7 +28,8 @@ $(document).ready(function(){
 		click:true,
 		scrollX: true,
 		scrollY: false,
-		preventDefault:false
+		preventDefault:false,
+		preventDefaultException:{className: /(^|\s)formfield(\s|$)/}
 	});
 
 	var myScrollJ = new IScroll('#j_r_scroll',{
@@ -25,8 +37,22 @@ $(document).ready(function(){
 		click:true,
 		scrollX: true,
 		scrollY: false,
-		preventDefault:false
+		preventDefault:false,
+		preventDefaultException:{className: /(^|\s)formfield(\s|$)/}
 	});
+
+	var camera_j_c_m = new camera();
+	var camera_j_c_l = new camera();
+	var camera_j_c_c = new camera();
+	var camera_j_r_m = new camera();
+	var camera_j_r_l = new camera();
+	var camera_j_r_c = new camera();
+	var camera_f_c_m = new camera();
+	var camera_f_c_l = new camera();
+	var camera_f_c_c = new camera();
+	var camera_f_r_m = new camera();
+	var camera_f_r_l = new camera();
+	var camera_f_r_c = new camera();
 	
 	//----------------------------------------页面初始化----------------------------------------
 	icom.init(init);//初始化
@@ -87,9 +113,184 @@ $(document).ready(function(){
 
 	//页面初始化
 	function pageInit(){
-		myScroll.refresh();
-		myScrollF.refresh();
-		myScrollJ.refresh();
+		btnInit();
+		choseBoxShow();
+		cameraInit();
+	}//end func
+
+	//相机初始化
+	function cameraInit(){
+		camera_j_c_m.init($(".japanC .shell"),$(".japanC .uploadBtn"),true);
+		camera_j_c_l.init($(".japanC .l-shell"),$(".japanC .l-ulBtn"),false);
+		camera_j_c_c.init($(".japanC .c-shell"),$(".japanC .c-ulBtn"),false);
+
+		camera_j_r_m.init($(".japanR .shell"),$(".japanR .uploadBtn"),true);
+		camera_j_r_l.init($(".japanR .l-shell"),$(".japanR .l-ulBtn"),false);
+		camera_j_r_c.init($(".japanR .c-shell"),$(".japanR .c-ulBtn"),false);
+
+		camera_f_c_m.init($(".franceC .shell"),$(".franceC .uploadBtn"),true);
+		camera_f_c_l.init($(".franceC .l-shell"),$(".franceC .l-ulBtn"),false);
+		camera_f_c_c.init($(".franceC .c-shell"),$(".franceC .c-ulBtn"),false);
+
+		camera_f_r_m.init($(".franceR .shell"),$(".franceR .uploadBtn"),true);
+		camera_f_r_l.init($(".franceR .l-shell"),$(".franceR .l-ulBtn"),false);
+		camera_f_r_c.init($(".franceR .c-shell"),$(".franceR .c-ulBtn"),false);
+
+		japanCBox.hide();
+		japanRBox.hide();
+		franceCBox.hide();
+		franceRBox.hide();
+	}//end func
+
+	//按钮初始化
+	function btnInit(){
+		$("#vef").on("click",sendCode);
+		$(".opt").on("click",choseTemplet);
+		$("#next").on("click",confirmTem);
+		$("#tone").on("click",toneShow);
+		$("#sticker").on("click",stickerShow);
+		$("#color img").on("click",switchColor);
+		$("#templet").on("click",backToChose);
+		$("#stickers img").on("click",addAdorn);
+		$(".cont").on("click",".adorn .remove",delAdorn);
+		$(".cont").on("touchmove",".adorn",moveAdorn);
+		$("#view").on("click",previewPoster);
+	}//end func
+
+	//预览海报
+	function previewPoster(){
+		icom.fadeIn(loadBox);
+		icamera.makeImg($("."+itemplet+" .cont"),function(img){
+			icom.fadeOut(loadBox);
+			console.log(img);
+		})
+	}//end func
+
+	//移动装饰
+	function moveAdorn(e){
+		var x = e.offsetX - $(this).width()/2;
+		var y = e.offsetY - $(this).height()/2;
+		$(this).css({x:x,y:y});
+		e.stopPropagation();
+	}//end func
+
+	//删除装饰
+	function delAdorn(){
+		$(this).parents(".adorn").remove();
+	}//end func
+
+	//添加装饰
+	function addAdorn(){
+		var img = $(this).attr("src");
+		var cont = '<div class="adorn"> <img src="'+img+'"> <div class="remove"></div> </div>';
+		$("."+itemplet+" .cont").append(cont);
+	}//end func
+
+	//返回选择模板
+	function backToChose(){
+		if(!$(this).hasClass("active") && controlFlag){
+			controlFlag = false;
+			$("#templet").addClass("active");
+			$("#view").hide();
+			$("#next").show();
+			$("."+itemplet).hide();
+			$("."+itemplet+" .uploadBtn").show();
+			choseBoxShow();
+		}
+	}//end func
+
+	//发送授权码
+	function sendCode(){
+		var code = $("#authCode").val();
+		if(code != ""){
+			authBox.hide();
+			choseBoxShow();
+		} 
+		else icom.alert("授权码不能为空!");
+	}//end func
+
+	//选择模板页面显示
+	function choseBoxShow(){
+		icom.fadeIn(choseBox);
+		icom.fadeIn(controlBox);
+	}//end func
+
+	//选择模板
+	function choseTemplet(){
+		itemplet = $(this).data("val");
+		$(".opt").removeClass("active");
+		$(this).addClass("active");
+	}//end func
+
+	//确认选择模板
+	function confirmTem(){
+		if(itemplet == ""){
+			icom.alert("请选择您的模板");
+		}
+		else{
+			$("#next").hide();
+			$("#view").show();
+			choseBox.hide();
+			controlFlag = true;
+			$("#templet").removeClass("active");
+			icom.fadeIn($("."+itemplet),500,function(){
+				if(itemplet == "japanR") myScrollJ.refresh();
+				else if(itemplet == "franceR") myScrollF.refresh();
+				if(itemplet == "japanR" || itemplet == "japanC"){
+					$("#color img").eq(0)[0].src = "images/japan/color1.png";
+					$("#color img").eq(1)[0].src = "images/japan/color2.png";
+				}
+				else{
+					$("#color img").eq(0)[0].src = "images/france/color1.png";
+					$("#color img").eq(1)[0].src = "images/france/color2.png";
+				}
+			});
+		}
+	}//end func
+
+	//显示色调板
+	function toneShow(){
+		var that = $(this);
+		if(!that.hasClass("active") && controlFlag){
+			that.addClass("active");
+			icom.fadeIn($("#color"),200,function(){
+				controlFlag = false;
+			});
+		}
+		else if(that.hasClass("active")){
+			that.removeClass("active");
+			icom.fadeOut($("#color"),200,function(){
+				controlFlag = true;
+			});
+		}
+	}//end func
+
+	//显示贴纸板
+	function stickerShow(){
+		var that = $(this);
+		if(!that.hasClass("active") && controlFlag){
+			that.addClass("active");
+			icom.fadeIn($("#stickers"),200,function(){
+				controlFlag = false;
+				myScroll.refresh();
+			});
+		}
+		else if(that.hasClass("active")){
+			that.removeClass("active");
+			icom.fadeOut($("#stickers"),200,function(){
+				controlFlag = true;
+			});
+		}
+	}//end func
+
+	//切换颜色
+	function switchColor(){
+		var c = $(this).data("val");
+		if(itemplet == "japanR" || itemplet == "japanC"){
+			$("."+itemplet+" .shellBox").removeClass("shellBox1 shellBox2").addClass("shellBox"+c);
+		}
+		$("."+itemplet+" .cont").removeClass("bg1 bg2").addClass("bg"+c);
+		$("."+itemplet+" .pattern").removeClass("pattern1 pattern2").addClass("pattern"+c);
 	}//end func
 	
 	//----------------------------------------页面监测代码----------------------------------------

@@ -479,7 +479,7 @@ IScroll.prototype = {
 		}
 
 		if ( this.options.preventDefault && !utils.isBadAndroid && !utils.preventDefaultException(e.target, this.options.preventDefaultException) ) {
-			e.preventDefault();
+			// e.preventDefault();
 		}
 
 		var point = e.touches ? e.touches[0] : e,
@@ -522,7 +522,7 @@ IScroll.prototype = {
 		}
 
 		if ( this.options.preventDefault ) {	// increases performance on Android? TODO: check!
-			e.preventDefault();
+			// e.preventDefault();
 		}
 
 		var point		= e.touches ? e.touches[0] : e,
@@ -558,7 +558,7 @@ IScroll.prototype = {
 
 		if ( this.directionLocked == 'h' ) {
 			if ( this.options.eventPassthrough == 'vertical' ) {
-				e.preventDefault();
+				// e.preventDefault();
 			} else if ( this.options.eventPassthrough == 'horizontal' ) {
 				this.initiated = false;
 				return;
@@ -567,7 +567,7 @@ IScroll.prototype = {
 			deltaY = 0;
 		} else if ( this.directionLocked == 'v' ) {
 			if ( this.options.eventPassthrough == 'horizontal' ) {
-				e.preventDefault();
+				// e.preventDefault();
 			} else if ( this.options.eventPassthrough == 'vertical' ) {
 				this.initiated = false;
 				return;
@@ -619,7 +619,7 @@ IScroll.prototype = {
 		}
 
 		if ( this.options.preventDefault && !utils.preventDefaultException(e.target, this.options.preventDefaultException) ) {
-			e.preventDefault();
+			// e.preventDefault();
 		}
 
 		var point = e.changedTouches ? e.changedTouches[0] : e,
@@ -1157,7 +1157,7 @@ IScroll.prototype = {
 			return;
 		}
 
-		e.preventDefault();
+		// e.preventDefault();
 
 		var wheelDeltaX, wheelDeltaY,
 			newX, newY,
@@ -1700,7 +1700,7 @@ IScroll.prototype = {
 				break;
 			case 'click':
 				if ( this.enabled && !e._constructed ) {
-					e.preventDefault();
+					// e.preventDefault();
 					e.stopPropagation();
 				}
 				break;
@@ -1861,7 +1861,7 @@ Indicator.prototype = {
 	_start: function (e) {
 		var point = e.touches ? e.touches[0] : e;
 
-		e.preventDefault();
+		// e.preventDefault();
 		e.stopPropagation();
 
 		this.transitionTime();
@@ -1911,7 +1911,7 @@ Indicator.prototype = {
 
 // INSERT POINT: indicator._move
 
-		e.preventDefault();
+		// e.preventDefault();
 		e.stopPropagation();
 	},
 
@@ -1922,7 +1922,7 @@ Indicator.prototype = {
 
 		this.initiated = false;
 
-		e.preventDefault();
+		// e.preventDefault();
 		e.stopPropagation();
 
 		utils.removeEvent(window, 'touchmove', this);
