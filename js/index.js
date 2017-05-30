@@ -76,8 +76,34 @@ $(document).ready(function(){
 	//----------------------------------------加载页面图片----------------------------------------
 	function load_handler(){
 		var loader = new PxLoader();
-		loader.addImage('images/common/turn.png');
-		
+
+		loader.addImage('images/auth/bg.jpg');
+
+		for (var i = 1; i <= 2; i++) {
+			loader.addImage('images/japan/chopsticks'+i+'.png');
+			loader.addImage('images/japan/chopsticks'+i+'r.png');
+			loader.addImage('images/japan/color'+i+'.png');
+			loader.addImage('images/japan/upload'+i+'.png');
+		};
+		loader.addImage('images/japan/bgCol.jpg');
+		loader.addImage('images/japan/bgRow.jpg');
+		loader.addImage('images/japan/col.jpg');
+		loader.addImage('images/japan/row.jpg');
+		loader.addImage('images/japan/upbtn.png');
+
+		loader.addImage('images/public/code.jpg');
+		loader.addImage('images/public/control.png');
+		loader.addImage('images/public/head.png');
+		loader.addImage('images/public/logoG.png');
+		loader.addImage('images/public/logoW.png');
+		loader.addImage('images/public/share.png');
+		loader.addImage('images/public/stickersBox.png');
+		loader.addImage('images/public/tips.png');
+
+		loader.addImage('images/sticker/c.png');
+		for (var i = 1; i <= 17; i++) {
+			loader.addImage('images/sticker/'+i+'.png');
+		};
 		//实际加载进度
 //		loader.addProgressListener(function(e) {
 //			var per=Math.round(e.completedCount/e.totalCount*50);
@@ -177,8 +203,21 @@ $(document).ready(function(){
 				icom.fadeOut(loadBox);
 				$("#preview img")[0].src = img;
 				icom.popOn($("#preview"),{fade:500,onClose:showTips});
+				sendInfo(img);
+				resetShare(img);
 			});
 		}
+	}//end func
+
+	//重置分享
+	function resetShare(img){
+		var url=location.href.substr(0, location.href.lastIndexOf('/')+1) + "share.html?i=" + img;
+		ishare.reset({link:url});
+	}//end func
+
+	//发送信息
+	function sendInfo(img){
+
 	}//end func
 
 	//显示提示

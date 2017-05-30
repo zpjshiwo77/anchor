@@ -64,6 +64,28 @@ section{
 }
 /*public end*/
 
+.moving{
+	-webkit-animation: moving 2s infinite;
+}
+@-webkit-keyframes moving{
+	0%{-webkit-transform: translate(-0.2rem, -0.2rem);}
+	50%{-webkit-transform: translate(0rem, 0rem);}
+	100%{-webkit-transform: translate(-0.2rem, -0.2rem);}
+}
+
+.beating{
+	-webkit-animation: beating 2s infinite;
+}
+@-webkit-keyframes beating{
+	0%{-webkit-transform: translateY(0rem);}
+	10%{-webkit-transform: translateY(-0.1rem);}
+	20%{-webkit-transform: translateY(0rem);}
+	30%{-webkit-transform: translateY(-0.1rem);}
+	40%{-webkit-transform: translateY(0rem);}
+	50%{-webkit-transform: translateY(-0.1rem);}
+	100%{-webkit-transform: translateY(0rem);}
+}
+/*anime end*/
 section.auth{
 	background: url(../images/auth/bg.jpg) no-repeat;
 	background-size: 100%;
@@ -752,7 +774,36 @@ section.japanR .pattern2{
 #preview img{
 	width: 100%;
 }
+#preview .tips{
+	position: absolute;
+	text-align: center;
+	width: 2rem;
+	height: auto;
+	bottom: 1rem;
+	left: 50%;
+	margin-left: -1rem;
+}
+#preview .tips img{
+	width: 0.67rem;
+}
+#preview .tips p{
+    font-size: 0.29rem;
+    color: #626262;
+    font-weight: bold;
+    padding-top: 0.2rem;
+}
+
+#preview .share{
+	position: absolute;
+	top: 0.2rem;
+	right: 0.2rem;
+	width: 1.92rem;
+	height: 0.85rem;
+	background: url(../images/public/share.png) no-repeat;
+	background-size: 100%;
+}
 /*preview end*/
+
 /*---------------------------------------- css media 适配部分（针对使用虚拟系统按键的android）----------------------*/
 @media screen and (device-width:360px) and (max-height:560px), screen and (device-width:412px) and (max-height:650px) and (-webkit-min-device-pixel-ratio:3.5), screen and (device-width:540px) and (device-height:780px){
 	#tips img{width: 3.8rem;}
