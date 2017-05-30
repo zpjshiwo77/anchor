@@ -23,23 +23,23 @@ $(document).ready(function(){
 		scrollY: false
 	});
 
-	var myScrollF = new IScroll('#f_r_scroll',{
-		bounce:true,
-		click:true,
-		scrollX: true,
-		scrollY: false,
-		preventDefault:false,
-		preventDefaultException:{className: /(^|\s)formfield(\s|$)/}
-	});
+	// var myScrollF = new IScroll('#f_r_scroll',{
+	// 	bounce:true,
+	// 	click:true,
+	// 	scrollX: true,
+	// 	scrollY: false,
+	// 	preventDefault:false,
+	// 	preventDefaultException:{className: /(^|\s)formfield(\s|$)/}
+	// });
 
-	var myScrollJ = new IScroll('#j_r_scroll',{
-		bounce:true,
-		click:true,
-		scrollX: true,
-		scrollY: false,
-		preventDefault:false,
-		preventDefaultException:{className: /(^|\s)formfield(\s|$)/}
-	});
+	// var myScrollJ = new IScroll('#j_r_scroll',{
+	// 	bounce:true,
+	// 	click:true,
+	// 	scrollX: true,
+	// 	scrollY: false,
+	// 	preventDefault:false,
+	// 	preventDefaultException:{className: /(^|\s)formfield(\s|$)/}
+	// });
 
 	var camera_j_c_m = new camera();
 	var camera_j_c_l = new camera();
@@ -120,21 +120,21 @@ $(document).ready(function(){
 
 	//相机初始化
 	function cameraInit(){
-		camera_j_c_m.init($(".japanC .shell"),$(".japanC .uploadBtn"),true);
-		camera_j_c_l.init($(".japanC .l-shell"),$(".japanC .l-ulBtn"),false);
-		camera_j_c_c.init($(".japanC .c-shell"),$(".japanC .c-ulBtn"),false);
+		camera_j_c_m.init($(".japanC .shell"),$(".japanC .uploadBtn"),true,function(){$(".japanC .shell").addClass("up")});
+		camera_j_c_l.init($(".japanC .l-shell"),$(".japanC .l-ulBtn"),false,function(){$(".japanC .l-shell").addClass("up")});
+		camera_j_c_c.init($(".japanC .c-shell"),$(".japanC .c-ulBtn"),false,function(){$(".japanC .c-shell").addClass("up")});
 
-		camera_j_r_m.init($(".japanR .shell"),$(".japanR .uploadBtn"),true);
-		camera_j_r_l.init($(".japanR .l-shell"),$(".japanR .l-ulBtn"),false);
-		camera_j_r_c.init($(".japanR .c-shell"),$(".japanR .c-ulBtn"),false);
+		camera_j_r_m.init($(".japanR .shell"),$(".japanR .uploadBtn"),true,function(){$(".japanR .shell").addClass("up")});
+		camera_j_r_l.init($(".japanR .l-shell"),$(".japanR .l-ulBtn"),false,function(){$(".japanR .l-shell").addClass("up")});
+		camera_j_r_c.init($(".japanR .c-shell"),$(".japanR .c-ulBtn"),false,function(){$(".japanR .c-shell").addClass("up")});
 
-		camera_f_c_m.init($(".franceC .shell"),$(".franceC .uploadBtn"),true);
-		camera_f_c_l.init($(".franceC .l-shell"),$(".franceC .l-ulBtn"),false);
-		camera_f_c_c.init($(".franceC .c-shell"),$(".franceC .c-ulBtn"),false);
+		camera_f_c_m.init($(".franceC .shell"),$(".franceC .uploadBtn"),true,function(){$(".franceC .shell").addClass("up")});
+		camera_f_c_l.init($(".franceC .l-shell"),$(".franceC .l-ulBtn"),false,function(){$(".franceC .l-shell").addClass("up")});
+		camera_f_c_c.init($(".franceC .c-shell"),$(".franceC .c-ulBtn"),false,function(){$(".franceC .c-shell").addClass("up")});
 
-		camera_f_r_m.init($(".franceR .shell"),$(".franceR .uploadBtn"),true);
-		camera_f_r_l.init($(".franceR .l-shell"),$(".franceR .l-ulBtn"),false);
-		camera_f_r_c.init($(".franceR .c-shell"),$(".franceR .c-ulBtn"),false);
+		camera_f_r_m.init($(".franceR .shell"),$(".franceR .uploadBtn"),true,function(){$(".franceR .shell").addClass("up")});
+		camera_f_r_l.init($(".franceR .l-shell"),$(".franceR .l-ulBtn"),false,function(){$(".franceR .l-shell").addClass("up")});
+		camera_f_r_c.init($(".franceR .c-shell"),$(".franceR .c-ulBtn"),false,function(){$(".franceR .c-shell").addClass("up")});
 
 		japanCBox.hide();
 		japanRBox.hide();
@@ -159,11 +159,52 @@ $(document).ready(function(){
 
 	//预览海报
 	function previewPoster(){
-		icom.fadeIn(loadBox);
-		icamera.makeImg($("."+itemplet+" .cont"),function(img){
-			icom.fadeOut(loadBox);
-			console.log(img);
-		})
+		var titleA = $("."+itemplet+" .titleA").val();
+		var titleB = $("."+itemplet+" .titleB").val();
+		var logo = $("."+itemplet+" .shell").hasClass("up");
+		var code = $("."+itemplet+" .l-shell").hasClass("up");
+		var main = $("."+itemplet+" .c-shell").hasClass("up");
+
+		if(titleA == "") icom.alert("请输入主标题");
+		else if(titleB == "") icom.alert("请输入副标题");
+		else if(!logo) icom.alert("请上传logo");
+		else if(!main) icom.alert("请上传一张内容图片");
+		else if(!code) icom.alert("请上传一张二维码图片");
+		else{
+			icom.fadeIn(loadBox);
+			removeTips();
+			icamera.makeImg($("."+itemplet+" .cont"),function(img){
+				icom.fadeOut(loadBox);
+				$("#preview img")[0].src = img;
+				icom.popOn($("#preview"),{fade:500,onClose:showTips});
+			});
+		}
+	}//end func
+
+	//显示提示
+	function showTips(){
+		var titleA = $("."+itemplet+" .titleA");
+		var titleB = $("."+itemplet+" .titleB");
+		var adornC = $(".adorn .remove");
+		var upload = $("."+itemplet+" .uploadBtn");
+
+		titleA.css("border-color","#626262");
+		titleB.css("border-color","#626262");
+		adornC.show();
+		upload.show();
+	}//end func
+
+	//移除掉一些提示
+	function removeTips(){
+		var titleA = $("."+itemplet+" .titleA");
+		var titleB = $("."+itemplet+" .titleB");
+		var adornC = $(".adorn .remove");
+		var upload = $("."+itemplet+" .uploadBtn");
+
+		titleA.css("border-color","rgba(0,0,0,0)");
+		titleB.css("border-color","rgba(0,0,0,0)");
+		adornC.hide();
+		upload.hide();
 	}//end func
 
 	//移动装饰
@@ -234,8 +275,8 @@ $(document).ready(function(){
 			controlFlag = true;
 			$("#templet").removeClass("active");
 			icom.fadeIn($("."+itemplet),500,function(){
-				if(itemplet == "japanR") myScrollJ.refresh();
-				else if(itemplet == "franceR") myScrollF.refresh();
+				// if(itemplet == "japanR") myScrollJ.refresh();
+				// else if(itemplet == "franceR") myScrollF.refresh();
 				if(itemplet == "japanR" || itemplet == "japanC"){
 					$("#color img").eq(0)[0].src = "images/japan/color1.png";
 					$("#color img").eq(1)[0].src = "images/japan/color2.png";

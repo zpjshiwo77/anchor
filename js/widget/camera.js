@@ -8,12 +8,16 @@ var camera = function(){
 	var imgScaleMin=0.1,imgScaleMax=5,imgScaleTimer;
     var fileInput;
     var control = true;
+    var callback = function(){
+    	cobsole.log("upimg");
+    };
 
     //初始化
-    _self.init = function(box,btn,c){
+    _self.init = function(box,btn,c,onUoload){
     	imgShell = box;
     	btnCamera = btn;
     	control = c;
+    	if(onUoload) callback = onUoload;
 
     	fileInput=$('<input type="file" accept="image/*" name="imageInput" class="formfield"/>').appendTo(btnCamera);
 		fileInput.on('change',file_select);
@@ -58,6 +62,7 @@ var camera = function(){
    //复制图片至canvas
 	function img_creat(src,wd,ht){	
 		loadBox.hide();
+		callback();
 		if(control) btnCamera.hide();
 		var size=imath.autoSize([wd,ht],[imgShell.width() * 2,imgShell.height() * 2],1);
 		imgCanvas.removeLayers()
