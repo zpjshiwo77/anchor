@@ -42,7 +42,7 @@ var camera = function(){
             height:shareContent.height() //dom 原始高度
         };
         html2canvas(shareContent[0], opts).then(function (canvas) {
-            icom.canvas_send(canvas,callback,'loop_test');
+            icom.canvas_send(canvas,callback,'anchor');
         });
     }//end func
 
