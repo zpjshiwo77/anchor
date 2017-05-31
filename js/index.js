@@ -15,6 +15,8 @@ $(document).ready(function(){
 
 	var itemplet = "";
 	var controlFlag = false;
+	var first = true;
+	var nowStep = 0;
 
 	var myScroll = new IScroll('#scrollBox',{
 		bounce:true,
@@ -91,6 +93,11 @@ $(document).ready(function(){
 			loader.addImage('images/japan/color'+i+'.png');
 			loader.addImage('images/japan/upload'+i+'.png');
 		};
+
+		for (var i = 0; i < 5; i++) {
+			loader.addImage('images/public/step'+i+'.png');
+		};
+
 		loader.addImage('images/france/col.jpg');
 		loader.addImage('images/france/row.jpg');
 
@@ -157,19 +164,19 @@ $(document).ready(function(){
 	function cameraInit(){
 		camera_j_c_m.init($(".japanC .shell"),$(".japanC .uploadBtn"),true,function(){$(".japanC .shell").addClass("up")});
 		camera_j_c_l.init($(".japanC .l-shell"),$(".japanC .l-ulBtn"),false,function(){$(".japanC .l-shell").addClass("up")});
-		camera_j_c_c.init($(".japanC .c-shell"),$(".japanC .c-ulBtn"),false,function(){$(".japanC .c-shell").addClass("up")});
+		camera_j_c_c.init($(".japanC .c-shell"),$(".japanC .c-ulBtn"),false,function(){$(".japanC .c-shell").addClass("up");if(nowStep == 1) {icom.fadeIn($("#next"));}});
 
 		camera_j_r_m.init($(".japanR .shell"),$(".japanR .uploadBtn"),true,function(){$(".japanR .shell").addClass("up")});
 		camera_j_r_l.init($(".japanR .l-shell"),$(".japanR .l-ulBtn"),false,function(){$(".japanR .l-shell").addClass("up")});
-		camera_j_r_c.init($(".japanR .c-shell"),$(".japanR .c-ulBtn"),false,function(){$(".japanR .c-shell").addClass("up")});
+		camera_j_r_c.init($(".japanR .c-shell"),$(".japanR .c-ulBtn"),false,function(){$(".japanR .c-shell").addClass("up");if(nowStep == 1) {icom.fadeIn($("#next"));}});
 
 		camera_f_c_m.init($(".franceC .shell"),$(".franceC .uploadBtn"),true,function(){$(".franceC .shell").addClass("up")});
 		camera_f_c_l.init($(".franceC .l-shell"),$(".franceC .l-ulBtn"),false,function(){$(".franceC .l-shell").addClass("up")});
-		camera_f_c_c.init($(".franceC .c-shell"),$(".franceC .c-ulBtn"),false,function(){$(".franceC .c-shell").addClass("up")});
+		camera_f_c_c.init($(".franceC .c-shell"),$(".franceC .c-ulBtn"),false,function(){$(".franceC .c-shell").addClass("up");if(nowStep == 1) {icom.fadeIn($("#next"));}});
 
 		camera_f_r_m.init($(".franceR .shell"),$(".franceR .uploadBtn"),true,function(){$(".franceR .shell").addClass("up")});
 		camera_f_r_l.init($(".franceR .l-shell"),$(".franceR .l-ulBtn"),false,function(){$(".franceR .l-shell").addClass("up")});
-		camera_f_r_c.init($(".franceR .c-shell"),$(".franceR .c-ulBtn"),false,function(){$(".franceR .c-shell").addClass("up")});
+		camera_f_r_c.init($(".franceR .c-shell"),$(".franceR .c-ulBtn"),false,function(){$(".franceR .c-shell").addClass("up");if(nowStep == 1) {icom.fadeIn($("#next"));}});
 
 		japanCBox.hide();
 		japanRBox.hide();
@@ -181,7 +188,19 @@ $(document).ready(function(){
 	function btnInit(){
 		$("#vef").on("click",sendCode);
 		$(".opt").on("click",choseTemplet);
-		$("#next").on("click",confirmTem);
+		$("#next").on("click",function(){
+			if(nowStep == 0) confirmTem();
+			if(nowStep == 1) judgeVal();
+			if(nowStep == 2){
+				if($("#tone").hasClass('active')) $("#tone").click();
+				icom.fadeIn($("#view"),500,function(){
+					nowStep++;
+					$("#sticker").click();
+					$("#next").hide();
+					if(nowStep == 3) showTipsDialog(nowStep);
+				});
+			}
+		});
 		$("#tone").on("click",toneShow);
 		$("#sticker").on("click",stickerShow);
 		$("#color img").on("click",switchColor);
@@ -190,15 +209,21 @@ $(document).ready(function(){
 		$(".cont").on("click",".adorn .remove",delAdorn);
 		$(".cont").on("touchmove",".adorn",moveAdorn);
 		$("#view").on("click",previewPoster);
+		$("#stickers .prev").on("click",function(){
+			stickersMove(1)
+		});
+		$("#stickers .next").on("click",function(){
+			stickersMove(-1);
+		});
 	}//end func
 
-	//预览海报
-	function previewPoster(){
+	//判断值
+	function judgeVal(){
 		var titleA = $("."+itemplet+" .titleA").val();
 		var titleB = $("."+itemplet+" .titleB").val();
-		var logo = $("."+itemplet+" .shell").hasClass("up");
-		var code = $("."+itemplet+" .l-shell").hasClass("up");
-		var main = $("."+itemplet+" .c-shell").hasClass("up");
+		var main = $("."+itemplet+" .shell").hasClass("up");
+		var logo = $("."+itemplet+" .l-shell").hasClass("up");
+		var code = $("."+itemplet+" .c-shell").hasClass("up");
 
 		if(titleA == "") icom.alert("请输入主标题");
 		else if(titleB == "") icom.alert("请输入副标题");
@@ -206,16 +231,35 @@ $(document).ready(function(){
 		else if(!main) icom.alert("请上传一张内容图片");
 		else if(!code) icom.alert("请上传一张二维码图片");
 		else{
-			icom.fadeIn(loadBox);
-			removeTips();
-			icamera.makeImg($("."+itemplet+" .cont"),function(img){
-				icom.fadeOut(loadBox);
-				$("#preview img")[0].src = img;
-				icom.popOn($("#preview"),{fade:500,onClose:showTips});
-				sendInfo(img);
-				resetShare(img);
-			});
+			setTimeout(function(){
+				nowStep++;
+				$("#tone").click();
+				if(nowStep == 2) showTipsDialog(nowStep);
+			},300); 
 		}
+	}//end func
+
+	//贴纸盒子移动
+	function stickersMove(d){
+		var w = $("#scrollBox").width();
+		myScroll.scrollBy(d * w / 2,0,600);
+	}//end func
+
+	//预览海报
+	function previewPoster(){
+		icom.fadeIn(loadBox);
+		removeTips();
+		icamera.makeImg($("."+itemplet+" .cont"),function(img){
+			icom.fadeOut(loadBox);
+			$("#preview .previewImg")[0].src = img;
+			icom.popOn($("#preview"),{fade:500,onClose:showTips});
+			sendInfo(img);
+			resetShare(img);
+		});
+		setTimeout(function(){
+			nowStep++;
+			if(nowStep == 4) showTipsDialog(nowStep);
+		},200);
 	}//end func
 
 	//重置分享
@@ -231,6 +275,7 @@ $(document).ready(function(){
 
 	//显示提示
 	function showTips(){
+		nowStep++;
 		var titleA = $("."+itemplet+" .titleA");
 		var titleB = $("."+itemplet+" .titleB");
 		var adornC = $(".adorn .remove");
@@ -277,7 +322,8 @@ $(document).ready(function(){
 
 	//返回选择模板
 	function backToChose(){
-		if(!$(this).hasClass("active") && controlFlag){
+		if(!$(this).hasClass("active") && controlFlag && nowStep > 3){
+			nowStep = 0;
 			controlFlag = false;
 			$("#templet").addClass("active");
 			$("#view").hide();
@@ -300,8 +346,23 @@ $(document).ready(function(){
 
 	//选择模板页面显示
 	function choseBoxShow(){
+		if(first){
+			first = false;
+			showTipsDialog(0);
+		}	
 		icom.fadeIn(choseBox);
 		icom.fadeIn(controlBox);
+	}//end func
+
+	//显示提示
+	function showTipsDialog(i){
+		$("#tips img")[0].src = "images/public/step"+i+".png";
+		var t = setTimeout(function(){
+			icom.fadeOut($("#tips"));
+		},4000);
+		icom.popOn($("#tips"),{fade:500,onClose:function(){
+			clearTimeout(t);
+		}});
 	}//end func
 
 	//选择模板
@@ -318,7 +379,10 @@ $(document).ready(function(){
 		}
 		else{
 			$("#next").hide();
-			$("#view").show();
+			if($("."+itemplet+" .c-shell").hasClass('up')) {
+				nowStep = 4;
+				$("#view").show();
+			}
 			choseBox.hide();
 			controlFlag = true;
 			$("#templet").removeClass("active");
@@ -333,6 +397,8 @@ $(document).ready(function(){
 					$("#color img").eq(0)[0].src = "images/france/color1.png";
 					$("#color img").eq(1)[0].src = "images/france/color2.png";
 				}
+				nowStep++;
+				if(nowStep == 1) showTipsDialog(nowStep);
 			});
 		}
 	}//end func
@@ -340,13 +406,13 @@ $(document).ready(function(){
 	//显示色调板
 	function toneShow(){
 		var that = $(this);
-		if(!that.hasClass("active") && controlFlag){
+		if(!that.hasClass("active") && controlFlag && (nowStep == 2 || nowStep > 3)){
 			that.addClass("active");
 			icom.fadeIn($("#color"),200,function(){
 				controlFlag = false;
 			});
 		}
-		else if(that.hasClass("active")){
+		else if(that.hasClass("active") && (nowStep == 2 || nowStep > 3)){
 			that.removeClass("active");
 			icom.fadeOut($("#color"),200,function(){
 				controlFlag = true;
@@ -357,14 +423,14 @@ $(document).ready(function(){
 	//显示贴纸板
 	function stickerShow(){
 		var that = $(this);
-		if(!that.hasClass("active") && controlFlag){
+		if(!that.hasClass("active") && controlFlag && nowStep >= 3){
 			that.addClass("active");
 			icom.fadeIn($("#stickers"),200,function(){
 				controlFlag = false;
 				myScroll.refresh();
 			});
 		}
-		else if(that.hasClass("active")){
+		else if(that.hasClass("active") && nowStep >= 3){
 			that.removeClass("active");
 			icom.fadeOut($("#stickers"),200,function(){
 				controlFlag = true;
