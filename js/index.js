@@ -80,11 +80,20 @@ $(document).ready(function(){
 		loader.addImage('images/auth/bg.jpg');
 
 		for (var i = 1; i <= 2; i++) {
+			loader.addImage('images/france/bgCol'+i+'.jpg');
+			loader.addImage('images/france/bgRow'+i+'.jpg');
+			loader.addImage('images/france/color'+i+'.png');
+			loader.addImage('images/france/upload'+i+'.png');
+			loader.addImage('images/france/upbtn'+i+'.png');
+
 			loader.addImage('images/japan/chopsticks'+i+'.png');
 			loader.addImage('images/japan/chopsticks'+i+'r.png');
 			loader.addImage('images/japan/color'+i+'.png');
 			loader.addImage('images/japan/upload'+i+'.png');
 		};
+		loader.addImage('images/france/col.jpg');
+		loader.addImage('images/france/row.jpg');
+
 		loader.addImage('images/japan/bgCol.jpg');
 		loader.addImage('images/japan/bgRow.jpg');
 		loader.addImage('images/japan/col.jpg');
@@ -140,7 +149,7 @@ $(document).ready(function(){
 	//页面初始化
 	function pageInit(){
 		btnInit();
-		choseBoxShow();
+		// choseBoxShow();
 		cameraInit();
 	}//end func
 
@@ -366,9 +375,10 @@ $(document).ready(function(){
 	//切换颜色
 	function switchColor(){
 		var c = $(this).data("val");
-		if(itemplet == "japanR" || itemplet == "japanC"){
-			$("."+itemplet+" .shellBox").removeClass("shellBox1 shellBox2").addClass("shellBox"+c);
+		if(itemplet == "franceR" || itemplet == "franceC"){
+			$("."+itemplet+" .uploadBtn").removeClass("uploadBtn1 uploadBtn2").addClass("uploadBtn"+c);
 		}
+		$("."+itemplet+" .shellBox").removeClass("shellBox1 shellBox2").addClass("shellBox"+c);
 		$("."+itemplet+" .cont").removeClass("bg1 bg2").addClass("bg"+c);
 		$("."+itemplet+" .pattern").removeClass("pattern1 pattern2").addClass("pattern"+c);
 	}//end func

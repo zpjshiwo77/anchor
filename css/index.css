@@ -88,7 +88,8 @@ section{
 /*anime end*/
 section.auth{
 	background: url(../images/auth/bg.jpg) no-repeat;
-	background-size: 100%;
+	background-size: cover;
+	background-position: center center;
 	text-align: center;
 	z-index: 2;
 }
@@ -302,10 +303,10 @@ section.franceC .cont.bg2{
 }
 section.franceC .cont .logo{
 	position: absolute;
-	top: 0.35rem;
-	left: 0.35rem;
-	width: 1.45rem;
-	height: 1.45rem;
+	top: 0.2rem;
+	left: 0.2rem;
+	width: 1.3rem;
+	height: 1.3rem;
 	background: url(../images/public/logoW.png) no-repeat;
 	background-size: 100%;
 }
@@ -332,34 +333,42 @@ section.franceC input[type=text]::-webkit-input-placeholder{
 }
 section.franceC input[type=text].titleA{
 	width: 7.2rem;
-	height: 1rem;
-	font-size: 0.7rem;
+	height: 0.8rem;
+	font-size: 0.6rem;
 	font-weight: bold;
-	top: 2rem;
+	top: 1.7rem;
 	z-index: 2;
 }
 section.franceC input[type=text].titleB{
 	width: 6.4rem;
-	height: 0.8rem;
-	font-size: 0.45rem;
-	top: 3.1rem;
+	height: 0.6rem;
+	font-size: 0.35rem;
+	top: 2.7rem;
 	z-index: 2;
 }
 section.franceC .shellBox{
 	position: absolute;
-	bottom: 0;
-	right: 0;
-	width: 7rem;
-	height: 8.38rem;
-	background: url(../images/france/uploadCol.png) no-repeat;
+	top: 3.4rem;
+	left: 50%;
+	margin-left: -3rem;
+	width: 6rem;
+	height: 6rem;
+}
+section.franceC .shellBox1{
+	background: url(../images/france/upload1.png) no-repeat;
+	background-size: 100%;
+}
+section.franceC .shellBox2{
+	background: url(../images/france/upload2.png) no-repeat;
 	background-size: 100%;
 }
 section.franceC .shellBox .shell{
-	width: 100%;
-	height: 100%;
-	/*-webkit-mask-image: url(../images/france/maskCol.png);
-	-webkit-mask-size: 100%;*/
-	border-radius: 100%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 4.7rem;
+	height: 4.7rem;
+	margin: -2.35rem 0 0 -2.35rem;
 }
 section.franceC .shellBox .uploadBtn{
 	width: 100%;
@@ -367,7 +376,13 @@ section.franceC .shellBox .uploadBtn{
 	position: absolute;
 	top:0;
 	left: 0;
-	background: url(../images/france/upbtnCol.png) no-repeat;
+}
+section.franceC .shellBox .uploadBtn1{
+	background: url(../images/france/upbtn1.png) no-repeat;
+	background-size: 100%;
+}
+section.franceC .shellBox .uploadBtn2{
+	background: url(../images/france/upbtn2.png) no-repeat;
 	background-size: 100%;
 }
 section.franceC .pattern{
@@ -409,8 +424,8 @@ section.franceR .cont{
 	position: absolute;
 	top:0;
 	left: 0;
-	width: 12.06rem;
-	height: 7.5rem;
+	width: 7.5rem;
+	height: 4.5rem;
 }
 section.franceR .cont.bg1{
 	background: url(../images/france/bgRow1.jpg) no-repeat;
@@ -422,19 +437,19 @@ section.franceR .cont.bg2{
 }
 section.franceR .cont .logo{
 	position: absolute;
-	top: 0.35rem;
-	left: 0.35rem;
-	width: 1.45rem;
-	height: 1.45rem;
+	top: 0.21rem;
+	left: 0.21rem;
+	width: 0.87rem;
+	height: 0.87rem;
 	background: url(../images/public/logoW.png) no-repeat;
 	background-size: 100%;
 }
 section.franceR .cont .code{
 	position: absolute;
-	bottom: 0.35rem;
-	right: 0.35rem;
-	width: 1.4rem;
-	height: 1.4rem;
+	bottom: 0.21rem;
+	left: 0.21rem;
+	width: 0.84rem;
+	height: 0.84rem;
 	background: url(../images/public/code.jpg) no-repeat;
 	background-size: 100%;
 	z-index: 2;
@@ -443,40 +458,48 @@ section.franceR input[type=text]{
 	border: 1px dashed #fff;
 	color: #fff;
 	position: absolute;
-	left: 0.35rem;
+	left: 0.21rem;
 }
 section.franceR input[type=text]::-webkit-input-placeholder{
 	color: #fff;
 }
 section.franceR input[type=text].titleA{
-	width: 5.5rem;
-	height: 1rem;
-	font-size: 0.7rem;
+	width: 3.3rem;
+	height: 0.6rem;
+	font-size: 0.42rem;
 	font-weight: bold;
-	top: 2rem;
+	top: 1.62rem;
 	z-index: 2;
 }
 section.franceR input[type=text].titleB{
-	width: 4rem;
-	height: 0.8rem;
-	font-size: 0.45rem;
-	top: 3.1rem;
+	width: 2.4rem;
+	height: 0.48rem;
+	font-size: 0.27rem;
+	top: 2.28rem;
 	z-index: 2;
 }
 section.franceR .shellBox{
 	position: absolute;
-	bottom: 0;
-	right: 0;
-	width: 8rem;
-	height: 6.14rem;
-	background: url(../images/france/uploadRow.png) no-repeat;
+	top: 0.25rem;
+	right: 0rem;
+	width: 4rem;
+	height: 4rem;
+}
+section.franceR .shellBox1{
+	background: url(../images/france/upload1.png) no-repeat;
+	background-size: 100%;
+}
+section.franceR .shellBox2{
+	background: url(../images/france/upload2.png) no-repeat;
 	background-size: 100%;
 }
 section.franceR .shellBox .shell{
-	width: 100%;
-	height: 100%;
-	-webkit-mask-image: url(../images/france/maskRow.png);
-	-webkit-mask-size: 100%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 3.1rem;
+	height: 3.1rem;
+	margin: -1.55rem 0 0 -1.55rem;
 }
 section.franceR .shellBox .uploadBtn{
 	width: 100%;
@@ -484,7 +507,13 @@ section.franceR .shellBox .uploadBtn{
 	position: absolute;
 	top:0;
 	left: 0;
-	background: url(../images/france/upbtnRow.png) no-repeat;
+}
+section.franceR .shellBox .uploadBtn1{
+	background: url(../images/france/upbtn1.png) no-repeat;
+	background-size: 100%;
+}
+section.franceR .shellBox .uploadBtn2{
+	background: url(../images/france/upbtn2.png) no-repeat;
 	background-size: 100%;
 }
 section.franceR .pattern{
