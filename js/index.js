@@ -25,6 +25,9 @@ $(document).ready(function(){
 		scrollY: false
 	});
 
+	var iOffsetY = $(".Offset").height();
+	var iOffsetX = $(".Offset").width();
+
 	// var myScrollF = new IScroll('#f_r_scroll',{
 	// 	bounce:true,
 	// 	click:true,
@@ -302,8 +305,8 @@ $(document).ready(function(){
 
 	//移动装饰
 	function moveAdorn(e){
-		var x = e.offsetX - $(this).width()/2;
-		var y = e.offsetY - $(this).height()/2;
+		var x = e.offsetX - $(this).width()/2 - iOffsetX;
+		var y = e.offsetY - $(this).height()/2 - iOffsetY;
 		$(this).css({x:x,y:y});
 		e.stopPropagation();
 	}//end func
@@ -387,8 +390,6 @@ $(document).ready(function(){
 			controlFlag = true;
 			$("#templet").removeClass("active");
 			icom.fadeIn($("."+itemplet),500,function(){
-				// if(itemplet == "japanR") myScrollJ.refresh();
-				// else if(itemplet == "franceR") myScrollF.refresh();
 				if(itemplet == "japanR" || itemplet == "japanC"){
 					$("#color img").eq(0)[0].src = "images/japan/color1.png";
 					$("#color img").eq(1)[0].src = "images/japan/color2.png";

@@ -62,6 +62,13 @@ section{
 	-webkit-transform: scale(0.65,0.65);
 	-webkit-transform-origin: left;
 }
+.Offset{
+	position: absolute;
+	top:0;
+	left: 0;
+	width: 2rem;
+	height: 0.2rem;
+}
 /*public end*/
 
 .moving{
@@ -351,25 +358,26 @@ section.franceC input[type=text]{
 	color: #fff;
 	position: absolute;
 	left: 50%;
-	-webkit-transform: translateX(-50%);
 }
 section.franceC input[type=text]::-webkit-input-placeholder{
 	color: #fff;
 }
 section.franceC input[type=text].titleA{
 	width: 7.2rem;
-	height: 0.8rem;
-	font-size: 0.6rem;
+	height: 0.7rem;
+	font-size: 0.5rem;
 	font-weight: bold;
 	top: 1.7rem;
 	z-index: 2;
+	margin-left: -3.6rem;
 }
 section.franceC input[type=text].titleB{
 	width: 6.4rem;
-	height: 0.6rem;
+	height: 0.45rem;
 	font-size: 0.35rem;
 	top: 2.7rem;
 	z-index: 2;
+	margin-left: -3.2rem;
 }
 section.franceC .shellBox{
 	position: absolute;
@@ -439,8 +447,7 @@ section.franceC .ring{
 /*franceC end*/
 section.franceR .scrollBox,section.japanR .scrollBox{
 	position: absolute;
-	top: 40%;
-	margin-top: -2.25rem;
+	top: 3.5rem;
 	left: 0;
 	width: 100%;
 	height: 4.5rem;
@@ -491,7 +498,7 @@ section.franceR input[type=text]::-webkit-input-placeholder{
 }
 section.franceR input[type=text].titleA{
 	width: 3.3rem;
-	height: 0.6rem;
+	height: 0.65rem;
 	font-size: 0.42rem;
 	font-weight: bold;
 	top: 1.62rem;
@@ -499,9 +506,9 @@ section.franceR input[type=text].titleA{
 }
 section.franceR input[type=text].titleB{
 	width: 2.4rem;
-	height: 0.48rem;
+	height: 0.55=3rem;
 	font-size: 0.27rem;
-	top: 2.28rem;
+	top: 2.33rem;
 	z-index: 2;
 }
 section.franceR .shellBox{
@@ -729,7 +736,7 @@ section.japanR input[type=text]::-webkit-input-placeholder{
 }
 section.japanR input[type=text].titleA{
 	width: 2.7rem;
-	height: 0.54rem;
+	height: 0.59rem;
 	font-size: 0.36rem;
 	font-weight: bold;
 	top: 2.58rem;
@@ -737,9 +744,9 @@ section.japanR input[type=text].titleA{
 }
 section.japanR input[type=text].titleB{
 	width: 2.4rem;
-	height: 0.35rem;
+	height: 0.4rem;
 	font-size: 0.21rem;
-	top: 3.18rem;
+	top: 3.23rem;
 	z-index: 2;
 }
 section.japanR .shellBox{
@@ -797,8 +804,8 @@ section.japanR .pattern2{
 
 .adorn{
 	position: absolute;
-	top: 0;
-	left: 0;
+	top: 0.2rem;
+	left: 2rem;
 	width: 1rem;
 	height: 1.05rem;
 	z-index: 3;
