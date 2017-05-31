@@ -5,7 +5,7 @@ $(document).ready(function(){
 	var articleBox=$('article');
 	var windowScale=window.innerWidth/750;
 
-	var poster = icom.getQueryString('i');
+	var poster = icom.getQueryString('i') || "images/public/share.jpg";
 	
 	//----------------------------------------页面初始化----------------------------------------
 	icom.init(init);//初始化

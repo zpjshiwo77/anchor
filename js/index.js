@@ -271,7 +271,7 @@ $(document).ready(function(){
 		ishare.reset({link:url});
 	}//end func
 
-	//发送信息
+	//发送信息 AJAX
 	function sendInfo(img){
 
 	}//end func
@@ -337,7 +337,7 @@ $(document).ready(function(){
 		}
 	}//end func
 
-	//发送授权码
+	//发送授权码 AJAX
 	function sendCode(){
 		var code = $("#authCode").val();
 		if(code != ""){
