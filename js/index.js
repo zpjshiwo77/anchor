@@ -86,10 +86,9 @@ $(document).ready(function(){
 		loader.addImage('images/auth/bg.jpg');
 
 		for (var i = 1; i <= 2; i++) {
-			loader.addImage('images/france/bgCol'+i+'.jpg');
-			loader.addImage('images/france/bgRow'+i+'.jpg');
+			loader.addImage('images/france/bgCol'+i+'.png');
+			loader.addImage('images/france/bgRow'+i+'.png');
 			loader.addImage('images/france/color'+i+'.png');
-			loader.addImage('images/france/upload'+i+'.png');
 			loader.addImage('images/france/upbtn'+i+'.png');
 
 			loader.addImage('images/japan/chopsticks'+i+'.png');
@@ -104,6 +103,8 @@ $(document).ready(function(){
 
 		loader.addImage('images/france/col.jpg');
 		loader.addImage('images/france/row.jpg');
+		loader.addImage('images/france/bgCol.jpg');
+		loader.addImage('images/france/bgRow.jpg');
 
 		loader.addImage('images/japan/bgCol.jpg');
 		loader.addImage('images/japan/bgRow.jpg');
@@ -116,6 +117,8 @@ $(document).ready(function(){
 		loader.addImage('images/public/head.png');
 		loader.addImage('images/public/logoG.png');
 		loader.addImage('images/public/logoW.png');
+		loader.addImage('images/public/logoR.jpg');
+		loader.addImage('images/public/logoB.jpg');
 		loader.addImage('images/public/share.png');
 		loader.addImage('images/public/stickersBox.png');
 		loader.addImage('images/public/tips.png');
@@ -219,6 +222,18 @@ $(document).ready(function(){
 		$("#stickers .next").on("click",function(){
 			stickersMove(-1);
 		});
+		$(".titleA").blur(showControl);
+		$(".titleB").blur(showControl);
+	}//end func
+
+	//显示控制面板
+	function showControl(){
+		var a = $("."+itemplet+" .titleA").val();
+		var b = $("."+itemplet+" .titleB").val();
+		if(a != "" && b!= "" && !$(".control").hasClass("show")) {
+			icom.fadeIn($(".control"));
+			$(".control").addClass("show");
+		}
 	}//end func
 
 	//判断值
@@ -284,9 +299,19 @@ $(document).ready(function(){
 		var titleB = $("."+itemplet+" .titleB");
 		var adornC = $(".adorn .remove");
 		var upload = $("."+itemplet+" .uploadBtn");
-
-		titleA.css("border-color","#626262");
-		titleB.css("border-color","#626262");
+		if(itemplet == "japanC" || itemplet == "japanR"){
+			titleA.css("border-color","#626262");
+			titleB.css("border-color","#626262");
+		}
+		else if((itemplet == "franceC" || itemplet == "franceR") && titleA.hasClass("c1")){
+			titleA.css("border-color","#ff2270");
+			titleB.css("border-color","#ff2270");
+		}
+		else if((itemplet == "franceC" || itemplet == "franceR") && titleA.hasClass("c2")){
+			titleA.css("border-color","#22b1ff");
+			titleB.css("border-color","#22b1ff");
+		}
+		
 		adornC.show();
 		upload.show();
 	}//end func
@@ -395,7 +420,9 @@ $(document).ready(function(){
 			if($("."+itemplet+" .c-shell").hasClass('up')) {
 				nowStep = 4;
 				$("#view").show();
+				$(".control").show();
 			}
+			else $(".control").hide().removeClass("show");
 			choseBox.hide();
 			controlFlag = true;
 			$("#templet").removeClass("active");
@@ -454,10 +481,16 @@ $(document).ready(function(){
 		var c = $(this).data("val");
 		if(itemplet == "franceR" || itemplet == "franceC"){
 			$("."+itemplet+" .uploadBtn").removeClass("uploadBtn1 uploadBtn2").addClass("uploadBtn"+c);
+			$("."+itemplet+" .mask").removeClass("mask1 mask2").addClass("mask"+c);
+			$("."+itemplet+" .titleA").removeClass("c1 c2").addClass("c"+c);
+			$("."+itemplet+" .titleB").removeClass("c1 c2").addClass("c"+c);
+			$("."+itemplet+" .logo").removeClass("logo1 logo2").addClass("logo"+c);
 		}
-		$("."+itemplet+" .shellBox").removeClass("shellBox1 shellBox2").addClass("shellBox"+c);
-		$("."+itemplet+" .cont").removeClass("bg1 bg2").addClass("bg"+c);
-		$("."+itemplet+" .pattern").removeClass("pattern1 pattern2").addClass("pattern"+c);
+		else if(itemplet == "japanR" || itemplet == "japanC"){
+			$("."+itemplet+" .shellBox").removeClass("shellBox1 shellBox2").addClass("shellBox"+c);
+			$("."+itemplet+" .cont").removeClass("bg1 bg2").addClass("bg"+c);
+			$("."+itemplet+" .pattern").removeClass("pattern1 pattern2").addClass("pattern"+c);
+		}
 	}//end func
 	
 	//----------------------------------------页面监测代码----------------------------------------
