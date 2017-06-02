@@ -68,7 +68,7 @@ $(document).ready(function(){
 		requestAnimationFrame(function(){
 			loadBox.show();
 			iuser.init(userGetted);
-//			load_handler();
+			// load_handler();
 		});
 	}//edn func
 	
@@ -345,7 +345,14 @@ $(document).ready(function(){
 	//添加装饰
 	function addAdorn(){
 		var img = $(this).attr("src");
-		var cont = '<div class="adorn"> <img src="'+img+'"> <div class="remove"></div> </div>';
+		var sp = $(this).attr("data-val");
+		if(sp == "sp"){
+			var cont = '<div class="adorn"> <img src="images/sticker/sp.png" class="sp"> <input type="tel" value="99"> <div class="remove"></div> </div>'
+		}
+		else{
+			var cont = '<div class="adorn"> <img src="'+img+'"> <div class="remove"></div> </div>';
+		}
+		
 		$("."+itemplet+" .cont").append(cont);
 	}//end func
 

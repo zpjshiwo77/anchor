@@ -295,7 +295,7 @@ div.control #stickers .scrollBox{
 }
 div.control #stickers .scrollBox .moveBox{
 	height: 100%;
-	width: 22.7rem;
+	width: 23.7rem;
 	overflow: hidden;
 }
 div.control #stickers .scrollBox img{
@@ -865,6 +865,17 @@ section.japanR .pattern2{
 }
 .adorn img{
 	width: 100%;
+}
+.adorn img.sp{
+	margin-top: 0.25rem;
+	width: 0.3rem;
+}
+.adorn input{
+    font-size: 0.33rem;
+    color: #fb3939;
+    width: 0.6rem;
+    font-weight: bold;
+    margin-top: 0.25rem;
 }
 .adorn .remove{
 	position: absolute;
