@@ -91,10 +91,10 @@ $(document).ready(function(){
 			loader.addImage('images/france/color'+i+'.png');
 			loader.addImage('images/france/upbtn'+i+'.png');
 
-			loader.addImage('images/japan/chopsticks'+i+'.png');
-			loader.addImage('images/japan/chopsticks'+i+'r.png');
+			loader.addImage('images/japan/bgCol'+i+'.png');
+			loader.addImage('images/japan/bgRow'+i+'r.png');
 			loader.addImage('images/japan/color'+i+'.png');
-			loader.addImage('images/japan/upload'+i+'.png');
+			
 		};
 
 		for (var i = 0; i < 5; i++) {
@@ -111,6 +111,7 @@ $(document).ready(function(){
 		loader.addImage('images/japan/col.jpg');
 		loader.addImage('images/japan/row.jpg');
 		loader.addImage('images/japan/upbtn.png');
+		loader.addImage('images/japan/upload.png');
 
 		loader.addImage('images/public/code.jpg');
 		loader.addImage('images/public/control.png');
@@ -304,12 +305,12 @@ $(document).ready(function(){
 			titleB.css("border-color","#626262");
 		}
 		else if((itemplet == "franceC" || itemplet == "franceR") && titleA.hasClass("c1")){
-			titleA.css("border-color","#ff2270");
-			titleB.css("border-color","#ff2270");
+			titleA.css("border-color","#d63555");
+			titleB.css("border-color","#d63555");
 		}
 		else if((itemplet == "franceC" || itemplet == "franceR") && titleA.hasClass("c2")){
-			titleA.css("border-color","#22b1ff");
-			titleB.css("border-color","#22b1ff");
+			titleA.css("border-color","#1486c9");
+			titleB.css("border-color","#1486c9");
 		}
 		
 		adornC.show();
@@ -491,12 +492,9 @@ $(document).ready(function(){
 			$("."+itemplet+" .mask").removeClass("mask1 mask2").addClass("mask"+c);
 			$("."+itemplet+" .titleA").removeClass("c1 c2").addClass("c"+c);
 			$("."+itemplet+" .titleB").removeClass("c1 c2").addClass("c"+c);
-			$("."+itemplet+" .logo").removeClass("logo1 logo2").addClass("logo"+c);
 		}
 		else if(itemplet == "japanR" || itemplet == "japanC"){
-			$("."+itemplet+" .shellBox").removeClass("shellBox1 shellBox2").addClass("shellBox"+c);
-			$("."+itemplet+" .cont").removeClass("bg1 bg2").addClass("bg"+c);
-			$("."+itemplet+" .pattern").removeClass("pattern1 pattern2").addClass("pattern"+c);
+			$("."+itemplet+" .mask").removeClass("mask1 mask2").addClass("mask"+c);
 		}
 	}//end func
 	

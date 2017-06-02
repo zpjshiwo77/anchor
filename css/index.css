@@ -182,7 +182,7 @@ section.chose .jCol{
 	top: 1.2rem;
 	left: 0.5rem;
 	width: 2.38rem;
-	height: 4.25rem;
+	height: 4.23rem;
 }
 section.chose .jRow{
 	top: 1.7rem;
@@ -194,7 +194,7 @@ section.chose .fCol{
 	top: 5.4rem;
 	right: 0.5rem;
 	width: 2.43rem;
-	height: 3.89rem;
+	height: 4.32rem;
 }
 section.chose .fRow{
 	top: 6.5rem;
@@ -344,11 +344,11 @@ section.franceC .cont .logo{
 	z-index: 2;
 }
 section.franceC .cont .logo1{
-	background: url(../images/public/logoR.jpg) no-repeat;
+	background: url(../images/public/logoW.png) no-repeat;
 	background-size: 100%;
 }
 section.franceC .cont .logo2{
-	background: url(../images/public/logoB.jpg) no-repeat;
+	background: url(../images/public/logoW.png) no-repeat;
 	background-size: 100%;
 }
 section.franceC .cont .code{
@@ -362,22 +362,22 @@ section.franceC .cont .code{
 	z-index: 2;
 }
 section.franceC input[type=text].c1,section.franceC textarea[type=text].c1{
-	border: 1px dashed #fd3f7b;
-	color: #fd3f7b;
+	border: 1px dashed #d63555;
+	color: #d63555;
 	position: absolute;
 	left: 0.4rem;
 }
 section.franceC input[type=text].c2,section.franceC textarea[type=text].c2{
-	border: 1px dashed #22b1ff;
-	color: #22b1ff;
+	border: 1px dashed #1486c9;
+	color: #1486c9;
 	position: absolute;
 	left: 0.4rem;
 }
 section.franceC [type=text].c1::-webkit-input-placeholder{
-	color: #fd3f7b;
+	color: #d63555;
 }
 section.franceC [type=text].c2::-webkit-input-placeholder{
-	color: #22b1ff;
+	color: #1486c9;
 }
 section.franceC input[type=text].titleA{
 	width: 5rem;
@@ -503,11 +503,11 @@ section.franceR .cont .logo{
 	z-index: 2;
 }
 section.franceR .cont .logo1{
-	background: url(../images/public/logoR.jpg) no-repeat;
+	background: url(../images/public/logoW.png) no-repeat;
 	background-size: 100%;
 }
 section.franceR .cont .logo2{
-	background: url(../images/public/logoB.jpg) no-repeat;
+	background: url(../images/public/logoW.png) no-repeat;
 	background-size: 100%;
 }
 section.franceR .cont .code{
@@ -521,25 +521,25 @@ section.franceR .cont .code{
 	z-index: 2;
 }
 section.franceR input[type=text].c1,section.franceR textarea[type=text].c1{
-	border: 1px dashed #ff2270;
-	color: #ff2270;
+	border: 1px dashed #d63555;
+	color: #d63555;
 	position: absolute;
 	left: 0.21rem;
 }
 section.franceR input[type=text].c2,section.franceR textarea[type=text].c2{
-	border: 1px dashed #22b1ff;
-	color: #22b1ff;
+	border: 1px dashed #1486c9;
+	color: #1486c9;
 	position: absolute;
 	left: 0.21rem;
 }
 section.franceR [type=text].c1::-webkit-input-placeholder{
-	color: #ff2270;
+	color: #d63555;
 }
 section.franceR [type=text].c2::-webkit-input-placeholder{
-	color: #22b1ff;
+	color: #1486c9;
 }
 section.franceR .titleA{
-	width: 5rem;
+	width:3rem;
 	height: 0.65rem;
 	font-size: 0.42rem;
 	font-weight: bold;
@@ -548,7 +548,7 @@ section.franceR .titleA{
 	z-index: 2;
 }
 section.franceR .titleB{
-	width: 5.5rem;
+	width: 4.5rem;
 	height: 0.45rem;
 	font-size: 0.22rem;
 	bottom: 0.05rem;
@@ -636,14 +636,16 @@ section.japanC .cont{
 	left: 0;
 	width: 100%;
 	height: 100%;
+	background: url(../images/japan/bgCol.jpg) no-repeat;
+	background-size: 100%;
 }
-section.japanC .cont.bg1{
+/*section.japanC .cont.bg1{
 	background: #e6e7e8;
 }
 section.japanC .cont.bg2{
 	background: url(../images/japan/bgCol.jpg) no-repeat;
 	background-size: cover;
-}
+}*/
 section.japanC .cont .logo{
 	position: absolute;
 	top: 0.2rem;
@@ -652,6 +654,7 @@ section.japanC .cont .logo{
 	height: 1.2rem;
 	background: url(../images/public/logoG.png) no-repeat;
 	background-size: 100%;
+	z-index: 2
 }
 section.japanC .cont .code{
 	position: absolute;
@@ -663,7 +666,7 @@ section.japanC .cont .code{
 	background-size: 100%;
 	z-index: 2;
 }
-section.japanC input[type=text]{
+section.japanC [type=text]{
 	border: 1px dashed #626262;
 	text-align: center;
 	color: #626262;
@@ -671,10 +674,10 @@ section.japanC input[type=text]{
 	left: 50%;
 	
 }
-section.japanC input[type=text]::-webkit-input-placeholder{
+section.japanC [type=text]::-webkit-input-placeholder{
 	color: #626262;
 }
-section.japanC input[type=text].titleA{
+section.japanC [type=text].titleA{
 	width: 7.2rem;
 	height: 0.7rem;
 	font-size: 0.5rem;
@@ -683,63 +686,55 @@ section.japanC input[type=text].titleA{
 	z-index: 2;
 	margin-left: -3.6rem;
 }
-section.japanC input[type=text].titleB{
+section.japanC [type=text].titleB{
 	width: 6.4rem;
-	height: 0.45rem;
+	height: 1.2rem;
 	font-size: 0.35rem;
 	top: 2.3rem;
 	z-index: 2;
 	margin-left: -3.2rem;
+	line-height: 1.5;
 }
 section.japanC .shellBox{
 	position: absolute;
-	top: 3rem;
-	left: 50%;
-	margin-left: -3.135rem;
-	width: 6.27rem;
-	height: 6.28rem;
-	
-}
-section.japanC .shellBox.shellBox1{
-	background: url(../images/japan/upload1.png) no-repeat;
-	background-size: 100%;
-}
-section.japanC .shellBox.shellBox2{
-	background: url(../images/japan/upload2.png) no-repeat;
-	background-size: 100%;
-}
-section.japanC .shellBox .shell{
-	margin: 1.5% 1.5%;
-	width: 97%;
-	height: 97%;
-	border-radius: 100rem;
-	overflow: hidden;
-}
-section.japanC .shellBox .shell canvas{
-	border-radius: 100rem;
-}
-section.japanC .shellBox .uploadBtn{
+	bottom: 0rem;
+	left: 0;
 	width: 100%;
 	height: 100%;
+	
+}
+section.japanC .shellBox .shell{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+section.japanC .shellBox .mask{
 	position: absolute;
 	top:0;
 	left: 0;
-	background: url(../images/japan/upbtn.png) no-repeat;
-	background-size: 100%;
+	width: 100%;
+	height: 100%;
 }
-section.japanC .pattern{
+section.japanC .shellBox .mask1{
+	background: url(../images/japan/bgCol1.png) no-repeat;
+	background-size: 100%;
+	background-position: bottom;
+}
+section.japanC .shellBox .mask2{
+	background: url(../images/japan/bgCol2.png) no-repeat;
+	background-size: 100%;
+	background-position: bottom;
+}
+section.japanC .shellBox .uploadBtn{
+	width: 5.78rem;
+	height: 5.78rem;
 	position: absolute;
-	top: 8.6rem;
-	left: 0;
-	width: 7.5rem;
-	height: 2.6rem;
-}
-section.japanC .pattern1{
-	background: url(../images/japan/chopsticks1.png) no-repeat;
-	background-size: 100%;
-}
-section.japanC .pattern2{
-	background: url(../images/japan/chopsticks2.png) no-repeat;
+	bottom:0.5rem;
+	left: 50%;
+	margin-left: -2.89rem;
+	background: url(../images/japan/upbtn.png) no-repeat;
 	background-size: 100%;
 }
 /*japanC end*/
@@ -751,14 +746,16 @@ section.japanR .cont{
 	width: 7.5rem;
 	height: 4.5rem;
 	overflow: hidden;
+	background: url(../images/japan/bgRow.jpg) no-repeat;
+	background-size: 100% 100%;
 }
-section.japanR .cont.bg1{
+/*section.japanR .cont.bg1{
 	background: #e6e7e8;
 }
 section.japanR .cont.bg2{
 	background: url(../images/japan/bgRow.jpg) no-repeat;
 	background-size: cover;
-}
+}*/
 section.japanR .cont .logo{
 	position: absolute;
 	top: 0.24rem;
@@ -767,6 +764,7 @@ section.japanR .cont .logo{
 	height: 0.72rem;
 	background: url(../images/public/logoG.png) no-repeat;
 	background-size: 100%;
+	z-index: 2
 }
 section.japanR .cont .code{
 	position: absolute;
@@ -778,16 +776,16 @@ section.japanR .cont .code{
 	background-size: 100%;
 	z-index: 2;
 }
-section.japanR input[type=text]{
+section.japanR [type=text]{
 	border: 1px dashed #626262;
 	color: #626262;
 	position: absolute;
 	left: 0.24rem;
 }
-section.japanR input[type=text]::-webkit-input-placeholder{
+section.japanR [type=text]::-webkit-input-placeholder{
 	color: #626262;
 }
-section.japanR input[type=text].titleA{
+section.japanR [type=text].titleA{
 	width: 2.7rem;
 	height: 0.59rem;
 	font-size: 0.36rem;
@@ -795,62 +793,54 @@ section.japanR input[type=text].titleA{
 	top: 2.58rem;
 	z-index: 2;
 }
-section.japanR input[type=text].titleB{
+section.japanR [type=text].titleB{
 	width: 2.4rem;
-	height: 0.4rem;
+	height: 0.8rem;
 	font-size: 0.21rem;
 	top: 3.23rem;
 	z-index: 2;
+	line-height: 1.5;
 }
 section.japanR .shellBox{
 	position: absolute;
-	top: 50%;
-	left: 3rem;
-	margin-top: -1.65rem;
-	width: 3.3rem;
-	height: 3.3rem;
-	
-}
-section.japanR .shellBox.shellBox1{
-	background: url(../images/japan/upload1.png) no-repeat;
-	background-size: 100%;
-}
-section.japanR .shellBox.shellBox2{
-	background: url(../images/japan/upload2.png) no-repeat;
-	background-size: 100%;
-}
-section.japanR .shellBox .shell{
-	margin: 1.5% 1.5%;
-	width: 97%;
-	height: 97%;
-	overflow: hidden;
-	border-radius: 100rem;
-}
-section.japanR .shellBox .shell canvas{
-	border-radius: 100rem;
-}
-section.japanR .shellBox .uploadBtn{
+	bottom: 0rem;
+	left: 0;
 	width: 100%;
 	height: 100%;
+	
+}
+section.japanR .shellBox .shell{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+section.japanR .shellBox .mask{
 	position: absolute;
 	top:0;
 	left: 0;
-	background: url(../images/japan/upbtn.png) no-repeat;
-	background-size: 100%;
+	width: 100%;
+	height: 100%;
 }
-section.japanR .pattern{
+section.japanR .shellBox .mask1{
+	background: url(../images/japan/bgRow1.png) no-repeat;
+	background-size: 100% 100%;
+	background-position: bottom;
+}
+section.japanR .shellBox .mask2{
+	background: url(../images/japan/bgRow2.png) no-repeat;
+	background-size: 100% 100%;
+	background-position: bottom;
+}
+section.japanR .shellBox .uploadBtn{
+	width: 3rem;
+	height: 3rem;
 	position: absolute;
-	top: 0.2rem;
-	right: 0.15rem;
-	width: 1.08rem;
-	height: 3.06rem;
-}
-section.japanR .pattern1{
-	background: url(../images/japan/chopsticks1r.png) no-repeat;
-	background-size: 100%;
-}
-section.japanR .pattern2{
-	background: url(../images/japan/chopsticks2r.png) no-repeat;
+	top:50%;
+	right: 0.5rem;
+	margin-top: -1.5rem;
+	background: url(../images/japan/upbtn.png) no-repeat;
 	background-size: 100%;
 }
 /*japanR end*/
