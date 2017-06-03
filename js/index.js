@@ -295,7 +295,9 @@ $(document).ready(function(){
 	//重置分享
 	function resetShare(img){
 		var url=location.href.substr(0, location.href.lastIndexOf('/')+1) + "share.html?i=" + img;
-		ishare.reset({link:url});
+		var title = $("."+itemplet+" .titleA").val();
+		var word = $("."+itemplet+" .titleB").val();
+		ishare.reset({link:url,image:img,title:title,friend:word,timeline:word});
 	}//end func
 
 	//发送信息 AJAX
