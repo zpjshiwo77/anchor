@@ -66,8 +66,8 @@ section{
 	position: absolute;
 	top:0;
 	left: 0;
-	width: 2rem;
-	height: 0.2rem;
+	width: 3.25rem;
+	height: 3.5rem;
 }
 /*public end*/
 
@@ -787,11 +787,12 @@ section.japanR [type=text]::-webkit-input-placeholder{
 }
 section.japanR [type=text].titleA{
 	width: 2.7rem;
-	height: 0.59rem;
+	height: 0.65rem;
 	font-size: 0.36rem;
 	font-weight: bold;
-	top: 2.58rem;
+	top: 2.5rem;
 	z-index: 2;
+	line-height: 1.2;
 }
 section.japanR [type=text].titleB{
 	width: 2.4rem;
@@ -847,8 +848,8 @@ section.japanR .shellBox .uploadBtn{
 
 .adorn{
 	position: absolute;
-	top: 0.2rem;
-	left: 2rem;
+	top: 3.5rem;
+	left: 3.25rem;
 	width: 1rem;
 	height: 1.05rem;
 	z-index: 3;
@@ -861,11 +862,13 @@ section.japanR .shellBox .uploadBtn{
 	width: 0.3rem;
 }
 .adorn input{
-    font-size: 0.33rem;
+	position: absolute;
+	top:0.25rem;
+	left: 0.32rem;
+    font-size: 0.34rem;
     color: #fb3939;
-    width: 0.6rem;
+    width: 1rem;
     font-weight: bold;
-    margin-top: 0.25rem;
 }
 .adorn .remove{
 	position: absolute;

@@ -164,9 +164,19 @@ $(document).ready(function(){
 	//页面初始化
 	function pageInit(){
 		btnInit();
+		$(document).on('touchmove', noScroll);
+		$("body").on('touchmove', noScroll);
+		$("html").on('touchmove', noScroll);
+		$("section").on('touchmove', noScroll);
+		// $("section").on('touchmove',".adorn" noScroll);
 		// choseBoxShow();
 		cameraInit();
 	}//end func
+
+	//禁止滑动
+	function noScroll(e) {
+		e.preventDefault();
+	} //end func
 
 	//相机初始化
 	function cameraInit(){
@@ -332,6 +342,7 @@ $(document).ready(function(){
 
 	//移动装饰
 	function moveAdorn(e){
+		e.preventDefault();
 		var x = e.offsetX - $(this).width()/2 - iOffsetX;
 		var y = e.offsetY - $(this).height()/2 - iOffsetY;
 		$(this).css({x:x,y:y});
@@ -348,7 +359,7 @@ $(document).ready(function(){
 		var img = $(this).attr("src");
 		var sp = $(this).attr("data-val");
 		if(sp == "sp"){
-			var cont = '<div class="adorn"> <img src="images/sticker/sp.png" class="sp"> <input type="tel" value="99"> <div class="remove"></div> </div>'
+			var cont = '<div class="adorn"> <img src="images/sticker/sp.png" class="sp"> <input type="tel" value="99" maxlength="4"> <div class="remove"></div> </div>'
 		}
 		else{
 			var cont = '<div class="adorn"> <img src="'+img+'"> <div class="remove"></div> </div>';
