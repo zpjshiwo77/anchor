@@ -25,7 +25,7 @@ section{
 }
 .ibtn{
 	position: absolute;
-	bottom: 0.2rem;
+	top: 0rem;
 	left: 5.55rem;
 	width: 1.75rem;
 	height: 0.85rem;
@@ -66,8 +66,8 @@ section{
 	position: absolute;
 	top:0;
 	left: 0;
-	width: 2rem;
-	height: 0.2rem;
+	width: 3.25rem;
+	height: 3.5rem;
 }
 /*public end*/
 
@@ -94,7 +94,7 @@ section{
 }
 /*anime end*/
 section.auth{
-	background: url(../images/auth/bg.jpg) no-repeat;
+	background-image: url(../images/auth/bg.jpg);
 	background-size: cover;
 	background-position: center center;
 	text-align: center;
@@ -154,7 +154,7 @@ section.auth .cont .abtn{
 	right: 0rem;
 	width: 1rem;
 	height: 1rem;
-	background: url(../images/public/close.png) no-repeat;
+	background-image: url(../images/public/close.png);
 	background-size: 100%;
 }
 /*tips end*/
@@ -182,7 +182,7 @@ section.chose .jCol{
 	top: 1.2rem;
 	left: 0.5rem;
 	width: 2.38rem;
-	height: 4.25rem;
+	height: 4.23rem;
 }
 section.chose .jRow{
 	top: 1.7rem;
@@ -194,13 +194,13 @@ section.chose .fCol{
 	top: 5.4rem;
 	right: 0.5rem;
 	width: 2.43rem;
-	height: 4.3rem;
+	height: 4.32rem;
 }
 section.chose .fRow{
-	top: 7.5rem;
+	top: 6.5rem;
 	left: 0.5rem;
 	width: 3.66rem;
-	height: 2.06rem;
+	height: 2.29rem;
 }
 section.chose .tips{
 	position: absolute;
@@ -215,7 +215,7 @@ section.chose .tips.jp{
 	right: 0.5rem;
 }
 section.chose .tips.fc{
-	top: 9.8rem;
+	top: 9rem;
 	left: 0.5rem;
 }
 /*chose end*/
@@ -234,7 +234,7 @@ div.control .funcBtns{
 	left: 0.1rem;
 	width: 5.42rem;
 	height: 1.12rem;
-	background: url(../images/public/control.png) no-repeat;
+	background-image: url(../images/public/control.png);
 	background-size: 100%;
 }
 div.control .funcBtns .fbtn{
@@ -283,7 +283,7 @@ div.control #stickers{
 	left: 0.06rem;
 	width: 7.38rem;
 	height: 1.82rem;
-	background: url(../images/public/stickersBox.png) no-repeat;
+	background-image: url(../images/public/stickersBox.png);
 	background-size: 100%;
 	overflow: hidden;
 	padding: 0 0.6rem;
@@ -295,7 +295,7 @@ div.control #stickers .scrollBox{
 }
 div.control #stickers .scrollBox .moveBox{
 	height: 100%;
-	width: 22.7rem;
+	width: 23.7rem;
 	overflow: hidden;
 }
 div.control #stickers .scrollBox img{
@@ -324,99 +324,134 @@ section.franceC .cont{
 	left: 0;
 	width: 100%;
 	height: 100%;
+	background-image: url(../images/france/bgCol.jpg);
+	background-size: 100%;
 }
 section.franceC .cont.bg1{
-	background: url(../images/france/bgCol1.jpg) no-repeat;
+	background-image: url(../images/france/bgCol1.jpg);
 	background-size: cover;
 }
 section.franceC .cont.bg2{
-	background: url(../images/france/bgCol2.jpg) no-repeat;
+	background-image: url(../images/france/bgCol2.jpg);
 	background-size: cover;
 }
 section.franceC .cont .logo{
 	position: absolute;
-	top: 0.2rem;
+	top: 0;
 	left: 0.2rem;
 	width: 1.3rem;
 	height: 1.3rem;
-	background: url(../images/public/logoW.png) no-repeat;
+	z-index: 2;
+	background-image: url(../images/public/logoW.png);
+	background-size: 100%;
+	background-color: rgba(0,0,0,0.5);
+}
+section.franceC .cont .logo1{
+	
+}
+section.franceC .cont .logo2{
+	background-image: url(../images/public/logoW.png);
 	background-size: 100%;
 }
 section.franceC .cont .code{
 	position: absolute;
-	bottom: 0.6rem;
-	right: 0.2rem;
-	width: 1.65rem;
-	height: 1.65rem;
-	background: url(../images/public/code.jpg) no-repeat;
+	bottom: 0.4rem;
+	right: 0.4rem;
+	width: 1.4rem;
+	height: 1.4rem;
+	background-image: url(../images/public/code.jpg);
 	background-size: 100%;
 	z-index: 2;
 }
-section.franceC input[type=text]{
-	border: 1px dashed #fff;
-	text-align: center;
-	color: #fff;
+section.franceC input[type=text].c1,section.franceC textarea[type=text].c1{
+	border: 1px dashed #d63555;
+	color: #d63555;
 	position: absolute;
-	left: 50%;
+	left: 0.4rem;
 }
-section.franceC input[type=text]::-webkit-input-placeholder{
-	color: #fff;
+section.franceC input[type=text].c2,section.franceC textarea[type=text].c2{
+	border: 1px dashed #1486c9;
+	color: #1486c9;
+	position: absolute;
+	left: 0.4rem;
+}
+section.franceC [type=text].c1::-webkit-input-placeholder{
+	color: #d63555;
+}
+section.franceC [type=text].c2::-webkit-input-placeholder{
+	color: #1486c9;
 }
 section.franceC input[type=text].titleA{
-	width: 7.2rem;
+	width: 5rem;
 	height: 0.7rem;
 	font-size: 0.5rem;
 	font-weight: bold;
-	top: 1.7rem;
+	bottom: 1.6rem;
 	z-index: 2;
-	margin-left: -3.6rem;
 }
 section.franceC input[type=text].titleB{
-	width: 6.4rem;
-	height: 0.45rem;
+	width: 4.5rem;
+	height: 0.7rem;
+	height: auto;
 	font-size: 0.35rem;
-	top: 2.7rem;
+	bottom: 0.7rem;
 	z-index: 2;
-	margin-left: -3.2rem;
+	line-height: 1.4;
 }
 section.franceC .shellBox{
 	position: absolute;
-	top: 3.4rem;
-	left: 50%;
-	margin-left: -3rem;
-	width: 6rem;
-	height: 6rem;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
 }
 section.franceC .shellBox1{
-	background: url(../images/france/upload1.png) no-repeat;
+	background-image: url(../images/france/upload1.png);
 	background-size: 100%;
 }
 section.franceC .shellBox2{
-	background: url(../images/france/upload2.png) no-repeat;
+	background-image: url(../images/france/upload2.png);
 	background-size: 100%;
 }
 section.franceC .shellBox .shell{
 	position: absolute;
-	top: 50%;
-	left: 50%;
-	width: 4.7rem;
-	height: 4.7rem;
-	margin: -2.35rem 0 0 -2.35rem;
+	top: 0;
+	left: 0;
+	width: 7.5rem;
+	height: 10.5rem;
 }
 section.franceC .shellBox .uploadBtn{
-	width: 100%;
-	height: 100%;
+	width: 7rem;
+	height: 7rem;
 	position: absolute;
-	top:0;
-	left: 0;
+	top: 50%;
+	left: 50%;
+	margin: -3.5rem 0 0 -3.5rem;
 }
 section.franceC .shellBox .uploadBtn1{
-	background: url(../images/france/upbtn1.png) no-repeat;
+	background-image: url(../images/france/upbtn1.png);
 	background-size: 100%;
 }
 section.franceC .shellBox .uploadBtn2{
-	background: url(../images/france/upbtn2.png) no-repeat;
+	background-image: url(../images/france/upbtn2.png);
 	background-size: 100%;
+}
+section.franceC .shellBox .mask{
+	position: absolute;
+	top:0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+section.franceC .shellBox .mask1{
+	background: url(../images/france/bgCol1.png) no-repeat;
+	background-size: 100%;
+	background-position: bottom;
+}
+section.franceC .shellBox .mask2{
+	background: url(../images/france/bgCol2.png) no-repeat;
+	background-size: 100%;
+	background-position: bottom;
 }
 section.franceC .pattern{
 	position: absolute;
@@ -447,7 +482,8 @@ section.franceC .ring{
 /*franceC end*/
 section.franceR .scrollBox,section.japanR .scrollBox{
 	position: absolute;
-	top: 3.5rem;
+	top: 50%;
+	margin-top: -2.25rem;
 	left: 0;
 	width: 100%;
 	height: 4.5rem;
@@ -459,87 +495,93 @@ section.franceR .cont{
 	left: 0;
 	width: 7.5rem;
 	height: 4.5rem;
-}
-section.franceR .cont.bg1{
-	background: url(../images/france/bgRow1.jpg) no-repeat;
-	background-size: cover;
-}
-section.franceR .cont.bg2{
-	background: url(../images/france/bgRow2.jpg) no-repeat;
+	background: url(../images/france/bgRow.jpg) no-repeat;
 	background-size: cover;
 }
 section.franceR .cont .logo{
 	position: absolute;
-	top: 0.21rem;
+	top: 0rem;
 	left: 0.21rem;
-	width: 0.87rem;
-	height: 0.87rem;
+	width: 0.85rem;
+	height: 0.85rem;
+	z-index: 2;
+	background: url(../images/public/logoW.png) no-repeat;
+	background-size: 100%;
+	background-color: rgba(0,0,0,0.5);
+}
+section.franceR .cont .logo1{
+	
+}
+section.franceR .cont .logo2{
 	background: url(../images/public/logoW.png) no-repeat;
 	background-size: 100%;
 }
 section.franceR .cont .code{
 	position: absolute;
 	bottom: 0.21rem;
-	left: 0.21rem;
+	right: 0.21rem;
 	width: 0.84rem;
 	height: 0.84rem;
 	background: url(../images/public/code.jpg) no-repeat;
 	background-size: 100%;
 	z-index: 2;
 }
-section.franceR input[type=text]{
-	border: 1px dashed #fff;
-	color: #fff;
+section.franceR input[type=text].c1,section.franceR textarea[type=text].c1{
+	border: 1px dashed #d63555;
+	color: #d63555;
 	position: absolute;
 	left: 0.21rem;
 }
-section.franceR input[type=text]::-webkit-input-placeholder{
-	color: #fff;
+section.franceR input[type=text].c2,section.franceR textarea[type=text].c2{
+	border: 1px dashed #1486c9;
+	color: #1486c9;
+	position: absolute;
+	left: 0.21rem;
 }
-section.franceR input[type=text].titleA{
-	width: 3.3rem;
+section.franceR [type=text].c1::-webkit-input-placeholder{
+	color: #d63555;
+}
+section.franceR [type=text].c2::-webkit-input-placeholder{
+	color: #1486c9;
+}
+section.franceR .titleA{
+	width:3.8rem;
 	height: 0.65rem;
-	font-size: 0.42rem;
+	font-size: 0.35rem;
 	font-weight: bold;
-	top: 1.62rem;
+	bottom: 0.5rem;
+	line-height: 1.1;
 	z-index: 2;
 }
-section.franceR input[type=text].titleB{
-	width: 2.4rem;
-	height: 0.55=3rem;
-	font-size: 0.27rem;
-	top: 2.33rem;
+section.franceR .titleB{
+	width: 4.5rem;
+	height: 0.45rem;
+	font-size: 0.22rem;
+	bottom: 0.05rem;
+	line-height: 1.1;
 	z-index: 2;
 }
 section.franceR .shellBox{
 	position: absolute;
-	top: 0.25rem;
-	right: 0rem;
-	width: 4rem;
-	height: 4rem;
-}
-section.franceR .shellBox1{
-	background: url(../images/france/upload1.png) no-repeat;
-	background-size: 100%;
-}
-section.franceR .shellBox2{
-	background: url(../images/france/upload2.png) no-repeat;
-	background-size: 100%;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
 }
 section.franceR .shellBox .shell{
 	position: absolute;
-	top: 50%;
-	left: 50%;
-	width: 3.1rem;
-	height: 3.1rem;
-	margin: -1.55rem 0 0 -1.55rem;
+	top: 0;
+	left: 0;
+	width: 7.5rem;
+	height: 4.2rem;
 }
 section.franceR .shellBox .uploadBtn{
-	width: 100%;
-	height: 100%;
+	width: 3rem;
+	height: 3rem;
 	position: absolute;
-	top:0;
-	left: 0;
+	top: 0rem;
+	left: 50%;
+	margin-left: -1.5rem;
 }
 section.franceR .shellBox .uploadBtn1{
 	background: url(../images/france/upbtn1.png) no-repeat;
@@ -548,6 +590,23 @@ section.franceR .shellBox .uploadBtn1{
 section.franceR .shellBox .uploadBtn2{
 	background: url(../images/france/upbtn2.png) no-repeat;
 	background-size: 100%;
+}
+section.franceR .shellBox .mask{
+	position: absolute;
+	top:0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+section.franceR .shellBox .mask1{
+	background: url(../images/france/bgRow1.png) no-repeat;
+	background-size: 100%;
+	background-position: bottom;
+}
+section.franceR .shellBox .mask2{
+	background: url(../images/france/bgRow2.png) no-repeat;
+	background-size: 100%;
+	background-position: bottom;
 }
 section.franceR .pattern{
 	position: absolute;
@@ -583,22 +642,27 @@ section.japanC .cont{
 	left: 0;
 	width: 100%;
 	height: 100%;
+	background: url(../images/japan/bgCol.jpg) no-repeat;
+	background-size: 100%;
 }
-section.japanC .cont.bg1{
+/*section.japanC .cont.bg1{
 	background: #e6e7e8;
 }
 section.japanC .cont.bg2{
 	background: url(../images/japan/bgCol.jpg) no-repeat;
 	background-size: cover;
-}
+}*/
 section.japanC .cont .logo{
 	position: absolute;
 	top: 0.2rem;
 	left: 0.2rem;
 	width: 1.2rem;
 	height: 1.2rem;
-	background: url(../images/public/logoG.png) no-repeat;
+	background-image: url(../images/public/logoW.png);
+	background-repeat: no-repeat;
 	background-size: 100%;
+	z-index: 2;
+	background-color: rgba(0,0,0,0.5);
 }
 section.japanC .cont .code{
 	position: absolute;
@@ -606,11 +670,12 @@ section.japanC .cont .code{
 	right: 0.2rem;
 	width: 1.3rem;
 	height: 1.3rem;
-	background: url(../images/public/code.jpg) no-repeat;
+	background-image: url(../images/public/code.jpg);
+	background-repeat: no-repeat;
 	background-size: 100%;
 	z-index: 2;
 }
-section.japanC input[type=text]{
+section.japanC [type=text]{
 	border: 1px dashed #626262;
 	text-align: center;
 	color: #626262;
@@ -618,10 +683,10 @@ section.japanC input[type=text]{
 	left: 50%;
 	
 }
-section.japanC input[type=text]::-webkit-input-placeholder{
+section.japanC [type=text]::-webkit-input-placeholder{
 	color: #626262;
 }
-section.japanC input[type=text].titleA{
+section.japanC [type=text].titleA{
 	width: 7.2rem;
 	height: 0.7rem;
 	font-size: 0.5rem;
@@ -630,63 +695,55 @@ section.japanC input[type=text].titleA{
 	z-index: 2;
 	margin-left: -3.6rem;
 }
-section.japanC input[type=text].titleB{
+section.japanC [type=text].titleB{
 	width: 6.4rem;
-	height: 0.45rem;
+	height: 0.6rem;
 	font-size: 0.35rem;
 	top: 2.3rem;
 	z-index: 2;
 	margin-left: -3.2rem;
+	line-height: 1.5;
 }
 section.japanC .shellBox{
 	position: absolute;
-	top: 3rem;
-	left: 50%;
-	margin-left: -3.135rem;
-	width: 6.27rem;
-	height: 6.28rem;
-	
-}
-section.japanC .shellBox.shellBox1{
-	background: url(../images/japan/upload1.png) no-repeat;
-	background-size: 100%;
-}
-section.japanC .shellBox.shellBox2{
-	background: url(../images/japan/upload2.png) no-repeat;
-	background-size: 100%;
-}
-section.japanC .shellBox .shell{
-	margin: 1.5% 1.5%;
-	width: 97%;
-	height: 97%;
-	border-radius: 100rem;
-	overflow: hidden;
-}
-section.japanC .shellBox .shell canvas{
-	border-radius: 100rem;
-}
-section.japanC .shellBox .uploadBtn{
+	bottom: 0rem;
+	left: 0;
 	width: 100%;
 	height: 100%;
+	
+}
+section.japanC .shellBox .shell{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+section.japanC .shellBox .mask{
 	position: absolute;
 	top:0;
 	left: 0;
-	background: url(../images/japan/upbtn.png) no-repeat;
-	background-size: 100%;
+	width: 100%;
+	height: 100%;
 }
-section.japanC .pattern{
+section.japanC .shellBox .mask1{
+	background: url(../images/japan/bgCol1.png) no-repeat;
+	background-size: 100%;
+	background-position: bottom;
+}
+section.japanC .shellBox .mask2{
+	background: url(../images/japan/bgCol2.png) no-repeat;
+	background-size: 100%;
+	background-position: bottom;
+}
+section.japanC .shellBox .uploadBtn{
+	width: 5.78rem;
+	height: 5.78rem;
 	position: absolute;
-	top: 8.6rem;
-	left: 0;
-	width: 7.5rem;
-	height: 2.6rem;
-}
-section.japanC .pattern1{
-	background: url(../images/japan/chopsticks1.png) no-repeat;
-	background-size: 100%;
-}
-section.japanC .pattern2{
-	background: url(../images/japan/chopsticks2.png) no-repeat;
+	bottom:0.5rem;
+	left: 50%;
+	margin-left: -2.89rem;
+	background: url(../images/japan/upbtn.png) no-repeat;
 	background-size: 100%;
 }
 /*japanC end*/
@@ -698,22 +755,28 @@ section.japanR .cont{
 	width: 7.5rem;
 	height: 4.5rem;
 	overflow: hidden;
+	background-image: url(../images/japan/bgRow.jpg);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
 }
-section.japanR .cont.bg1{
+/*section.japanR .cont.bg1{
 	background: #e6e7e8;
 }
 section.japanR .cont.bg2{
 	background: url(../images/japan/bgRow.jpg) no-repeat;
 	background-size: cover;
-}
+}*/
 section.japanR .cont .logo{
 	position: absolute;
 	top: 0.24rem;
 	left: 0.24rem;
 	width: 0.72rem;
 	height: 0.72rem;
-	background: url(../images/public/logoG.png) no-repeat;
+	background-image: url(../images/public/logoW.png);
+	background-repeat: no-repeat;
 	background-size: 100%;
+	z-index: 2;
+	background-color: rgba(0,0,0,0.5);
 }
 section.japanR .cont .code{
 	position: absolute;
@@ -721,91 +784,85 @@ section.japanR .cont .code{
 	right: 0.24rem;
 	width: 0.84rem;
 	height: 0.84rem;
-	background: url(../images/public/code.jpg) no-repeat;
+	background-image: url(../images/public/code.jpg);
+	background-repeat: no-repeat;
 	background-size: 100%;
 	z-index: 2;
 }
-section.japanR input[type=text]{
+section.japanR [type=text]{
 	border: 1px dashed #626262;
 	color: #626262;
 	position: absolute;
 	left: 0.24rem;
 }
-section.japanR input[type=text]::-webkit-input-placeholder{
+section.japanR [type=text]::-webkit-input-placeholder{
 	color: #626262;
 }
-section.japanR input[type=text].titleA{
-	width: 2.7rem;
-	height: 0.59rem;
-	font-size: 0.36rem;
+section.japanR [type=text].titleA{
+	width: 3.5rem;
+	height: 0.65rem;
+	font-size: 0.3rem;
 	font-weight: bold;
-	top: 2.58rem;
+	top: 2.5rem;
 	z-index: 2;
+	line-height: 1.2;
 }
-section.japanR input[type=text].titleB{
+section.japanR [type=text].titleB{
 	width: 2.4rem;
-	height: 0.4rem;
+	height: 0.5rem;
 	font-size: 0.21rem;
 	top: 3.23rem;
 	z-index: 2;
+	line-height: 1.5;
 }
 section.japanR .shellBox{
 	position: absolute;
-	top: 50%;
-	left: 3rem;
-	margin-top: -1.65rem;
-	width: 3.3rem;
-	height: 3.3rem;
-	
-}
-section.japanR .shellBox.shellBox1{
-	background: url(../images/japan/upload1.png) no-repeat;
-	background-size: 100%;
-}
-section.japanR .shellBox.shellBox2{
-	background: url(../images/japan/upload2.png) no-repeat;
-	background-size: 100%;
-}
-section.japanR .shellBox .shell{
-	margin: 1.5% 1.5%;
-	width: 97%;
-	height: 97%;
-	overflow: hidden;
-	border-radius: 100rem;
-}
-section.japanR .shellBox .shell canvas{
-	border-radius: 100rem;
-}
-section.japanR .shellBox .uploadBtn{
+	bottom: 0rem;
+	left: 0;
 	width: 100%;
 	height: 100%;
+	
+}
+section.japanR .shellBox .shell{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+section.japanR .shellBox .mask{
 	position: absolute;
 	top:0;
 	left: 0;
-	background: url(../images/japan/upbtn.png) no-repeat;
-	background-size: 100%;
+	width: 100%;
+	height: 100%;
 }
-section.japanR .pattern{
+section.japanR .shellBox .mask1{
+	background-image: url(../images/japan/bgRow1.png);
+	background-size: 100% 100%;
+	background-position: bottom;
+}
+section.japanR .shellBox .mask2{
+	background-image: url(../images/japan/bgRow2.png);
+	background-size: 100% 100%;
+	background-position: bottom;
+}
+section.japanR .shellBox .uploadBtn{
+	width: 3rem;
+	height: 3rem;
 	position: absolute;
-	top: 0.2rem;
-	right: 0.15rem;
-	width: 1.08rem;
-	height: 3.06rem;
-}
-section.japanR .pattern1{
-	background: url(../images/japan/chopsticks1r.png) no-repeat;
-	background-size: 100%;
-}
-section.japanR .pattern2{
-	background: url(../images/japan/chopsticks2r.png) no-repeat;
+	top:50%;
+	right: 0.5rem;
+	margin-top: -1.5rem;
+	background-image: url(../images/japan/upbtn.png);
 	background-size: 100%;
 }
 /*japanR end*/
 
 .adorn{
 	position: absolute;
-	top: 0.2rem;
-	left: 2rem;
+	top: 3.5rem;
+	left: 3.25rem;
 	width: 1rem;
 	height: 1.05rem;
 	z-index: 3;
@@ -813,13 +870,32 @@ section.japanR .pattern2{
 .adorn img{
 	width: 100%;
 }
+.adorn img.sp{
+	position: absolute;
+	top:50%;
+	left: 0;
+	width: 0.3rem;
+	height: 0.31rem;
+	margin-top: -0.155rem;
+}
+.adorn input{
+	position: absolute;
+	top:50%;
+	left: 0.32rem;
+    font-size: 0.34rem;
+    color: #fb3939;
+    width: 1rem;
+    height: 0.5rem;
+    font-weight: bold;
+    margin-top: -0.25rem;
+}
 .adorn .remove{
 	position: absolute;
 	top: -0.1rem;
 	right: -0.1rem;
 	width: 0.3rem;
 	height: 0.3rem;
-	background: url(../images/sticker/c.png) no-repeat;
+	background-image: url(../images/sticker/c.png);
 	background-size: 100%;
 }
 /*adorn end*/
@@ -845,7 +921,7 @@ section.japanR .pattern2{
 	text-align: center;
 	width: 2rem;
 	height: auto;
-	bottom: 1rem;
+	top: 10rem;
 	left: 50%;
 	margin-left: -1rem;
 }
@@ -860,14 +936,15 @@ section.japanR .pattern2{
 }
 #preview .ibtn{
 	left: 0.2rem;
+	top: 10.8rem;
 }
 #preview .share{
 	position: absolute;
 	top: 0.2rem;
-	right: 0.2rem;
+	right: 0.1rem;
 	width: 1.92rem;
 	height: 0.85rem;
-	background: url(../images/public/share.png) no-repeat;
+	background-image: url(../images/public/share.png);
 	background-size: 100%;
 }
 /*preview end*/
@@ -877,9 +954,9 @@ section.japanR .pattern2{
 	section.chose .jCol{top: 1.1rem;}
 	section.chose .jRow{top: 1.6rem;}
 	section.chose .fCol{top: 4.7rem;}
-	section.chose .fRow{top: 6.8rem;}
+	section.chose .fRow{top: 5.8rem;}
 	section.chose .tips.jp{top:0.9rem;}
-	section.chose .tips.fc{top:9.1rem;}
+	section.chose .tips.fc{top:8.2rem;}
 	section.franceC .shellBox{width: 6rem;height: 7.184rem;}
 	section.franceC .pattern{left: 1.8rem;bottom:4.3rem;}
 	section.franceC .ring{left: 1.6rem;}
