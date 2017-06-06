@@ -1,11 +1,11 @@
-
+﻿
 //2016.12.5
 var ishare=importShare();
 
 (function() {
     ishare.wxId = 'wxd211f54d29066a83';//微信 appid
 	//-------------------------------------------------------定义当前站点的分享设置
-	ishare.url=location.href.substr(0, location.href.lastIndexOf('/')+1);
+	ishare.url='http://anchorgifting.anchorchina.cn/';
 	ishare.content={
 		link:ishare.url,
 		image:ishare.url+'images/share.jpg?v='+Math.random(),
