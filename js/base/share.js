@@ -1,8 +1,9 @@
+
 //2016.12.5
 var ishare=importShare();
 
 (function() {
-	ishare.wxId='wx61a3f44683b295b9';//微信 appid
+    ishare.wxId = 'wxd211f54d29066a83';//微信 appid
 	//-------------------------------------------------------定义当前站点的分享设置
 	ishare.url=location.href.substr(0, location.href.lastIndexOf('/')+1);
 	ishare.content={
@@ -26,7 +27,7 @@ function importShare(){
 	
 	//-------------------------------------------------------微信SDK验证
 	share.wxSign=function(){
-		$.getJSON("http://grazesheep.be-xx.com/api/jssdk/sign?callback=?",{appid:share.wxId,url:location.href}, function(data){
+		$.get("/ajax/jssdk.ashx",{appid:share.wxId,url:location.href}, function(data){
 			wx.config({
 				debug: false,
 				appId: data.appid,
@@ -75,7 +76,7 @@ function importShare(){
 				wx.showOptionMenu();//用微信“扫一扫”打开，optionMenu是off状态，默认开启
 				share.wxShare();
 			});//end wx.ready
-		});//end ajax
+		},'json');//end ajax
 	}//end func
 	
 	//-------------------------------------------------------微信分享函数
