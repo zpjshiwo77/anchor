@@ -342,11 +342,12 @@ section.franceC .cont .logo{
 	width: 1.3rem;
 	height: 1.3rem;
 	z-index: 2;
+	background-image: url(../images/public/logoW.png);
+	background-size: 100%;
 	background-color: rgba(0,0,0,0.5);
 }
 section.franceC .cont .logo1{
-	background-image: url(../images/public/logoW.png);
-	background-size: 100%;
+	
 }
 section.franceC .cont .logo2{
 	background-image: url(../images/public/logoW.png);
@@ -504,11 +505,12 @@ section.franceR .cont .logo{
 	width: 0.85rem;
 	height: 0.85rem;
 	z-index: 2;
+	background: url(../images/public/logoW.png) no-repeat;
+	background-size: 100%;
 	background-color: rgba(0,0,0,0.5);
 }
 section.franceR .cont .logo1{
-	background: url(../images/public/logoW.png) no-repeat;
-	background-size: 100%;
+	
 }
 section.franceR .cont .logo2{
 	background: url(../images/public/logoW.png) no-repeat;
@@ -543,9 +545,9 @@ section.franceR [type=text].c2::-webkit-input-placeholder{
 	color: #1486c9;
 }
 section.franceR .titleA{
-	width:3rem;
+	width:3.8rem;
 	height: 0.65rem;
-	font-size: 0.42rem;
+	font-size: 0.35rem;
 	font-weight: bold;
 	bottom: 0.5rem;
 	line-height: 1.1;
@@ -797,9 +799,9 @@ section.japanR [type=text]::-webkit-input-placeholder{
 	color: #626262;
 }
 section.japanR [type=text].titleA{
-	width: 2.7rem;
+	width: 3.5rem;
 	height: 0.65rem;
-	font-size: 0.36rem;
+	font-size: 0.3rem;
 	font-weight: bold;
 	top: 2.5rem;
 	z-index: 2;
@@ -939,7 +941,7 @@ section.japanR .shellBox .uploadBtn{
 #preview .share{
 	position: absolute;
 	top: 0.2rem;
-	right: 0.2rem;
+	right: 0.1rem;
 	width: 1.92rem;
 	height: 0.85rem;
 	background-image: url(../images/public/share.png);

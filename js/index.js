@@ -296,10 +296,10 @@ $(document).ready(function(){
 		removeTips();
 
 		if(itemplet == "japanR" || itemplet == "franceR"){
-			$("#preview tips").css("top","5rem");
+			$("#preview .tips").css("top","7rem");
 		}
 		else{
-			$("#preview tips").css("top","10rem");
+			$("#preview .tips").css("top","10rem");
 		}
 
 
@@ -401,11 +401,15 @@ $(document).ready(function(){
 		}
 		
 		$("."+itemplet+" .cont").append(cont);
+		$("#s"+nowAdorn).css({
+			x: 0,
+			y: 0
+		});
 	}//end func
 
 	//返回选择模板
 	function backToChose(){
-		if(!$(this).hasClass("active") && controlFlag && nowStep > 3){
+		if(!$(this).hasClass("active") && nowStep > 3){
 			nowStep = 0;
 			controlFlag = false;
 			$("#templet").addClass("active");
@@ -414,6 +418,10 @@ $(document).ready(function(){
 			$("."+itemplet).hide();
 			$("."+itemplet+" .uploadBtn").show();
 			choseBoxShow();
+			icom.fadeOut($("#color"),200);
+			$("#tone").removeClass("active");
+			icom.fadeOut($("#stickers"),200);
+			$("#sticker").removeClass("active");
 		}
 	}//end func
 
@@ -500,11 +508,15 @@ $(document).ready(function(){
 		var that = $(this);
 		if(!that.hasClass("active") && controlFlag && (nowStep == 2 || nowStep > 3)){
 			that.addClass("active");
+			controlFlag = false;
 			icom.fadeIn($("#color"),200,function(){
-				controlFlag = false;
+				controlFlag = true;
 			});
+			icom.fadeOut($("#stickers"),200);
+			$("#sticker").removeClass("active");
 		}
-		else if(that.hasClass("active") && (nowStep == 2 || nowStep > 3)){
+		else if(that.hasClass("active") && controlFlag && (nowStep == 2 || nowStep > 3)){
+			controlFlag = false;
 			that.removeClass("active");
 			icom.fadeOut($("#color"),200,function(){
 				controlFlag = true;
@@ -517,14 +529,18 @@ $(document).ready(function(){
 		var that = $(this);
 		if(!that.hasClass("active") && controlFlag && nowStep >= 3){
 			that.addClass("active");
+			controlFlag = false;
 			icom.fadeIn($("#stickers"),200,function(){
-				controlFlag = false;
+				controlFlag = true;
 				myScroll.refresh();
 			});
+			icom.fadeOut($("#color"),200);
+			$("#tone").removeClass("active");
 			$("."+itemplet+" .shellBox").addClass('noPointer');
 		}
-		else if(that.hasClass("active") && nowStep >= 3){
+		else if(that.hasClass("active") && controlFlag && nowStep >= 3){
 			that.removeClass("active");
+			controlFlag = false;
 			icom.fadeOut($("#stickers"),200,function(){
 				controlFlag = true;
 			});
