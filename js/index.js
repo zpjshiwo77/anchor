@@ -418,10 +418,8 @@ $(document).ready(function(){
 			$("."+itemplet).hide();
 			$("."+itemplet+" .uploadBtn").show();
 			choseBoxShow();
-			icom.fadeOut($("#color"),200);
-			$("#tone").removeClass("active");
-			icom.fadeOut($("#stickers"),200);
-			$("#sticker").removeClass("active");
+			toneHide();
+			stickerHide();
 		}
 	}//end func
 
@@ -512,16 +510,20 @@ $(document).ready(function(){
 			icom.fadeIn($("#color"),200,function(){
 				controlFlag = true;
 			});
-			icom.fadeOut($("#stickers"),200);
-			$("#sticker").removeClass("active");
+			stickerHide();
 		}
 		else if(that.hasClass("active") && controlFlag && (nowStep == 2 || nowStep > 3)){
-			controlFlag = false;
-			that.removeClass("active");
-			icom.fadeOut($("#color"),200,function(){
-				controlFlag = true;
-			});
+			toneHide();
 		}
+	}//end func
+
+	//隐藏色调板
+	function toneHide(){
+		controlFlag = false;
+		$("#tone").removeClass("active");
+		icom.fadeOut($("#color"),200,function(){
+			controlFlag = true;
+		});
 	}//end func
 
 	//显示贴纸板
@@ -534,18 +536,22 @@ $(document).ready(function(){
 				controlFlag = true;
 				myScroll.refresh();
 			});
-			icom.fadeOut($("#color"),200);
-			$("#tone").removeClass("active");
+			toneHide();
 			$("."+itemplet+" .shellBox").addClass('noPointer');
 		}
 		else if(that.hasClass("active") && controlFlag && nowStep >= 3){
-			that.removeClass("active");
-			controlFlag = false;
-			icom.fadeOut($("#stickers"),200,function(){
-				controlFlag = true;
-			});
-			$("."+itemplet+" .shellBox").addClass('noPointer');
+			stickerHide();
 		}
+	}//end func
+
+	//隐藏贴纸板
+	function stickerHide(){
+		$("#sticker").removeClass("active");
+		controlFlag = false;
+		icom.fadeOut($("#stickers"),200,function(){
+			controlFlag = true;
+		});
+		$("."+itemplet+" .shellBox").removeClass('noPointer');
 	}//end func
 
 	//切换颜色
