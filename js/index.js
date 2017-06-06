@@ -18,6 +18,8 @@ $(document).ready(function(){
 	var controlFlag = false;
 	var first = true;
 	var nowStep = 0;
+	var nowAdorn = 0;
+	var iAscale = 1;
 
 	var myScroll = new IScroll('#scrollBox',{
 		bounce:true,
@@ -235,6 +237,19 @@ $(document).ready(function(){
 		});
 		$(".titleA").blur(showControl);
 		$(".titleB").blur(showControl);
+		$("body").on('pinchscale',AdornScale);
+	}//end func
+	
+	//标签放大
+	function AdornScale(e,scaleOffset){
+		if($("#sticker").hasClass('active')){
+			iAscale += scaleOffset * 5;
+			iAscale = iAscale < 1 ? 1 : iAscale;
+			iAscale = iAscale > 25 ? 25 : iAscale;
+			$("#s"+nowAdorn).css({scale:iAscale});
+			// $("."+itemplet+" .titleA").val(scaleOffset);
+			// $("."+itemplet+" .titleB").val(scale);			
+		}
 	}//end func
 
 	//显示控制面板
@@ -279,12 +294,27 @@ $(document).ready(function(){
 	function previewPoster(){
 		icom.fadeIn(loadBox);
 		removeTips();
+
+		if(itemplet == "japanR" || itemplet == "franceR"){
+			$("#preview tips").css("top","5rem");
+		}
+		else{
+			$("#preview tips").css("top","10rem");
+		}
+
+
 		icamera.makeImg($("."+itemplet+" .cont"),function(img){
 			icom.fadeOut(loadBox);
 			$("#preview .previewImg")[0].src = img;
 			icom.popOn($("#preview"),{fade:500,onClose:showTips});
 			sendInfo(img);
 			resetShare(img);
+			if(!$("#preview .share").hasClass('ishow')){
+				setTimeout(function(){
+					icom.fadeIn($("#preview .share"));
+					$("#preview .share").addClass('ishow');
+				},3000);
+			}
 		});
 		setTimeout(function(){
 			nowStep++;
@@ -297,7 +327,7 @@ $(document).ready(function(){
 		var url=location.href.substr(0, location.href.lastIndexOf('/')+1) + "share.html?i=" + img;
 		var title = $("."+itemplet+" .titleA").val();
 		var word = $("."+itemplet+" .titleB").val();
-		ishare.reset({link:url,image:img,title:title,friend:word,timeline:word});
+		ishare.reset({link:url,image:img,title:title,friend:word,timeline:title});
 	}//end func
 
 	//发送信息 AJAX
@@ -360,11 +390,14 @@ $(document).ready(function(){
 	function addAdorn(){
 		var img = $(this).attr("src");
 		var sp = $(this).attr("data-val");
+		var id = $(this).attr("data-id");
+		nowAdorn++;
+		iAscale = 1;
 		if(sp == "sp"){
-			var cont = '<div class="adorn"> <img src="images/sticker/sp.png" class="sp"> <input type="tel" value="99" maxlength="4"> <div class="remove"></div> </div>'
+			var cont = '<div class="adorn" id="s'+nowAdorn+'"> <img src="images/sticker/sp.png" class="sp"> <input type="tel" value="99" maxlength="4"> <div class="remove"></div> </div>'
 		}
 		else{
-			var cont = '<div class="adorn"> <img src="'+img+'"> <div class="remove"></div> </div>';
+			var cont = '<div class="adorn" id="s'+nowAdorn+'"> <img src="'+img+'"> <div class="remove"></div> </div>';
 		}
 		
 		$("."+itemplet+" .cont").append(cont);
@@ -488,12 +521,14 @@ $(document).ready(function(){
 				controlFlag = false;
 				myScroll.refresh();
 			});
+			$("."+itemplet+" .shellBox").addClass('noPointer');
 		}
 		else if(that.hasClass("active") && nowStep >= 3){
 			that.removeClass("active");
 			icom.fadeOut($("#stickers"),200,function(){
 				controlFlag = true;
 			});
+			$("."+itemplet+" .shellBox").addClass('noPointer');
 		}
 	}//end func
 
