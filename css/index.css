@@ -388,11 +388,12 @@ section.franceC input[type=text].titleA{
 	bottom: 1.6rem;
 	z-index: 2;
 }
-section.franceC textarea[type=text].titleB{
+section.franceC input[type=text].titleB{
 	width: 4.5rem;
+	height: 0.7rem;
 	height: auto;
 	font-size: 0.35rem;
-	bottom: 0.5rem;
+	bottom: 0.7rem;
 	z-index: 2;
 	line-height: 1.4;
 }
@@ -694,7 +695,7 @@ section.japanC [type=text].titleA{
 }
 section.japanC [type=text].titleB{
 	width: 6.4rem;
-	height: 1.2rem;
+	height: 0.6rem;
 	font-size: 0.35rem;
 	top: 2.3rem;
 	z-index: 2;
@@ -806,7 +807,7 @@ section.japanR [type=text].titleA{
 }
 section.japanR [type=text].titleB{
 	width: 2.4rem;
-	height: 0.8rem;
+	height: 0.5rem;
 	font-size: 0.21rem;
 	top: 3.23rem;
 	z-index: 2;
