@@ -105,31 +105,31 @@ section.auth{
 }
 section.auth .cont{
 	position: absolute;
-	top: 50%;
+	top: 56%;
 	left: 0;
 	width: 100%;
-	height: auto;
-	-webkit-transform: translateY(-50%);
 }
-section.auth .cont p{
-	font-size: 0.3rem;
-	color: #fff;
-	padding: 0.4rem 0.4rem;
-}
-section.auth .cont input[type=text]{
-	padding: 0.1rem 0.2rem;
+section.auth .cont input{
+	font-size: 0.34rem;
 	border: 1px solid #fff;
 	color: #fff;
 	border-radius: 0.1rem;
-	width: 4rem;
-	margin-bottom: 0.8rem;
+	width: 4.5rem;
+	height: 0.6rem;
+	line-height: 0.6rem;
+	text-align: center;
+	padding: 0.2rem 0;
+	margin-bottom: 0.5rem;
 }
+
 section.auth .cont .abtn{
-	font-size: 0.3rem;
-	width: 2.6rem;
-	color: #0e2b5b;
+	font-size: 0.34rem;
+	width: 2.7rem;
+	height: 0.6rem;
+	line-height: 0.6rem;
+	text-align: center;
+	color: #011437;
 	background: #fff;
-	padding: 0.1rem 0;
 	margin: 0 auto;
 	border-radius: 0.1rem;
 }
