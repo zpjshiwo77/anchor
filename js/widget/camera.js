@@ -63,7 +63,10 @@ var camera = function(){
 	function img_creat(src,wd,ht){	
 		loadBox.hide();
 		callback();
-		if(control) btnCamera.hide();
+		if(control){
+//			btnCamera.hide();
+			btnCamera.addClass('uploadBtnSide');
+		}//edn if
 		var size=imath.autoSize([wd,ht],[imgShell.width() * 2,imgShell.height() * 2],1);
 		imgCanvas.removeLayers()
 		.drawImage({

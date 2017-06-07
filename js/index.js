@@ -356,7 +356,7 @@ $(document).ready(function(){
 		}
 		
 		adornC.show();
-		upload.show();
+		upload.show().removeClass('uploadBtnSide');
 	}//end func
 
 	//移除掉一些提示
@@ -394,7 +394,7 @@ $(document).ready(function(){
 		nowAdorn++;
 		iAscale = 1;
 		if(sp == "sp"){
-			var cont = '<div class="adorn" id="s'+nowAdorn+'"> <img src="images/sticker/sp.png" class="sp"> <input type="tel" value="99" maxlength="4"> <div class="remove"></div> </div>'
+			var cont = '<div class="adorn adornSp" id="s'+nowAdorn+'"> <img src="images/sticker/sp.png"> <input type="tel" value="99" maxlength="4"> <div class="remove"></div> </div>'
 		}
 		else{
 			var cont = '<div class="adorn" id="s'+nowAdorn+'"> <img src="'+img+'"> <div class="remove"></div> </div>';
@@ -457,7 +457,7 @@ $(document).ready(function(){
 		$("#tips img")[0].src = "images/public/step"+i+".png";
 		var t = setTimeout(function(){
 			icom.fadeOut($("#tips"));
-		},4000);
+		},2000);
 		icom.popOn($("#tips"),{fade:500,onClose:function(){
 			clearTimeout(t);
 		}});

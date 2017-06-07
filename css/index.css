@@ -14,6 +14,9 @@ body{
 a, a:visited{
 	color: #fff;
 }
+
+.black{ background-image: none; background-color: #000000;}
+
 section{
     width: 100%;
     height: 100%;
@@ -421,13 +424,18 @@ section.franceC .shellBox .shell{
 	height: 10.5rem;
 }
 section.franceC .shellBox .uploadBtn{
-	width: 7rem;
-	height: 7rem;
+	width: 3.5rem;
+	height: 3.5rem;
 	position: absolute;
 	top: 50%;
-	left: 50%;
-	margin: -3.5rem 0 0 -3.5rem;
+	right: 50%;
+	margin-right: -1.75rem;
+	margin-top: -1.75rem; 
+	
 }
+
+section.franceC .shellBox .uploadBtnSide{ width: 1.4rem; height: 1.4rem; margin: 0; right: 0.4rem; top: 0rem; background-color: rgba(255,255,255,0.6);}
+
 section.franceC .shellBox .uploadBtn1{
 	background-image: url(../images/france/upbtn1.png);
 	background-size: 100%;
@@ -444,12 +452,12 @@ section.franceC .shellBox .mask{
 	height: 100%;
 }
 section.franceC .shellBox .mask1{
-	background: url(../images/france/bgCol1.png) no-repeat;
+	background-image: url(../images/france/bgCol1.png);
 	background-size: 100%;
 	background-position: bottom;
 }
 section.franceC .shellBox .mask2{
-	background: url(../images/france/bgCol2.png) no-repeat;
+	background-image: url(../images/france/bgCol2.png);
 	background-size: 100%;
 	background-position: bottom;
 }
@@ -462,11 +470,11 @@ section.franceC .pattern{
 	z-index: 2;
 }
 section.franceC .pattern1{
-	background: url(../images/france/lCol1.png) no-repeat;
+	background-image: url(../images/france/lCol1.png);
 	background-size: 100%;
 }
 section.franceC .pattern2{
-	background: url(../images/france/lCol2.png) no-repeat;
+	background-image: url(../images/france/lCol2.png);
 	background-size: 100%;
 }
 section.franceC .ring{
@@ -475,7 +483,7 @@ section.franceC .ring{
 	left: 0.5rem;
 	width: 1.13rem;
 	height: 1.11rem;
-	background: url(../images/france/circle.png) no-repeat;
+	background-image: url(../images/france/circle.png);
 	background-size: 100%;
 	z-index: 2;
 }
@@ -495,7 +503,7 @@ section.franceR .cont{
 	left: 0;
 	width: 7.5rem;
 	height: 4.5rem;
-	background: url(../images/france/bgRow.jpg) no-repeat;
+	background-image: url(../images/france/bgRow.jpg);
 	background-size: cover;
 }
 section.franceR .cont .logo{
@@ -505,7 +513,7 @@ section.franceR .cont .logo{
 	width: 0.85rem;
 	height: 0.85rem;
 	z-index: 2;
-	background: url(../images/public/logoW.png) no-repeat;
+	background-image: url(../images/public/logoW.png);
 	background-size: 100%;
 	background-color: rgba(0,0,0,0.5);
 }
@@ -513,7 +521,7 @@ section.franceR .cont .logo1{
 	
 }
 section.franceR .cont .logo2{
-	background: url(../images/public/logoW.png) no-repeat;
+	background-image: url(../images/public/logoW.png);
 	background-size: 100%;
 }
 section.franceR .cont .code{
@@ -522,7 +530,7 @@ section.franceR .cont .code{
 	right: 0.21rem;
 	width: 0.84rem;
 	height: 0.84rem;
-	background: url(../images/public/code.jpg) no-repeat;
+	background-image: url(../images/public/code.jpg);
 	background-size: 100%;
 	z-index: 2;
 }
@@ -576,19 +584,23 @@ section.franceR .shellBox .shell{
 	height: 4.2rem;
 }
 section.franceR .shellBox .uploadBtn{
-	width: 3rem;
-	height: 3rem;
+	width: 3.5rem;
+	height: 3.5rem;
 	position: absolute;
 	top: 0rem;
-	left: 50%;
-	margin-left: -1.5rem;
+	right: 50%;
+	margin-right: -1.75rem;
+	
 }
+
+section.franceR .shellBox .uploadBtnSide{ width: 1.1rem; height: 1.1rem; margin: 0; right: 0.21rem; top: 0rem; background-color: rgba(255,255,255,0.6);}
+
 section.franceR .shellBox .uploadBtn1{
-	background: url(../images/france/upbtn1.png) no-repeat;
+	background-image: url(../images/france/upbtn1.png);
 	background-size: 100%;
 }
 section.franceR .shellBox .uploadBtn2{
-	background: url(../images/france/upbtn2.png) no-repeat;
+	background-image: url(../images/france/upbtn2.png);
 	background-size: 100%;
 }
 section.franceR .shellBox .mask{
@@ -599,12 +611,12 @@ section.franceR .shellBox .mask{
 	height: 100%;
 }
 section.franceR .shellBox .mask1{
-	background: url(../images/france/bgRow1.png) no-repeat;
+	background-image: url(../images/france/bgRow1.png);
 	background-size: 100%;
 	background-position: bottom;
 }
 section.franceR .shellBox .mask2{
-	background: url(../images/france/bgRow2.png) no-repeat;
+	background-image: url(../images/france/bgRow2.png);
 	background-size: 100%;
 	background-position: bottom;
 }
@@ -617,11 +629,11 @@ section.franceR .pattern{
 	z-index: 2;
 }
 section.franceR .pattern1{
-	background: url(../images/france/lRow1.png) no-repeat;
+	background-image: url(../images/france/lRow1.png);
 	background-size: 100%;
 }
 section.franceR .pattern2{
-	background: url(../images/france/lRow2.png) no-repeat;
+	background-image: url(../images/france/lRow2.png);
 	background-size: 100%;
 }
 section.franceR .ring{
@@ -630,7 +642,7 @@ section.franceR .ring{
 	left: 7.5rem;
 	width: 1.13rem;
 	height: 1.11rem;
-	background: url(../images/france/circle.png) no-repeat;
+	background-image: url(../images/france/circle.png);
 	background-size: 100%;
 	z-index: 2;
 }
@@ -642,14 +654,14 @@ section.japanC .cont{
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background: url(../images/japan/bgCol.jpg) no-repeat;
+	background-image: url(../images/japan/bgCol.jpg);
 	background-size: 100%;
 }
 /*section.japanC .cont.bg1{
 	background: #e6e7e8;
 }
 section.japanC .cont.bg2{
-	background: url(../images/japan/bgCol.jpg) no-repeat;
+	background-image: url(../images/japan/bgCol.jpg);
 	background-size: cover;
 }*/
 section.japanC .cont .logo{
@@ -659,7 +671,6 @@ section.japanC .cont .logo{
 	width: 1.2rem;
 	height: 1.2rem;
 	background-image: url(../images/public/logoW.png);
-	background-repeat: no-repeat;
 	background-size: 100%;
 	z-index: 2;
 	background-color: rgba(0,0,0,0.5);
@@ -671,7 +682,6 @@ section.japanC .cont .code{
 	width: 1.3rem;
 	height: 1.3rem;
 	background-image: url(../images/public/code.jpg);
-	background-repeat: no-repeat;
 	background-size: 100%;
 	z-index: 2;
 }
@@ -727,25 +737,28 @@ section.japanC .shellBox .mask{
 	height: 100%;
 }
 section.japanC .shellBox .mask1{
-	background: url(../images/japan/bgCol1.png) no-repeat;
+	background-image: url(../images/japan/bgCol1.png);
 	background-size: 100%;
 	background-position: bottom;
 }
 section.japanC .shellBox .mask2{
-	background: url(../images/japan/bgCol2.png) no-repeat;
+	background-image: url(../images/japan/bgCol2.png);
 	background-size: 100%;
 	background-position: bottom;
 }
 section.japanC .shellBox .uploadBtn{
-	width: 5.78rem;
-	height: 5.78rem;
+	width: 3.5rem;
+	height: 3.5rem;
 	position: absolute;
-	bottom:0.5rem;
+	bottom:2rem;
 	left: 50%;
-	margin-left: -2.89rem;
-	background: url(../images/japan/upbtn.png) no-repeat;
+	margin-left: -1.75rem;
+	background-image: url(../images/japan/upbtn.png);
 	background-size: 100%;
 }
+
+section.japanC .shellBox .uploadBtnSide{ width: 1.3rem; height: 1.3rem; margin: 0; left: 0.2rem; bottom: 0.7rem; background-color: rgba(255,255,255,0.6);}
+
 /*japanC end*/
 
 section.japanR .cont{
@@ -756,14 +769,13 @@ section.japanR .cont{
 	height: 4.5rem;
 	overflow: hidden;
 	background-image: url(../images/japan/bgRow.jpg);
-	background-repeat: no-repeat;
 	background-size: 100% 100%;
 }
 /*section.japanR .cont.bg1{
 	background: #e6e7e8;
 }
 section.japanR .cont.bg2{
-	background: url(../images/japan/bgRow.jpg) no-repeat;
+	background-image: url(../images/japan/bgRow.jpg);
 	background-size: cover;
 }*/
 section.japanR .cont .logo{
@@ -773,7 +785,6 @@ section.japanR .cont .logo{
 	width: 0.72rem;
 	height: 0.72rem;
 	background-image: url(../images/public/logoW.png);
-	background-repeat: no-repeat;
 	background-size: 100%;
 	z-index: 2;
 	background-color: rgba(0,0,0,0.5);
@@ -785,7 +796,6 @@ section.japanR .cont .code{
 	width: 0.84rem;
 	height: 0.84rem;
 	background-image: url(../images/public/code.jpg);
-	background-repeat: no-repeat;
 	background-size: 100%;
 	z-index: 2;
 }
@@ -851,12 +861,15 @@ section.japanR .shellBox .uploadBtn{
 	width: 3rem;
 	height: 3rem;
 	position: absolute;
-	top:50%;
-	right: 0.5rem;
+	top:55%;
+	right: 1.3rem;
 	margin-top: -1.5rem;
 	background-image: url(../images/japan/upbtn.png);
 	background-size: 100%;
 }
+
+section.japanR .shellBox .uploadBtnSide{ width: 1.1rem; height: 1.1rem; margin: 0; right: 0.24rem; top: 0.24rem; background-color: rgba(255,255,255,0.6);}
+
 /*japanR end*/
 
 .adorn{
@@ -870,24 +883,20 @@ section.japanR .shellBox .uploadBtn{
 .adorn img{
 	width: 100%;
 }
-.adorn img.sp{
-	position: absolute;
-	top:50%;
-	left: 0;
+
+.adornSp{ display: flex; align-items: center; width: 1.32rem;}
+
+.adornSp img{
 	width: 0.3rem;
-	height: 0.31rem;
-	margin-top: -0.155rem;
+	height: 0.3rem;
 }
-.adorn input{
-	position: absolute;
-	top:50%;
-	left: 0.32rem;
+.adornSp input{
     font-size: 0.34rem;
     color: #fb3939;
     width: 1rem;
-    height: 0.5rem;
+    height: 0.34rem;
     font-weight: bold;
-    margin-top: -0.25rem;
+    margin-left: 0.02rem;
 }
 .adorn .remove{
 	position: absolute;
