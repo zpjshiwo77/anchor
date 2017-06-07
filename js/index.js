@@ -69,8 +69,8 @@ $(document).ready(function(){
 	function init(){
 		requestAnimationFrame(function(){
 			loadBox.show();
-			iuser.init(userGetted);
-			// load_handler();
+//			iuser.init(userGetted);
+			load_handler();
 		});
 	}//edn func
 	
@@ -356,7 +356,10 @@ $(document).ready(function(){
 		}
 		
 		adornC.show();
-		upload.show().removeClass('uploadBtnSide');
+		upload.show();
+//		upload.removeClass('uploadBtnSide')
+//		$('.franceC .cont').add($('.franceR .cont')).add($('.japanC .cont')).add($('.japanR .cont')).removeClass('black');
+		
 	}//end func
 
 	//移除掉一些提示
@@ -468,6 +471,7 @@ $(document).ready(function(){
 		itemplet = $(this).data("val");
 		$(".opt").removeClass("active");
 		$(this).addClass("active");
+		$('.franceC .cont').add($('.franceR .cont')).add($('.japanC .cont')).add($('.japanR .cont')).removeClass('black');
 	}//end func
 
 	//确认选择模板

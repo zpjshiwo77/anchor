@@ -66,6 +66,7 @@ var camera = function(){
 		if(control){
 //			btnCamera.hide();
 			btnCamera.addClass('uploadBtnSide');
+			$('.franceC .cont').add($('.franceR .cont')).add($('.japanC .cont')).add($('.japanR .cont')).addClass('black');
 		}//edn if
 		var size=imath.autoSize([wd,ht],[imgShell.width() * 2,imgShell.height() * 2],1);
 		imgCanvas.removeLayers()
