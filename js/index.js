@@ -69,8 +69,8 @@ $(document).ready(function(){
 	function init(){
 		requestAnimationFrame(function(){
 			loadBox.show();
-//			iuser.init(userGetted);
-			load_handler();
+			iuser.init(userGetted);
+//			load_handler();
 		});
 	}//edn func
 	
