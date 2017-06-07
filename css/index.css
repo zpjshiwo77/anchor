@@ -324,10 +324,10 @@ div.control #stickers .next{
 
 section.franceC .cont{
 	position: absolute;
-	top:0;
-	left: 0;
-	width: 100%;
-	height: 100%;
+	top: 0.5rem;
+	left: 0.75rem;
+	width: 6rem;
+	height: 9.7rem;
 	background-image: url(../images/france/bgCol.jpg);
 	background-size: 100%;
 }
@@ -342,42 +342,43 @@ section.franceC .cont.bg2{
 section.franceC .cont .logo{
 	position: absolute;
 	top: 0;
-	left: 0.2rem;
-	width: 1.3rem;
-	height: 1.3rem;
+	left: 0.16rem;
+	width: 1.04rem;
+	height: 1.04rem;
 	z-index: 2;
 	background-image: url(../images/public/logoW.png);
 	background-size: 100%;
 	background-color: rgba(0,0,0,0.5);
 }
-section.franceC .cont .logo1{
-	
-}
-section.franceC .cont .logo2{
-	background-image: url(../images/public/logoW.png);
-	background-size: 100%;
+section.franceC .cont .logo .l-shell{
+	width: 1.1rem;
+	height: 1.1rem;
 }
 section.franceC .cont .code{
 	position: absolute;
-	bottom: 0.4rem;
-	right: 0.4rem;
-	width: 1.4rem;
-	height: 1.4rem;
+	top: 8.26rem;
+	right: 0.32rem;
+	width: 1.12rem;
+	height: 1.12rem;
 	background-image: url(../images/public/code.jpg);
 	background-size: 100%;
 	z-index: 2;
+}
+section.franceC .cont .code .c-shell{
+	width: 1.18rem;
+	height: 1.18rem;
 }
 section.franceC input[type=text].c1,section.franceC textarea[type=text].c1{
 	border: 1px dashed #d63555;
 	color: #d63555;
 	position: absolute;
-	left: 0.4rem;
+	left: 0.32rem;
 }
 section.franceC input[type=text].c2,section.franceC textarea[type=text].c2{
 	border: 1px dashed #1486c9;
 	color: #1486c9;
 	position: absolute;
-	left: 0.4rem;
+	left: 0.32rem;
 }
 section.franceC [type=text].c1::-webkit-input-placeholder{
 	color: #d63555;
@@ -386,19 +387,20 @@ section.franceC [type=text].c2::-webkit-input-placeholder{
 	color: #1486c9;
 }
 section.franceC input[type=text].titleA{
-	width: 5rem;
-	height: 0.7rem;
-	font-size: 0.6rem;
+	width: 4rem;
+	height: 0.64rem;
+	font-size: 0.44rem;
 	font-weight: bold;
-	bottom: 1.6rem;
+	top: 7.78rem;
+	line-height: 1.2;
 	z-index: 2;
 }
 section.franceC input[type=text].titleB{
-	width: 4.5rem;
-	height: 0.7rem;
+	width: 3.6rem;
+	height: 0.56rem;
 	height: auto;
-	font-size: 0.45rem;
-	bottom: 0.7rem;
+	font-size: 0.256rem;
+	top: 8.45rem;
 	z-index: 2;
 	line-height: 1.4;
 }
@@ -406,8 +408,8 @@ section.franceC .shellBox{
 	position: absolute;
 	top: 0;
 	left: 0;
-	width: 100%;
-	height: 100%;
+	width: 6rem;
+	height: 9.7rem;
 }
 section.franceC .shellBox1{
 	background-image: url(../images/france/upload1.png);
@@ -421,21 +423,21 @@ section.franceC .shellBox .shell{
 	position: absolute;
 	top: 0;
 	left: 0;
-	width: 7.5rem;
-	height: 10.5rem;
+	width: 6rem;
+	height: 8.4rem;
 }
 section.franceC .shellBox .uploadBtn{
-	width: 3.5rem;
-	height: 3.5rem;
+	width: 2.8rem;
+	height: 2.8rem;
 	position: absolute;
 	top: 50%;
 	right: 50%;
-	margin-right: -1.75rem;
-	margin-top: -1.75rem; 
+	margin-right: -1.4rem;
+	margin-top: -1.4rem; 
 	
 }
 
-section.franceC .shellBox .uploadBtnSide{ width: 1.4rem; height: 1.4rem; margin: 0; right: 0.4rem; top: 0rem; background-color: rgba(255,255,255,0.6);}
+section.franceC .shellBox .uploadBtnSide{ width: 1.12rem; height: 1.12rem; margin: 0; right: 0.32rem; top: 0rem; background-color: rgba(255,255,255,0.6);}
 
 section.franceC .shellBox .uploadBtn1{
 	background-image: url(../images/france/upbtn1.png);
@@ -449,8 +451,8 @@ section.franceC .shellBox .mask{
 	position: absolute;
 	top:0;
 	left: 0;
-	width: 100%;
-	height: 100%;
+	width: 6rem;
+	height: 9.7rem;
 }
 section.franceC .shellBox .mask1{
 	background-image: url(../images/france/bgCol1.png);
@@ -527,7 +529,7 @@ section.franceR .cont .logo2{
 }
 section.franceR .cont .code{
 	position: absolute;
-	bottom: 0.21rem;
+	top: 3.45rem;
 	right: 0.21rem;
 	width: 0.84rem;
 	height: 0.84rem;
@@ -555,18 +557,18 @@ section.franceR [type=text].c2::-webkit-input-placeholder{
 }
 section.franceR .titleA{
 	width:3.8rem;
-	height: 0.65rem;
-	font-size: 0.45rem;
+	height: 0.6rem;
+	font-size: 0.33rem;
 	font-weight: bold;
-	bottom: 0.5rem;
+	top: 3.4rem;
 	line-height: 1.1;
 	z-index: 2;
 }
 section.franceR .titleB{
 	width: 4.5rem;
-	height: 0.45rem;
-	font-size: 0.32rem;
-	bottom: 0.05rem;
+	height: 0.4rem;
+	font-size: 0.192rem;
+	top: 4.05rem;
 	line-height: 1.1;
 	z-index: 2;
 }
@@ -574,8 +576,8 @@ section.franceR .shellBox{
 	position: absolute;
 	top: 0;
 	left: 0;
-	width: 100%;
-	height: 100%;
+	width: 7.5rem;
+	height: 4.5rem;
 }
 section.franceR .shellBox .shell{
 	position: absolute;
@@ -608,8 +610,8 @@ section.franceR .shellBox .mask{
 	position: absolute;
 	top:0;
 	left: 0;
-	width: 100%;
-	height: 100%;
+	width: 7.5rem;
+	height: 4.5rem;
 }
 section.franceR .shellBox .mask1{
 	background-image: url(../images/france/bgRow1.png);
@@ -651,40 +653,41 @@ section.franceR .ring{
 
 section.japanC .cont{
 	position: absolute;
-	top:0;
-	left: 0;
-	width: 100%;
-	height: 100%;
+	top: 0.5rem;
+	left: 0.75rem;
+	width: 6rem;
+	height: 9.7rem;
 	background-image: url(../images/japan/bgCol.jpg);
 	background-size: 100%;
 }
-/*section.japanC .cont.bg1{
-	background: #e6e7e8;
-}
-section.japanC .cont.bg2{
-	background-image: url(../images/japan/bgCol.jpg);
-	background-size: cover;
-}*/
 section.japanC .cont .logo{
 	position: absolute;
-	top: 0.2rem;
-	left: 0.2rem;
-	width: 1.2rem;
-	height: 1.2rem;
+	top: 0.16rem;
+	left: 0.16rem;
+	width: 0.96rem;
+	height: 0.96rem;
 	background-image: url(../images/public/logoW.png);
 	background-size: 100%;
 	z-index: 2;
 	background-color: rgba(0,0,0,0.5);
 }
+section.japanC .cont .logo .l-shell{
+	width: 1rem;
+	height: 1rem;
+}
 section.japanC .cont .code{
 	position: absolute;
-	bottom: 0.7rem;
-	right: 0.2rem;
-	width: 1.3rem;
-	height: 1.3rem;
+	top: 8.1rem;
+	right: 0.16rem;
+	width: 1.04rem;
+	height: 1.04rem;
 	background-image: url(../images/public/code.jpg);
 	background-size: 100%;
 	z-index: 2;
+}
+section.japanC .cont .code .c-shell{
+	width: 1.1rem;
+	height: 1.1rem;
 }
 section.japanC [type=text]{
 	border: 1px dashed #626262;
@@ -692,50 +695,50 @@ section.japanC [type=text]{
 	color: #626262;
 	position: absolute;
 	left: 50%;
-	
+	line-height: 1.2;
 }
 section.japanC [type=text]::-webkit-input-placeholder{
 	color: #626262;
 }
 section.japanC [type=text].titleA{
-	width: 7.2rem;
-	height: 0.7rem;
+	width: 5.76rem;
+	height: 0.9rem;
 	font-size: 0.6rem;
 	font-weight: bold;
-	top: 1.5rem;
+	top: 1.2rem;
 	z-index: 2;
-	margin-left: -3.6rem;
+	margin-left: -2.88rem;
 }
 section.japanC [type=text].titleB{
-	width: 6.4rem;
-	height: 0.6rem;
-	font-size: 0.45rem;
-	top: 2.3rem;
+	width: 5.12rem;
+	height: 0.48rem;
+	font-size: 0.36rem;
+	top: 2.16rem;
 	z-index: 2;
-	margin-left: -3.2rem;
+	margin-left: -2.56rem;
 	line-height: 1.5;
 }
 section.japanC .shellBox{
 	position: absolute;
-	bottom: 0rem;
+	top: 0rem;
 	left: 0;
-	width: 100%;
-	height: 100%;
+	width: 6rem;
+	height: 9.7rem;
 	
 }
 section.japanC .shellBox .shell{
 	position: absolute;
-	bottom: 0;
+	top: 0;
 	left: 0;
-	width: 100%;
-	height: 100%;
+	width: 6rem;
+	height: 9.7rem;
 }
 section.japanC .shellBox .mask{
 	position: absolute;
 	top:0;
 	left: 0;
-	width: 100%;
-	height: 100%;
+	width: 6rem;
+	height: 9.7rem;
 }
 section.japanC .shellBox .mask1{
 	background-image: url(../images/japan/bgCol1.png);
@@ -748,17 +751,17 @@ section.japanC .shellBox .mask2{
 	background-position: bottom;
 }
 section.japanC .shellBox .uploadBtn{
-	width: 3.5rem;
-	height: 3.5rem;
+	width: 2.8rem;
+	height: 2.8rem;
 	position: absolute;
-	top:6rem;
+	top:4.8rem;
 	right: 50%;
-	margin-right: -1.75rem;
+	margin-right: -1.4rem;
 	background-image: url(../images/japan/upbtn.png);
 	background-size: 100%;
 }
 
-section.japanC .shellBox .uploadBtnSide{ width: 1.3rem; height: 1.3rem; margin: 0; right: 0.2rem; top: 0; background-color: rgba(255,255,255,0.6);}
+section.japanC .shellBox .uploadBtnSide{ width: 1.04rem; height: 1.04rem; margin: 0; right: 0.16rem; top: 0; background-color: rgba(255,255,255,0.6);}
 
 /*japanC end*/
 
@@ -793,7 +796,7 @@ section.japanR .cont .logo{
 }
 section.japanR .cont .code{
 	position: absolute;
-	bottom: 0.24rem;
+	top: 3.42rem;
 	right: 0.24rem;
 	width: 0.84rem;
 	height: 0.84rem;
@@ -812,8 +815,8 @@ section.japanR [type=text]::-webkit-input-placeholder{
 }
 section.japanR [type=text].titleA{
 	width: 3.5rem;
-	height: 0.65rem;
-	font-size: 0.4rem;
+	height: 0.7rem;
+	font-size: 0.432rem;
 	font-weight: bold;
 	top: 2.5rem;
 	z-index: 2;
@@ -822,32 +825,32 @@ section.japanR [type=text].titleA{
 section.japanR [type=text].titleB{
 	width: 2.4rem;
 	height: 0.5rem;
-	font-size: 0.3rem;
-	top: 3.23rem;
+	font-size: 0.27rem;
+	top: 3.3rem;
 	z-index: 2;
 	line-height: 1.5;
 }
 section.japanR .shellBox{
 	position: absolute;
-	bottom: 0rem;
+	top: 0rem;
 	left: 0;
-	width: 100%;
-	height: 100%;
+	width: 7.5rem;
+	height: 4.5rem;
 	
 }
 section.japanR .shellBox .shell{
 	position: absolute;
-	bottom: 0;
+	top: 0;
 	left: 0;
-	width: 100%;
-	height: 100%;
+	width: 7.5rem;
+	height: 4.5rem;
 }
 section.japanR .shellBox .mask{
 	position: absolute;
 	top:0;
 	left: 0;
-	width: 100%;
-	height: 100%;
+	width: 7.5rem;
+	height: 4.5rem;
 }
 section.japanR .shellBox .mask1{
 	background-image: url(../images/japan/bgRow1.png);
