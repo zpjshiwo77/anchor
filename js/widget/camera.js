@@ -5,7 +5,7 @@ var camera = function(){
 	var imgShell=$('div.shell');
 	var btnCamera=$('a.btnCamera');
 	var imgCanvas,imgLayer;
-	var imgScaleMin=0.1,imgScaleMax=5,imgScaleTimer;
+	var imgScaleMin=1,imgScaleMax=5,imgScaleTimer;
     var fileInput;
     var control = true;
     var callback = function(){
