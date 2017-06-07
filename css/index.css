@@ -387,7 +387,7 @@ section.franceC [type=text].c2::-webkit-input-placeholder{
 section.franceC input[type=text].titleA{
 	width: 5rem;
 	height: 0.7rem;
-	font-size: 0.5rem;
+	font-size: 0.6rem;
 	font-weight: bold;
 	bottom: 1.6rem;
 	z-index: 2;
@@ -396,7 +396,7 @@ section.franceC input[type=text].titleB{
 	width: 4.5rem;
 	height: 0.7rem;
 	height: auto;
-	font-size: 0.35rem;
+	font-size: 0.45rem;
 	bottom: 0.7rem;
 	z-index: 2;
 	line-height: 1.4;
@@ -555,7 +555,7 @@ section.franceR [type=text].c2::-webkit-input-placeholder{
 section.franceR .titleA{
 	width:3.8rem;
 	height: 0.65rem;
-	font-size: 0.35rem;
+	font-size: 0.45rem;
 	font-weight: bold;
 	bottom: 0.5rem;
 	line-height: 1.1;
@@ -564,7 +564,7 @@ section.franceR .titleA{
 section.franceR .titleB{
 	width: 4.5rem;
 	height: 0.45rem;
-	font-size: 0.22rem;
+	font-size: 0.32rem;
 	bottom: 0.05rem;
 	line-height: 1.1;
 	z-index: 2;
@@ -699,7 +699,7 @@ section.japanC [type=text]::-webkit-input-placeholder{
 section.japanC [type=text].titleA{
 	width: 7.2rem;
 	height: 0.7rem;
-	font-size: 0.5rem;
+	font-size: 0.6rem;
 	font-weight: bold;
 	top: 1.5rem;
 	z-index: 2;
@@ -708,7 +708,7 @@ section.japanC [type=text].titleA{
 section.japanC [type=text].titleB{
 	width: 6.4rem;
 	height: 0.6rem;
-	font-size: 0.35rem;
+	font-size: 0.45rem;
 	top: 2.3rem;
 	z-index: 2;
 	margin-left: -3.2rem;
@@ -811,7 +811,7 @@ section.japanR [type=text]::-webkit-input-placeholder{
 section.japanR [type=text].titleA{
 	width: 3.5rem;
 	height: 0.65rem;
-	font-size: 0.3rem;
+	font-size: 0.4rem;
 	font-weight: bold;
 	top: 2.5rem;
 	z-index: 2;
@@ -820,7 +820,7 @@ section.japanR [type=text].titleA{
 section.japanR [type=text].titleB{
 	width: 2.4rem;
 	height: 0.5rem;
-	font-size: 0.21rem;
+	font-size: 0.3rem;
 	top: 3.23rem;
 	z-index: 2;
 	line-height: 1.5;
