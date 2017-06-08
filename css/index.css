@@ -426,6 +426,10 @@ section.franceC .shellBox .shell{
 	width: 6rem;
 	height: 8.4rem;
 }
+section.franceC .shellBox .shell canvas{
+	width: 6rem;
+	height: 8.4rem;
+}
 section.franceC .shellBox .uploadBtn{
 	width: 2.8rem;
 	height: 2.8rem;
@@ -731,6 +735,10 @@ section.japanC .shellBox .shell{
 	position: absolute;
 	top: 0;
 	left: 0;
+	width: 6rem;
+	height: 9.7rem;
+}
+section.japanC .shellBox .shell canvas{
 	width: 6rem;
 	height: 9.7rem;
 }
