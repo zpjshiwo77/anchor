@@ -172,6 +172,7 @@ $(document).ready(function(){
 		// $("section").on('touchmove',".adorn" noScroll);
 		// choseBoxShow();
 		cameraInit();
+		closeSelf_handler();
 	}//end func
 
 	//禁止滑动
@@ -517,6 +518,7 @@ $(document).ready(function(){
 				nowStep++;
 				if(nowStep == 1) showTipsDialog(nowStep);
 			});
+			$('.closeSelf').parent().show();
 		}
 	}//end func
 
@@ -586,6 +588,37 @@ $(document).ready(function(){
 			$("."+itemplet+" .mask").removeClass("mask1 mask2").addClass("mask"+c);
 		}
 	}//end func
+	
+	//确定弹窗
+	var confirmBox=$('aside.confirm');
+	function confirm_handler(text,callback){
+		text=text||'确定删除？'
+		confirmBox.show();
+		confirmBox.find('.text').html(text);
+		var confirm=confirmBox.find('a.confirm');
+		var cancel=confirmBox.find('a.cancel');
+		cancel.off().one('click',function(e){
+			confirmBox.hide();
+		});
+		confirm.off().one('click',function(e){
+			confirmBox.hide();
+			if(callback) callback();
+		});
+	}//edn func
+	
+	//关闭按钮
+	var closeSelf=$('.closeSelf');
+	
+	function closeSelf_handler(){
+		closeSelf.off().on('click',closeSelf_click);
+	}//edn func
+	
+	function closeSelf_click(e){
+		var parent=$(this).parent();
+		confirm_handler(null,function(){
+			parent.hide();
+		});
+	}//edn func
 	
 	//----------------------------------------页面监测代码----------------------------------------
 	function monitor_handler(){
