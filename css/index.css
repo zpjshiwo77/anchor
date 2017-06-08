@@ -341,10 +341,10 @@ section.franceC .cont.bg2{
 }
 section.franceC .cont .logo{
 	position: absolute;
-	top: 0;
+	top: 0.16rem;
 	left: 0.16rem;
-	width: 1.04rem;
-	height: 1.04rem;
+	width: 1rem;
+	height: 1rem;
 	z-index: 2;
 	background-image: url(../images/public/logoW.png);
 	background-size: 100%;
@@ -356,10 +356,10 @@ section.franceC .cont .logo .l-shell{
 }
 section.franceC .cont .code{
 	position: absolute;
-	top: 8.26rem;
-	right: 0.32rem;
-	width: 1.12rem;
-	height: 1.12rem;
+	bottom: 0.16rem;
+	right: 0.16rem;
+	width: 1rem;
+	height: 1rem;
 	background-image: url(../images/public/code.jpg);
 	background-size: 100%;
 	z-index: 2;
@@ -441,7 +441,7 @@ section.franceC .shellBox .uploadBtn{
 	
 }
 
-section.franceC .shellBox .uploadBtnSide{ width: 1.12rem; height: 1.12rem; margin: 0; right: 0.32rem; top: 0rem; background-color: rgba(255,255,255,0.6);}
+section.franceC .shellBox .uploadBtnSide{ width: 1rem; height: 1rem; margin: 0; right: 0.16rem; top: 0.16rem; background-color: rgba(255,255,255,0.6);}
 
 section.franceC .shellBox .uploadBtn1{
 	background-image: url(../images/france/upbtn1.png);
@@ -515,10 +515,10 @@ section.franceR .cont{
 }
 section.franceR .cont .logo{
 	position: absolute;
-	top: 0rem;
-	left: 0.21rem;
-	width: 0.85rem;
-	height: 0.85rem;
+	top: 0.24rem;
+	left: 0.24rem;
+	width: 0.84rem;
+	height: 0.84rem;
 	z-index: 2;
 	background-image: url(../images/public/logoW.png);
 	background-size: 100%;
@@ -533,8 +533,8 @@ section.franceR .cont .logo2{
 }
 section.franceR .cont .code{
 	position: absolute;
-	top: 3.45rem;
-	right: 0.21rem;
+	bottom: 0.24rem;
+	right: 0.24rem;
 	width: 0.84rem;
 	height: 0.84rem;
 	background-image: url(../images/public/code.jpg);
@@ -600,7 +600,7 @@ section.franceR .shellBox .uploadBtn{
 	
 }
 
-section.franceR .shellBox .uploadBtnSide{ width: 1.1rem; height: 1.1rem; margin: 0; right: 0.2rem; top: 0rem; background-color: rgba(255,255,255,0.6);}
+section.franceR .shellBox .uploadBtnSide{ width: 0.84rem; height: 0.84rem; margin: 0; right: 0.24rem; top: 0.24rem; background-color: rgba(255,255,255,0.6);}
 
 section.franceR .shellBox .uploadBtn1{
 	background-image: url(../images/france/upbtn1.png);
@@ -668,8 +668,8 @@ section.japanC .cont .logo{
 	position: absolute;
 	top: 0.16rem;
 	left: 0.16rem;
-	width: 0.96rem;
-	height: 0.96rem;
+	width: 1rem;
+	height: 1rem;
 	background-image: url(../images/public/logoW.png);
 	background-size: 100%;
 	z-index: 2;
@@ -681,10 +681,10 @@ section.japanC .cont .logo .l-shell{
 }
 section.japanC .cont .code{
 	position: absolute;
-	top: 8.1rem;
+	bottom: 0.16rem;
 	right: 0.16rem;
-	width: 1.04rem;
-	height: 1.04rem;
+	width: 1rem;
+	height: 1rem;
 	background-image: url(../images/public/code.jpg);
 	background-size: 100%;
 	z-index: 2;
@@ -770,7 +770,7 @@ section.japanC .shellBox .uploadBtn{
 	background-size: 100%;
 }
 
-section.japanC .shellBox .uploadBtnSide{ width: 1.04rem; height: 1.04rem; margin: 0; right: 0.16rem; top: 0; background-color: rgba(255,255,255,0.6);}
+section.japanC .shellBox .uploadBtnSide{ width: 1rem; height: 1rem; margin: 0; right: 0.16rem; top: 0.16rem; background-color: rgba(255,255,255,0.6);}
 
 /*japanC end*/
 
@@ -796,8 +796,8 @@ section.japanR .cont .logo{
 	position: absolute;
 	top: 0.24rem;
 	left: 0.24rem;
-	width: 0.72rem;
-	height: 0.72rem;
+	width: 0.84rem;
+	height: 0.84rem;
 	background-image: url(../images/public/logoW.png);
 	background-size: 100%;
 	z-index: 2;
@@ -805,7 +805,7 @@ section.japanR .cont .logo{
 }
 section.japanR .cont .code{
 	position: absolute;
-	top: 3.42rem;
+	bottom: 0.24rem;
 	right: 0.24rem;
 	width: 0.84rem;
 	height: 0.84rem;
@@ -875,14 +875,14 @@ section.japanR .shellBox .uploadBtn{
 	width: 3rem;
 	height: 3rem;
 	position: absolute;
-	top: 50%;
-	right: 1.1rem;
+	top: 45%;
+	right: 0.8rem;
 	margin-top: -1.5rem;
 	background-image: url(../images/japan/upbtn.png);
 	background-size: 100%;
 }
 
-section.japanR .shellBox .uploadBtnSide{ width: 1.1rem; height: 1.1rem; margin: 0; right: 0.24rem; top: 0.24rem; background-color: rgba(255,255,255,0.6);}
+section.japanR .shellBox .uploadBtnSide{ width: 0.84rem; height: 0.84rem; margin: 0; right: 0.24rem; top: 0.24rem; background-color: rgba(255,255,255,0.6);}
 
 /*japanR end*/
 

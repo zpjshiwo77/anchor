@@ -69,8 +69,8 @@ $(document).ready(function(){
 	function init(){
 		requestAnimationFrame(function(){
 			loadBox.show();
-			iuser.init(userGetted);
-//			load_handler();
+//			iuser.init(userGetted);
+			load_handler();
 		});
 	}//edn func
 	
@@ -271,9 +271,9 @@ $(document).ready(function(){
 
 		if(titleA == "") icom.alert("请输入主标题");
 		else if(titleB == "") icom.alert("请输入副标题");
-		else if(!logo) icom.alert("请上传logo");
-		else if(!main) icom.alert("请上传一张内容图片");
-		else if(!code) icom.alert("请上传一张二维码图片");
+//		else if(!logo) icom.alert("请上传logo");
+		else if(!main) icom.alert("请更换一张背景图片");
+//		else if(!code) icom.alert("请上传一张二维码图片");
 		else{
 			setTimeout(function(){
 				nowStep++;
@@ -304,9 +304,16 @@ $(document).ready(function(){
 			
 		}
 
-
+		var logo = $("."+itemplet+" .l-shell").hasClass("up");
+		var code = $("."+itemplet+" .c-shell").hasClass("up");
+		if(!logo) $("."+itemplet+" .logo").hide();
+		if(!code) $("."+itemplet+" .code").hide();
+		
 		icamera.makeImg($("."+itemplet+" .cont"),function(img){
 			icom.fadeOut(loadBox);
+			$('.franceC .logo').add($('.franceC .code')).show();
+			if(!logo) $("."+itemplet+" .logo").show();
+			if(!code) $("."+itemplet+" .code").show();
 			$("#preview .previewImg")[0].src = img;
 			icom.popOn($("#preview"),{fade:500,onClose:showTips});
 			sendInfo(img);
@@ -474,7 +481,10 @@ $(document).ready(function(){
 		itemplet = $(this).data("val");
 		$(".opt").removeClass("active");
 		$(this).addClass("active");
-		$('.franceC .cont').add($('.franceR .cont')).add($('.japanC .cont')).add($('.japanR .cont')).removeClass('black');
+		$('.franceC .cont').removeClass('black');
+		$('.franceR .cont').removeClass('black');
+		$('.japanC .cont').removeClass('black');
+		$('.japanR .cont').removeClass('black');
 	}//end func
 
 	//确认选择模板
@@ -483,13 +493,15 @@ $(document).ready(function(){
 			icom.alert("请选择您的模板");
 		}
 		else{
-			$("#next").hide();
+//			$("#next").hide();
 			if($("."+itemplet+" .c-shell").hasClass('up')) {
 				nowStep = 4;
 				$("#view").show();
 				$(".control").show();
 			}
-			else $(".control").hide().removeClass("show");
+			else{
+//				$(".control").hide().removeClass("show");
+			}//edn else
 			choseBox.hide();
 			controlFlag = true;
 			$("#templet").removeClass("active");
