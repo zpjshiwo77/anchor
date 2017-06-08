@@ -14,8 +14,8 @@ $(document).ready(function(){
 	function init(){
 		requestAnimationFrame(function(){
 			loadBox.show();
-			iuser.init(userGetted);
-//			load_handler();
+//			iuser.init(userGetted);
+			load_handler();
 		});
 	}//edn func
 	
@@ -64,8 +64,10 @@ $(document).ready(function(){
 	}//end func
 
 	function pageInit(){
-		$(".poster img")[0].src = poster;
-		icom.fadeIn(articleBox);
+		icom.imageLoad(poster,function(src){
+			$(".poster img")[0].src = src;
+			icom.fadeIn(articleBox);
+		})
 	}
 	
 	//----------------------------------------页面监测代码----------------------------------------

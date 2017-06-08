@@ -94,7 +94,7 @@ $(document).ready(function(){
 			loader.addImage('images/france/upbtn'+i+'.png');
 
 			loader.addImage('images/japan/bgCol'+i+'.png');
-			loader.addImage('images/japan/bgRow'+i+'r.png');
+			loader.addImage('images/japan/bgRow'+i+'.png');
 			loader.addImage('images/japan/color'+i+'.png');
 			
 		};
@@ -113,7 +113,6 @@ $(document).ready(function(){
 		loader.addImage('images/japan/col.jpg');
 		loader.addImage('images/japan/row.jpg');
 		loader.addImage('images/japan/upbtn.png');
-		loader.addImage('images/japan/upload.png');
 
 		loader.addImage('images/public/code.jpg');
 		loader.addImage('images/public/control.png');
@@ -296,10 +295,13 @@ $(document).ready(function(){
 		removeTips();
 
 		if(itemplet == "japanR" || itemplet == "franceR"){
-			$("#preview .tips").css("top","7rem");
+			$("#preview img.previewImg").css({width:7.5+'rem',height:'4.5rem',top:'50%',left:0,marginTop:-2.25+'rem'});
+			$("#preview .tips").css("top","7.5rem");
 		}
 		else{
+			$("#preview img.previewImg").css({width:6+'rem',height:'9.7rem',top:0.5+'rem',left:0.75+'rem',marginTop:0});
 			$("#preview .tips").css("top","10rem");
+			
 		}
 
 
