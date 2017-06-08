@@ -69,8 +69,8 @@ $(document).ready(function(){
 	function init(){
 		requestAnimationFrame(function(){
 			loadBox.show();
-//			iuser.init(userGetted);
-			load_handler();
+			iuser.init(userGetted);
+			// load_handler();
 		});
 	}//edn func
 	
@@ -171,8 +171,20 @@ $(document).ready(function(){
 		$("section").on('touchmove', noScroll);
 		// $("section").on('touchmove',".adorn" noScroll);
 		// choseBoxShow();
+		resetSize();
 		cameraInit();
 		closeSelf_handler();
+	}//end func
+
+	//重置大小
+	function resetSize(){
+		$(".mask").each(function(){
+			var that = $(this);
+			var h = that.height();
+			var w = that.width();
+			that.height(h);
+			that.width(w);
+		});
 	}//end func
 
 	//禁止滑动
@@ -336,7 +348,7 @@ $(document).ready(function(){
 	function resetShare(img){
 		var title = $("."+itemplet+" .titleA").val();
 		var word = $("."+itemplet+" .titleB").val();
-		var url=ishare.url + "share.html?i=" + img +'&title='+title+'&word='+word;
+		var url="http://anchorgifting.anchorchina.cn/" + "share.html?i=" + encodeURIComponent(img) +'&title='+encodeURIComponent(title)+'&word='+encodeURIComponent(word);
 		console.log(url);
 		ishare.reset({link:url,image:img,title:title,friend:word,timeline:title});
 	}//end func
