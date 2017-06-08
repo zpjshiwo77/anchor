@@ -326,9 +326,10 @@ $(document).ready(function(){
 
 	//重置分享
 	function resetShare(img){
-		var url=location.href.substr(0, location.href.lastIndexOf('/')+1) + "share.html?i=" + img;
 		var title = $("."+itemplet+" .titleA").val();
 		var word = $("."+itemplet+" .titleB").val();
+		var url=ishare.url + "share.html?i=" + img +'&title='+title+'&word='+word;
+		console.log(url);
 		ishare.reset({link:url,image:img,title:title,friend:word,timeline:title});
 	}//end func
 

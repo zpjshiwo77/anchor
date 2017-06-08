@@ -5,7 +5,7 @@ $(document).ready(function(){
 	var articleBox=$('article');
 	var windowScale=window.innerWidth/750;
 
-	var poster = icom.getQueryString('i') || "images/public/share.jpg";
+	var poster = icom.getQueryString('i') || ishare.url+"images/public/share.jpg";
 	
 	//----------------------------------------页面初始化----------------------------------------
 	icom.init(init);//初始化
@@ -67,8 +67,18 @@ $(document).ready(function(){
 		icom.imageLoad(poster,function(src){
 			$(".poster img")[0].src = src;
 			icom.fadeIn(articleBox);
+			resetShare(src);
 		})
 	}
+	
+	//重置分享
+	function resetShare(img){
+		var title = icom.getQueryString('title') || "海报生成器";
+		var word = icom.getQueryString('word') || "定制海报生成器，用美照实力打响招牌！";
+		var url=ishare.url + "share.html?i=" + img +'&title='+title+'&word='+word;
+		console.log(url);
+		ishare.reset({link:url,image:img,title:title,friend:word,timeline:title});
+	}//end func
 	
 	//----------------------------------------页面监测代码----------------------------------------
 	function monitor_handler(){
