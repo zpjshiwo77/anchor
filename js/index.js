@@ -518,7 +518,7 @@ $(document).ready(function(){
 				nowStep++;
 				if(nowStep == 1) showTipsDialog(nowStep);
 			});
-			$('.closeSelf').parent().show();
+			closeSelf.parent().show();
 		}
 	}//end func
 
