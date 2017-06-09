@@ -70,7 +70,7 @@ $(document).ready(function(){
 		requestAnimationFrame(function(){
 			loadBox.show();
 			iuser.init(userGetted);
-			// load_handler();
+//			load_handler();
 		});
 	}//edn func
 	

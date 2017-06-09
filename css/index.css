@@ -341,8 +341,8 @@ section.franceC .cont.bg2{
 }
 section.franceC .cont .logo{
 	position: absolute;
-	top: 0.16rem;
-	left: 0.16rem;
+	top: 0.2rem;
+	left: 0.2rem;
 	width: 1rem;
 	height: 1rem;
 	z-index: 2;
@@ -351,13 +351,13 @@ section.franceC .cont .logo{
 	background-color: rgba(0,0,0,0.5);
 }
 section.franceC .cont .logo .l-shell{
-	width: 1.1rem;
-	height: 1.1rem;
+	width: 1rem;
+	height: 1rem;
 }
 section.franceC .cont .code{
 	position: absolute;
-	bottom: 0.16rem;
-	right: 0.16rem;
+	bottom: 0.2rem;
+	right: 0.2rem;
 	width: 1rem;
 	height: 1rem;
 	background-image: url(../images/public/code.jpg);
@@ -365,8 +365,8 @@ section.franceC .cont .code{
 	z-index: 2;
 }
 section.franceC .cont .code .c-shell{
-	width: 1.18rem;
-	height: 1.18rem;
+	width: 1rem;
+	height: 1rem;
 }
 section.franceC input[type=text].c1,section.franceC textarea[type=text].c1{
 	border: 1px dashed #d63555;
@@ -441,7 +441,7 @@ section.franceC .shellBox .uploadBtn{
 	
 }
 
-section.franceC .shellBox .uploadBtnSide{ width: 1rem; height: 1rem; margin: 0; right: 0.16rem; top: 0.16rem; background-color: rgba(255,255,255,0.6);}
+section.franceC .shellBox .uploadBtnSide{ width: 1rem; height: 1rem; margin: 0; right: 0.2rem; top: 0.2rem; background-color: rgba(255,255,255,0.6);}
 
 section.franceC .shellBox .uploadBtn1{
 	background-image: url(../images/france/upbtn1.png);
@@ -666,8 +666,8 @@ section.japanC .cont{
 }
 section.japanC .cont .logo{
 	position: absolute;
-	top: 0.16rem;
-	left: 0.16rem;
+	top: 0.2rem;
+	left: 0.2rem;
 	width: 1rem;
 	height: 1rem;
 	background-image: url(../images/public/logoW.png);
@@ -681,8 +681,8 @@ section.japanC .cont .logo .l-shell{
 }
 section.japanC .cont .code{
 	position: absolute;
-	bottom: 0.16rem;
-	right: 0.16rem;
+	bottom: 0.2rem;
+	right: 0.2rem;
 	width: 1rem;
 	height: 1rem;
 	background-image: url(../images/public/code.jpg);
@@ -690,8 +690,8 @@ section.japanC .cont .code{
 	z-index: 2;
 }
 section.japanC .cont .code .c-shell{
-	width: 1.1rem;
-	height: 1.1rem;
+	width: 1rem;
+	height: 1rem;
 }
 section.japanC [type=text]{
 	border: 1px dashed #626262;
@@ -709,7 +709,7 @@ section.japanC [type=text].titleA{
 	height: 0.9rem;
 	font-size: 0.6rem;
 	font-weight: bold;
-	top: 1.2rem;
+	top: 1.6rem;
 	z-index: 2;
 	margin-left: -2.88rem;
 	
@@ -718,7 +718,7 @@ section.japanC [type=text].titleB{
 	width: 5.12rem;
 	height: 0.48rem;
 	font-size: 0.36rem;
-	top: 2.16rem;
+	top: 2.56rem;
 	z-index: 2;
 	margin-left: -2.56rem;
 	line-height: 1.5;
@@ -770,7 +770,7 @@ section.japanC .shellBox .uploadBtn{
 	background-size: 100%;
 }
 
-section.japanC .shellBox .uploadBtnSide{ width: 1rem; height: 1rem; margin: 0; right: 0.16rem; top: 0.16rem; background-color: rgba(255,255,255,0.6);}
+section.japanC .shellBox .uploadBtnSide{ width: 1rem; height: 1rem; margin: 0; right: 0.2rem; top: 0.2rem; background-color: rgba(255,255,255,0.6);}
 
 /*japanC end*/
 
@@ -1001,10 +1001,10 @@ aside.confirm>div>p.btn a:active{ background-color: #eeeeee;}
 
 .closeSelf{
 	position: absolute;
-	top: -0.25rem;
-	right: -0.25rem;
-	width: 0.45rem;
-	height: 0.45rem;
+	top: -0.2rem;
+	right: -0.2rem;
+	width: 0.4rem;
+	height: 0.4rem;
 	background-image: url(../images/sticker/c.png);
 }
 
