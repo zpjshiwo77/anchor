@@ -70,7 +70,7 @@ $(document).ready(function(){
 		requestAnimationFrame(function(){
 			loadBox.show();
 			iuser.init(userGetted);
-//			load_handler();
+			// load_handler();
 		});
 	}//edn func
 	
@@ -184,6 +184,43 @@ $(document).ready(function(){
 			var w = that.width();
 			that.height(h);
 			that.width(w);
+		});
+		$(".code").each(resetSizePt);
+		$(".logo").each(resetSizePt);
+		$(".titleA").each(resetSizePtFs);
+		$(".titleB").each(resetSizePtFs);
+	}//end func
+
+	//重置大小和定位和字号
+	function resetSizePtFs(){
+		var that = $(this);
+		var h = that.height();
+		var w = that.width();
+		var t = that.css("top");
+		var l = that.css("left");
+		var fs = that.css("font-size");
+		that.height(h);
+		that.width(w);
+		that.css({
+			top: t,
+			left: l,
+			"font-size":fs
+		});
+		console.log(fs);
+	}//end func
+
+	//重置大小和定位
+	function resetSizePt(){
+		var that = $(this);
+		var h = that.height();
+		var w = that.width();
+		var t = that.css("top");
+		var l = that.css("left");
+		that.height(h);
+		that.width(w);
+		that.css({
+			top: t,
+			left: l
 		});
 	}//end func
 

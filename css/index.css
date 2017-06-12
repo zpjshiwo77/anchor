@@ -356,8 +356,8 @@ section.franceC .cont .logo .l-shell{
 }
 section.franceC .cont .code{
 	position: absolute;
-	bottom: 0.2rem;
-	right: 0.2rem;
+	top: 8.5rem;
+	left: 4.8rem;
 	width: 1rem;
 	height: 1rem;
 	background-image: url(../images/public/code.jpg);
@@ -533,8 +533,8 @@ section.franceR .cont .logo2{
 }
 section.franceR .cont .code{
 	position: absolute;
-	bottom: 0.24rem;
-	right: 0.24rem;
+	top: 3.42rem;
+	left: 6.42rem;
 	width: 0.84rem;
 	height: 0.84rem;
 	background-image: url(../images/public/code.jpg);
@@ -681,8 +681,8 @@ section.japanC .cont .logo .l-shell{
 }
 section.japanC .cont .code{
 	position: absolute;
-	bottom: 0.2rem;
-	right: 0.2rem;
+	top: 8.5rem;
+	left: 4.8rem;
 	width: 1rem;
 	height: 1rem;
 	background-image: url(../images/public/code.jpg);
@@ -805,8 +805,8 @@ section.japanR .cont .logo{
 }
 section.japanR .cont .code{
 	position: absolute;
-	bottom: 0.24rem;
-	right: 0.24rem;
+	top: 3.42rem;
+	left: 6.42rem;
 	width: 0.84rem;
 	height: 0.84rem;
 	background-image: url(../images/public/code.jpg);
