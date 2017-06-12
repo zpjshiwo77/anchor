@@ -464,7 +464,17 @@ $(document).ready(function(){
 		}
 		
 		$("."+itemplet+" .cont").append(cont);
-		$("#s"+nowAdorn).css({
+
+		var that = $("#s"+nowAdorn);
+		var h = that.height();
+		var w = that.width();
+		var t = that.css("top");
+		var l = that.css("left");
+		that.height(h);
+		that.width(w);
+		that.css({
+			top:t,
+			left:l,
 			x: 0,
 			y: 0
 		});

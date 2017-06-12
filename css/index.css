@@ -698,7 +698,6 @@ section.japanC [type=text]{
 	text-align: center;
 	color: #626262;
 	position: absolute;
-	left: 50%;
 	line-height: 1.2;
 }
 section.japanC [type=text]::-webkit-input-placeholder{
@@ -711,8 +710,7 @@ section.japanC [type=text].titleA{
 	font-weight: bold;
 	top: 1.6rem;
 	z-index: 2;
-	margin-left: -2.88rem;
-	
+	left: 0.12rem;
 }
 section.japanC [type=text].titleB{
 	width: 5.12rem;
@@ -720,7 +718,7 @@ section.japanC [type=text].titleB{
 	font-size: 0.36rem;
 	top: 2.56rem;
 	z-index: 2;
-	margin-left: -2.56rem;
+	left: 0.44rem;
 	line-height: 1.5;
 }
 section.japanC .shellBox{
