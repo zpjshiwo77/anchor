@@ -70,7 +70,7 @@ $(document).ready(function(){
 		requestAnimationFrame(function(){
 			loadBox.show();
 			iuser.init(userGetted);
-			// load_handler();
+//			 load_handler();
 		});
 	}//edn func
 	
@@ -368,12 +368,12 @@ $(document).ready(function(){
 			icom.popOn($("#preview"),{fade:500,onClose:showTips});
 			sendInfo(img);
 			resetShare(img);
-			if(!$("#preview .share").hasClass('ishow')){
-				setTimeout(function(){
-					icom.fadeIn($("#preview .share"));
-					$("#preview .share").addClass('ishow');
-				},3000);
-			}
+//			if(!$("#preview .share").hasClass('ishow')){
+//				setTimeout(function(){
+//					icom.fadeIn($("#preview .share"));
+//					$("#preview .share").addClass('ishow');
+//				},3000);
+//			}
 		});
 		setTimeout(function(){
 			nowStep++;
