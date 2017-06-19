@@ -70,7 +70,7 @@ $(document).ready(function(){
 		requestAnimationFrame(function(){
 			loadBox.show();
 			iuser.init(userGetted);
-//			 load_handler();
+//			load_handler();
 		});
 	}//edn func
 	
@@ -358,12 +358,13 @@ $(document).ready(function(){
 		var code = $("."+itemplet+" .c-shell").hasClass("up");
 		if(!logo) $("."+itemplet+" .logo").hide();
 		if(!code) $("."+itemplet+" .code").hide();
-		
+		closeSelf.hide();
 		icamera.makeImg($("."+itemplet+" .cont"),function(img){
 			icom.fadeOut(loadBox);
 			$('.franceC .logo').add($('.franceC .code')).show();
 			if(!logo) $("."+itemplet+" .logo").show();
 			if(!code) $("."+itemplet+" .code").show();
+			closeSelf.show();
 			$("#preview .previewImg")[0].src = img;
 			icom.popOn($("#preview"),{fade:500,onClose:showTips});
 			sendInfo(img);
@@ -577,6 +578,7 @@ $(document).ready(function(){
 				nowStep++;
 				if(nowStep == 1) showTipsDialog(nowStep);
 			});
+			closeSelf.show();
 			closeSelf.parent().show();
 		}
 	}//end func
